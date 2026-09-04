@@ -6,21 +6,21 @@ import Process from '@src/pages/about/components/process/Process';
 import CustomHead from '@src/components/dom/CustomHead';
 
 const seo = {
-  title: 'Giats - About',
-  description: 'Learn about my journey, values, and commitment to quality web and app solutions.',
+  title: 'Giats - 关于我',
+  description: '了解我的成长经历、价值观，以及我对高品质网站与应用解决方案的坚持。',
   keywords: [
     'Giats',
-    'About Evangelos Giatsidis',
-    'About me',
-    'Frontend Developer Journey',
-    'Web Developer Story',
-    'Professional Web Development',
-    'Frontend Development Expertise',
-    'Web Design Skills',
-    'Web Development Services',
-    'Web Design Expertise',
-    'Developer Profile',
-    'Quality Web Solutions',
+    '埃万杰洛斯·贾齐迪斯',
+    '关于我',
+    '前端开发者经历',
+    '网页开发故事',
+    '专业网页开发',
+    '前端开发专长',
+    '网页设计技能',
+    '网页开发服务',
+    '网页设计专长',
+    '开发者简介',
+    '高品质网页解决方案',
   ],
 };
 function Page() {

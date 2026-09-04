@@ -68,6 +68,40 @@
       border-radius: calc(var(--layout-columns-gap) * 0.5);
     }
   }
+  .screenshotContainer {
+    grid-column: 1 / 17;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: calc(var(--layout-columns-gap) * 0.5);
+    background: #fff;
+
+    @include mobile {
+      grid-column: 1 / 7;
+      border-radius: calc(var(--layout-columns-gap) * 0.25);
+    }
+
+    > img {
+      object-fit: contain;
+    }
+  }
+  .mobileContainer {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: calc(var(--layout-columns-gap) * 0.5);
+    background: rgba(18, 54, 58, 0.08);
+
+    @include mobile {
+      grid-column: 1 / 7 !important;
+      aspect-ratio: 3 / 4.5;
+      border-radius: calc(var(--layout-columns-gap) * 0.25);
+    }
+
+    > img {
+      object-fit: contain;
+    }
+  }
   .videoContainer {
     grid-column: 1 / 17;
     position: relative;

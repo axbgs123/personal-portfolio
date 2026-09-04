@@ -12,7 +12,7 @@ function ProjectImages({ project }) {
   const isMobile = useIsMobile();
 
   const renderMediaContainer = useCallback(
-    ({ tag, src, isRight, index, title }) => {
+    ({ tag, src, isRight, index, title, width, height }) => {
       if (tag === 'video') {
         return (
           <div className={styles.videoContainer}>
@@ -24,22 +24,41 @@ function ProjectImages({ project }) {
       }
       if (tag === 'small') {
         return (
-          <div style={{ gridColumn: !isMobile ? (!isRight ? '1 / 9' : ' 9 / 17') : !isRight ? '1 / 4' : ' 4 / 7' }} className={styles.imageContainer}>
-            <Image priority sizes="100%" src={src} fill alt={`Image-${title}-${index}`} />
+          <div
+            style={{
+              gridColumn: !isMobile ? (!isRight ? '1 / 9' : ' 9 / 17') : !isRight ? '1 / 4' : ' 4 / 7',
+            }}
+            className={styles.imageContainer}
+          >
+            <Image priority sizes="100%" src={src} fill alt={`图片-${title}-${index}`} />
           </div>
         );
       }
       if (tag === 'big') {
         return (
           <div className={styles.bigContainer}>
-            <Image priority sizes="100%" src={src} fill alt={`Image-${title}-${index}`} />
+            <Image priority sizes="100%" src={src} fill alt={`图片-${title}-${index}`} />
           </div>
         );
       }
       if (tag === 'medium') {
         return (
           <div className={styles.mediumContainer}>
-            <Image priority sizes="100%" src={src} fill alt={`Image-${title}-${index}`} />
+            <Image priority sizes="100%" src={src} fill alt={`图片-${title}-${index}`} />
+          </div>
+        );
+      }
+      if (tag === 'screenshot') {
+        return (
+          <div style={{ aspectRatio: `${width} / ${height}` }} className={styles.screenshotContainer}>
+            <Image priority sizes="100%" src={src} fill alt={`图片-${title}-${index}`} />
+          </div>
+        );
+      }
+      if (tag === 'mobile') {
+        return (
+          <div style={{ gridColumn: !isRight ? '1 / 9' : '9 / 17' }} className={styles.mobileContainer}>
+            <Image priority sizes="50vw" src={src} fill alt={`移动端图片-${title}-${index}`} />
           </div>
         );
       }
@@ -65,6 +84,8 @@ ProjectImages.propTypes = {
         tag: PropTypes.string.isRequired,
         src: PropTypes.string.isRequired,
         isRight: PropTypes.bool,
+        width: PropTypes.number,
+        height: PropTypes.number,
       }),
     ).isRequired,
   }).isRequired,

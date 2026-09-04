@@ -1,0 +1,194 @@
+[
+  {
+    "id": "第一节-codex-的下载-安装和基础使用",
+    "title": "第一节：Codex 的下载、安装和基础使用",
+    "children": []
+  },
+  {
+    "id": "第二-三节-看懂codex工作台-上-下",
+    "title": "第二、三节：看懂Codex工作台（上）+（下）",
+    "children": []
+  },
+  {
+    "id": "第四-五节-codex做精美ppt-上-下",
+    "title": "第四、五节：Codex做精美PPT（上）+（下）：",
+    "children": [
+      {
+        "id": "一-image2生图模型做ppt",
+        "title": "一、Image2生图模型做PPT"
+      },
+      {
+        "id": "二-用html-做ppt",
+        "title": "二、用HTML 做PPT"
+      },
+      {
+        "id": "4个方法-我该用哪种",
+        "title": "4个方法：我该用哪种？"
+      }
+    ]
+  },
+  {
+    "id": "第六节-必懂知识-skill-skill-md-references-scripts-asset",
+    "title": "第六节：必懂知识：Skill=skill.md+references+scripts+asset",
+    "children": [
+      {
+        "id": "一-skill-md-references-scripts-asset",
+        "title": "一、skill.md+references+scripts+asset"
+      },
+      {
+        "id": "二-案例讲解",
+        "title": "二、案例讲解"
+      }
+    ]
+  },
+  {
+    "id": "第七节-codex-excel-实战-数据清洗-计算-分析-可视化与skill沉淀",
+    "title": "第七节：Codex Excel 实战：数据清洗、计算、分析、可视化与skill沉淀",
+    "children": [
+      {
+        "id": "大纲",
+        "title": "大纲"
+      },
+      {
+        "id": "业务场景",
+        "title": "业务场景"
+      },
+      {
+        "id": "提示词汇总",
+        "title": "提示词汇总"
+      },
+      {
+        "id": "重要知识点",
+        "title": "重要知识点"
+      },
+      {
+        "id": "课程小结",
+        "title": "课程小结"
+      }
+    ]
+  },
+  {
+    "id": "第八节-codex自媒体实战-热点选题skill-文案脚本skill",
+    "title": "第八节：Codex自媒体实战：热点选题skill+文案脚本skill",
+    "children": [
+      {
+        "id": "一-热点选题skill-ai_hot_content_curator",
+        "title": "一、热点选题skill：ai_hot_content_curator"
+      },
+      {
+        "id": "二-文案脚本skill-media-copywriter",
+        "title": "二、文案脚本skill：media-copywriter"
+      }
+    ]
+  },
+  {
+    "id": "第九节-codex自媒体实战-小红书图文生成自动化",
+    "title": "第九节：Codex自媒体实战：小红书图文生成自动化",
+    "children": [
+      {
+        "id": "如何判断一个skill是否值得采纳",
+        "title": "如何判断一个skill是否值得采纳？"
+      },
+      {
+        "id": "一-xhs-note-creator-skill",
+        "title": "一、xhs-note-creator-skill"
+      },
+      {
+        "id": "二-guizang-social-card-skill",
+        "title": "二、guizang-social-card-skill"
+      }
+    ]
+  },
+  {
+    "id": "第九节-youtube内容提炼-改写-多平台配图-ins-linkedin-x",
+    "title": "第九节：YouTube内容提炼+改写+多平台配图（Ins、LinkedIn、X）",
+    "children": [
+      {
+        "id": "本节使用的两个-skill",
+        "title": "本节使用的两个 Skill"
+      },
+      {
+        "id": "实操流程",
+        "title": "实操流程"
+      }
+    ]
+  },
+  {
+    "id": "第十节-codex自媒体实战-video-use-hyperframes实现视频剪辑与生成自动化",
+    "title": "第十节：Codex自媒体实战：Video-use+Hyperframes实现视频剪辑与生成自动化",
+    "children": [
+      {
+        "id": "一-video-use实现剪辑自动化",
+        "title": "一、Video-use实现剪辑自动化"
+      },
+      {
+        "id": "二-hyperframes实现视频素材生成自动化",
+        "title": "二、Hyperframes实现视频素材生成自动化"
+      }
+    ]
+  },
+  {
+    "id": "第十一节-codex浏览器自动化-原生control-chrome-进阶ego-lite-应用快照appshot",
+    "title": "第十一节：Codex浏览器自动化：原生Control Chrome+进阶Ego-lite+应用快照Appshot",
+    "children": [
+      {
+        "id": "一-原生codex-control-chrome-浏览器",
+        "title": "一、原生Codex Control Chrome（@浏览器）"
+      },
+      {
+        "id": "二-进阶玩法-ego-lite-ego-browser",
+        "title": "二、进阶玩法：Ego-lite（/ego-browser）"
+      },
+      {
+        "id": "三-应用快照appshot",
+        "title": "三、应用快照Appshot"
+      }
+    ]
+  },
+  {
+    "id": "第十二节-codex-computer-use实战-操作桌面软件-record-replay沉淀skill",
+    "title": "第十二节：Codex Computer Use实战：操作桌面软件+Record&Replay沉淀skill",
+    "children": [
+      {
+        "id": "一-computer-use操作桌面软件",
+        "title": "一、Computer Use操作桌面软件"
+      },
+      {
+        "id": "二-record-replay-in-codex",
+        "title": "二、Record & Replay in Codex"
+      }
+    ]
+  },
+  {
+    "id": "第十三节-codex多智能体协作-子智能体-并行分工-ultra模式",
+    "title": "第十三节：Codex多智能体协作：子智能体、并行分工、Ultra模式",
+    "children": [
+      {
+        "id": "官方介绍",
+        "title": "官方介绍"
+      },
+      {
+        "id": "案例-2",
+        "title": "案例"
+      },
+      {
+        "id": "ultra模式",
+        "title": "Ultra模式"
+      }
+    ]
+  },
+  {
+    "id": "第十四节-codex-飞书-lark-cli-玩转多维表格-飞书白板-手机飞书操控codex",
+    "title": "第十四节：Codex+飞书（Lark）CLI：玩转多维表格、飞书白板、手机飞书操控Codex",
+    "children": [
+      {
+        "id": "一-飞书cli-lark",
+        "title": "一、飞书CLI（Lark）"
+      },
+      {
+        "id": "仅大陆-二-补充-知识星球cli",
+        "title": "（仅大陆）二、补充：知识星球cli"
+      }
+    ]
+  }
+]

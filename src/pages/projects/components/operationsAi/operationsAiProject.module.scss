@@ -1,0 +1,82 @@
+@import '@src/styles/functions';
+
+.hero {
+  min-height: 142svh;
+  background: #d9f0e9;
+}
+
+.title {
+  max-width: 100%;
+  font-size: 5.7vw;
+}
+
+.stats {
+  grid-column: 1 / 17;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--layout-columns-gap);
+  padding-top: calc(var(--layout-columns-gap) * 2);
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35vw;
+    padding-top: var(--layout-columns-gap);
+    border-top: 1px solid rgba(18, 54, 58, 0.28);
+
+    span:last-child {
+      opacity: 0.62;
+    }
+  }
+}
+
+.boundary {
+  grid-column: 1 / 17;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  gap: var(--layout-columns-gap);
+  margin-top: calc(var(--layout-columns-gap) * 2);
+  padding: calc(var(--layout-columns-gap) * 1.2);
+  border-radius: 0.7vw;
+  color: var(--white);
+  background: #12363a;
+
+  > span {
+    opacity: 0.58;
+  }
+}
+
+.caseStudy {
+  background: #f3f8f7;
+}
+
+.prose {
+  :global(h3) {
+    background: rgba(18, 54, 58, 0.065);
+  }
+
+  :global(.course-image-group) {
+    background: rgba(18, 54, 58, 0.045);
+  }
+}
+
+@include mobile {
+  .hero {
+    min-height: auto;
+  }
+
+  .title {
+    font-size: 9vw;
+  }
+
+  .stats {
+    grid-column: 1 / 7;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boundary {
+    grid-column: 1 / 7;
+    grid-template-columns: 1fr;
+    border-radius: 2vw;
+  }
+}

@@ -9,6 +9,16 @@ import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect'
 import { useRef } from 'react';
 import { useWindowSize } from '@darkroom.engineering/hamo';
 
+function ClientDescription() {
+  return (
+    <AppearTitle>
+      <div className="p-l">我们以设计与技术为核心，打造清晰、稳定且富有表现力的数字体验。</div>
+      <div className="p-l">从需求梳理到交互实现，每个环节都兼顾业务目标与用户感受。</div>
+      <div className="p-l">通过高效协作和持续优化，让创意可靠落地，并形成长期价值。</div>
+    </AppearTitle>
+  );
+}
+
 function Clients() {
   const isMobile = useIsMobile();
   const textRefs = useRef([]);
@@ -51,7 +61,7 @@ function Clients() {
   return (
     <section ref={rootRef} className={clsx(styles.root, 'layout-grid-inner')}>
       <h1 className={clsx(styles.sectionTitle, 'h1')}>
-        <AppearByWords>Clients</AppearByWords>
+        <AppearByWords>合作客户</AppearByWords>
       </h1>
       {isMobile ? <div className={styles.mobileEmpty} /> : null}
       {isMobile ? (
@@ -71,18 +81,9 @@ function Clients() {
       {isMobile ? (
         <div className={styles.textMobile}>
           <AppearTitle>
-            <h4 className={clsx('h4', 'bold')}>Company 1</h4>
+            <h4 className={clsx('h4', 'bold')}>公司一</h4>
           </AppearTitle>
-          <AppearTitle>
-            <div className="p-l">Lorem ipsum dolor sit amet, consectetur</div>
-            <div className="p-l">adipiscing elit. Sed do eiusmod tempor</div>
-            <div className="p-l">incididunt ut labore et dolore magna aliqua.</div>
-            <div className="p-l">Ut enim ad minim veniam, quis nostrud</div>
-            <div className="p-l">exercitation ullamco laboris nisi ut aliquip</div>
-            <div className="p-l">ex ea commodo consequat. Duis aute irure</div>
-            <div className="p-l">dolor in reprehenderit in voluptate velit</div>
-            <div className="p-l">esse cillum dolore eu fugiat nulla pariatur.</div>
-          </AppearTitle>
+          <ClientDescription />
         </div>
       ) : null}
       {!isMobile ? (
@@ -98,18 +99,9 @@ function Clients() {
               <h6 className="h6">2024</h6>
             </AppearTitle>
             <AppearTitle>
-              <h4 className={clsx('h4', 'bold', styles.title)}>Company 1</h4>
+              <h4 className={clsx('h4', 'bold', styles.title)}>公司一</h4>
             </AppearTitle>
-            <AppearTitle>
-              <div className="p-l">Lorem ipsum dolor sit amet, consectetur</div>
-              <div className="p-l">adipiscing elit. Sed do eiusmod tempor</div>
-              <div className="p-l">incididunt ut labore et dolore magna aliqua.</div>
-              <div className="p-l">Ut enim ad minim veniam, quis nostrud</div>
-              <div className="p-l">exercitation ullamco laboris nisi ut aliquip</div>
-              <div className="p-l">ex ea commodo consequat. Duis aute irure</div>
-              <div className="p-l">dolor in reprehenderit in voluptate velit</div>
-              <div className="p-l">esse cillum dolore eu fugiat nulla pariatur.</div>
-            </AppearTitle>
+            <ClientDescription />
           </div>
         </>
       ) : null}
@@ -132,18 +124,9 @@ function Clients() {
       {isMobile ? (
         <div className={styles.textMobile}>
           <AppearTitle>
-            <h4 className={clsx('h4', 'bold')}>Company 2</h4>
+            <h4 className={clsx('h4', 'bold')}>公司二</h4>
           </AppearTitle>
-          <AppearTitle>
-            <div className="p-l">Lorem ipsum dolor sit amet, consectetur</div>
-            <div className="p-l">adipiscing elit. Sed do eiusmod tempor</div>
-            <div className="p-l">incididunt ut labore et dolore magna aliqua.</div>
-            <div className="p-l">Ut enim ad minim veniam, quis nostrud</div>
-            <div className="p-l">exercitation ullamco laboris nisi ut aliquip</div>
-            <div className="p-l">ex ea commodo consequat. Duis aute irure</div>
-            <div className="p-l">dolor in reprehenderit in voluptate velit</div>
-            <div className="p-l">esse cillum dolore eu fugiat nulla pariatur.</div>
-          </AppearTitle>
+          <ClientDescription />
         </div>
       ) : null}
       {!isMobile ? (
@@ -158,18 +141,9 @@ function Clients() {
               <h6 className="h6">2023</h6>
             </AppearTitle>
             <AppearTitle>
-              <h4 className={clsx('h4', 'bold', styles.title)}>Company 2</h4>
+              <h4 className={clsx('h4', 'bold', styles.title)}>公司二</h4>
             </AppearTitle>
-            <AppearTitle>
-              <div className="p-l">Lorem ipsum dolor sit amet, consectetur</div>
-              <div className="p-l">adipiscing elit. Sed do eiusmod tempor</div>
-              <div className="p-l">incididunt ut labore et dolore magna aliqua.</div>
-              <div className="p-l">Ut enim ad minim veniam, quis nostrud</div>
-              <div className="p-l">exercitation ullamco laboris nisi ut aliquip</div>
-              <div className="p-l">ex ea commodo consequat. Duis aute irure</div>
-              <div className="p-l">dolor in reprehenderit in voluptate velit</div>
-              <div className="p-l">esse cillum dolore eu fugiat nulla pariatur.</div>
-            </AppearTitle>
+            <ClientDescription />
           </div>
           <div className={styles.fourthEmpty} />
         </>
@@ -192,18 +166,9 @@ function Clients() {
       {isMobile ? (
         <div className={styles.textMobile}>
           <AppearTitle>
-            <h4 className={clsx('h4', 'bold')}>Company 3</h4>
+            <h4 className={clsx('h4', 'bold')}>公司三</h4>
           </AppearTitle>
-          <AppearTitle>
-            <div className="p-l">Lorem ipsum dolor sit amet, consectetur</div>
-            <div className="p-l">adipiscing elit. Sed do eiusmod tempor</div>
-            <div className="p-l">incididunt ut labore et dolore magna aliqua.</div>
-            <div className="p-l">Ut enim ad minim veniam, quis nostrud</div>
-            <div className="p-l">exercitation ullamco laboris nisi ut aliquip</div>
-            <div className="p-l">ex ea commodo consequat. Duis aute irure</div>
-            <div className="p-l">dolor in reprehenderit in voluptate velit</div>
-            <div className="p-l">esse cillum dolore eu fugiat nulla pariatur.</div>
-          </AppearTitle>
+          <ClientDescription />
         </div>
       ) : null}
       {!isMobile ? (
@@ -219,18 +184,9 @@ function Clients() {
               <h6 className="h6">2021</h6>
             </AppearTitle>
             <AppearTitle>
-              <h4 className={clsx('h4', 'bold', styles.title)}>Company 3</h4>
+              <h4 className={clsx('h4', 'bold', styles.title)}>公司三</h4>
             </AppearTitle>
-            <AppearTitle>
-              <div className="p-l">Lorem ipsum dolor sit amet, consectetur</div>
-              <div className="p-l">adipiscing elit. Sed do eiusmod tempor</div>
-              <div className="p-l">incididunt ut labore et dolore magna aliqua.</div>
-              <div className="p-l">Ut enim ad minim veniam, quis nostrud</div>
-              <div className="p-l">exercitation ullamco laboris nisi ut aliquip</div>
-              <div className="p-l">ex ea commodo consequat. Duis aute irure</div>
-              <div className="p-l">dolor in reprehenderit in voluptate velit</div>
-              <div className="p-l">esse cillum dolore eu fugiat nulla pariatur.</div>
-            </AppearTitle>
+            <ClientDescription />
           </div>
         </>
       ) : null}

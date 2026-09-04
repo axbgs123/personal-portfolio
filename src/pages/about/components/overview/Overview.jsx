@@ -11,66 +11,66 @@ function Overview() {
       <div className={styles.title}>
         {isMobile ? (
           <AppearTitle key="mobile-queto">
-            <h3 className="h3">The front-end developer&apos;s role </h3>
+            <h3 className="h3">前端开发者的角色，</h3>
             <h3 className="h3">
-              is like a kind host, <span className="medium">ensuring</span>
+              就像一位体贴的主人，<span className="medium">确保</span>
             </h3>
             <h3 className="h3">
-              visitors have a <span className="medium">smooth</span> and
+              每位访客都能获得<span className="medium">流畅</span>且
             </h3>
             <h3 className="h3">
-              <span className="medium">enjoyable</span> experience.
+              <span className="medium">愉悦</span>的体验。
             </h3>
           </AppearTitle>
         ) : (
           <AppearTitle key="desktop-queto">
-            <h3 className="h3">The front-end developer&apos;s role is like a</h3>
+            <h3 className="h3">前端开发者就像一位体贴的主人，</h3>
             <h3 className="h3">
-              kind host, <span className="medium">ensuring</span> visitors have
+              <span className="medium">确保</span>每位访客都能获得
             </h3>
             <h3 className="h3">
-              a <span className="medium">smooth</span> and <span className="medium">enjoyable</span> experience.
+              <span className="medium">流畅</span>且<span className="medium">愉悦</span>的体验。
             </h3>
           </AppearTitle>
         )}
       </div>
       <div className={clsx(styles.text, 'p-l', styles.myStory)}>
         <AppearTitle>
-          <span>Some words</span>
+          <span>关于我的几句话</span>
         </AppearTitle>
       </div>
       <div className={styles.desc}>
         {!isMobile ? (
           <AppearTitle key="desktop-overview">
-            <h6 className="h6">Hey there! I&apos;m a 26-year-old front-end developer from Greece with a </h6>
-            <h6 className="h6">passion for crafting amazing digital experiences. I studied software</h6>
-            <h6 className="h6">engineering to deepen my understanding of how to build sleek and </h6>
-            <h6 className="h6">efficient websites and apps.</h6>
-            <h6 className={clsx(styles.paddingTop, 'h6')}>When I&apos;m not busy coding, you&apos;ll often find me soaking up inspiration from</h6>
-            <h6 className="h6">the world of design. Whether it&apos;s exploring new color palettes or refining</h6>
-            <h6 className="h6">user interfaces, I love bringing creativity into my work.</h6>
-            <h6 className={clsx(styles.paddingTop, 'h6')}>When I&apos;m not immersed in coding, I enjoy staying active. I love swimming, </h6>
-            <h6 className="h6">rowing, and playing intense PC games to relax and recharge.</h6>
+            <h6 className="h6">你好！我是一名来自希腊的 26 岁前端开发者，</h6>
+            <h6 className="h6">热衷于打造令人惊喜的数字体验。我学习了软件工程，</h6>
+            <h6 className="h6">不断加深对产品构建方式的理解，希望做出简洁、</h6>
+            <h6 className="h6">高效的网站与应用。</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>不写代码时，我常从设计世界中寻找灵感。</h6>
+            <h6 className="h6">无论是探索新的色彩组合，还是打磨用户界面，</h6>
+            <h6 className="h6">我都喜欢把创意融入自己的作品。</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>工作之外，我也喜欢保持活力：游泳、划船，</h6>
+            <h6 className="h6">或玩几局紧张刺激的电脑游戏，让自己放松充电。</h6>
 
-            <h6 className={clsx(styles.paddingTop, 'h6')}>I&apos;m looking forward to collaborating and creating something great!</h6>
-            <h6 className={clsx(styles.paddingTop, 'h6')}>Evangelos Giatsidis.</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>期待与你合作，一起创造真正出色的作品！</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>埃万杰洛斯·贾齐迪斯。</h6>
           </AppearTitle>
         ) : (
           <AppearTitle key="mobile-overview">
-            <h6 className="h6">Hey there! I&apos;m a 26-year-old front-end developer from Greece </h6>
-            <h6 className="h6">with a passion for crafting amazing digital experiences. I studied </h6>
-            <h6 className="h6">software engineering to deepen my understanding of how to </h6>
-            <h6 className="h6">build sleek and efficient websites and apps.</h6>
-            <h6 className={clsx(styles.paddingTop, 'h6')}>When I&apos;m not busy coding, you&apos;ll often find me soaking up </h6>
-            <h6 className="h6">inspiration from the world of design. Whether it&apos;s exploring new</h6>
-            <h6 className="h6">color palettes or refining user interfaces, I love bringing</h6>
-            <h6 className="h6">creativity into my work.</h6>
-            <h6 className={clsx(styles.paddingTop, 'h6')}>When I&apos;m not immersed in coding, I enjoy staying active. I love</h6>
-            <h6 className="h6">swimming, rowing, and playing intense PC games to relax</h6>
-            <h6 className="h6">and recharge.</h6>
-            <h6 className={clsx(styles.paddingTop, 'h6')}>I&apos;m looking forward to collaborating and creating something</h6>
-            <h6 className="h6">great!</h6>
-            <h6 className={clsx(styles.paddingTop, 'h6')}>Evangelos Giatsidis.</h6>
+            <h6 className="h6">你好！我是一名来自希腊的 26 岁前端开发者，</h6>
+            <h6 className="h6">热衷于打造令人惊喜的数字体验。我学习了软件工程，</h6>
+            <h6 className="h6">不断加深对产品构建方式的理解，希望做出</h6>
+            <h6 className="h6">简洁、高效的网站与应用。</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>不写代码时，我常从设计世界中寻找灵感。</h6>
+            <h6 className="h6">无论是探索新的色彩组合，还是打磨用户界面，</h6>
+            <h6 className="h6">我都喜欢把创意融入</h6>
+            <h6 className="h6">自己的作品。</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>工作之外，我也喜欢保持活力：</h6>
+            <h6 className="h6">游泳、划船，或玩几局紧张刺激的电脑游戏，</h6>
+            <h6 className="h6">让自己放松充电。</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>期待与你合作，一起创造</h6>
+            <h6 className="h6">真正出色的作品！</h6>
+            <h6 className={clsx(styles.paddingTop, 'h6')}>埃万杰洛斯·贾齐迪斯。</h6>
           </AppearTitle>
         )}
       </div>

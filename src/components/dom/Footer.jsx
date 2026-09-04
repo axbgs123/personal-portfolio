@@ -2,9 +2,9 @@ import AppearTitle from '@src/components/animationComponents/appearTitle/Index';
 import Link from 'next/link';
 import LinkText from '@src/components/animationComponents/linkText/Index';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import archiveLinks from '@src/components/dom/navbar/constants/archiveLinks';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
-import footerLinks from '@src/components/dom/navbar/constants/footerLinks';
 import gsap from 'gsap';
 import menuLinks from '@src/components/dom/navbar/constants/menuLinks';
 import styles from '@src/components/dom/styles/footer.module.scss';
@@ -15,8 +15,9 @@ import { useShallow } from 'zustand/react/shallow';
 import { useStore } from '@src/store';
 import { useWindowSize } from '@darkroom.engineering/hamo';
 
-const Time = dynamic(() => import('@src/components/dom/Time'), { ssr: false });
-const GoTop = dynamic(() => import('@src/components/dom/GoTop'), { ssr: false });
+const GoTop = dynamic(() => import('@src/components/dom/GoTop'), {
+  ssr: false,
+});
 
 function Footer() {
   const isMobile = useIsMobile();
@@ -49,7 +50,10 @@ function Footer() {
               scroller: document?.querySelector('main'),
             });
           } else {
-            gsap.set(footerRef.current, { transform: 'translate(0%, 0%)', height: 'auto' });
+            gsap.set(footerRef.current, {
+              transform: 'translate(0%, 0%)',
+              height: 'auto',
+            });
           }
         }
       };
@@ -69,7 +73,7 @@ function Footer() {
     <section ref={footerRef} className={clsx(styles.root, 'layout-grid-inner')} role="contentinfo">
       <div style={{ gridColumn: isMobile ? '1 / 3' : '1 / 5' }} className={styles.linksContainer}>
         <AppearTitle isFooter>
-          <h6 className={clsx(styles.title, 'h6')}>Sitemap</h6>
+          <h6 className={clsx(styles.title, 'h6')}>网站导航</h6>
           {menuLinks.slice(0, -1).map((link) => (
             <div key={link.title} className={styles.linkTextContainer}>
               <LinkText className={styles.linkText} title={link.title} href={link.href}>
@@ -81,10 +85,10 @@ function Footer() {
       </div>
       <div style={{ gridColumn: isMobile ? '3 / 7' : '5 / 9' }} className={styles.linksContainer}>
         <AppearTitle isFooter>
-          <h6 className={clsx(styles.title, 'h6')}>Follow me</h6>
-          {footerLinks.map((link) => (
+          <h6 className={clsx(styles.title, 'h6')}>仓库</h6>
+          {archiveLinks.map((link) => (
             <div key={link.title} className={styles.linkTextContainer}>
-              <LinkText target className={styles.linkText} title={link.title} href={link.href}>
+              <LinkText className={styles.linkText} title={link.title} href={link.href}>
                 <span className="footer">{link.title}</span>
               </LinkText>
             </div>
@@ -93,10 +97,10 @@ function Footer() {
       </div>
       <div className={styles.emailContaineer}>
         <AppearTitle isFooter>
-          <h4 className={clsx(styles.workWithMe, 'h4')}>Work With Me:</h4>
+          <h4 className={clsx(styles.workWithMe, 'h4')}>与我合作：</h4>
           <div>
             <div className={styles.link}>
-              <Link aria-label="Send email" scroll={false} href="mailto:vaggelisgiats@gmail.com">
+              <Link aria-label="发送邮件" scroll={false} href="mailto:vaggelisgiats@gmail.com">
                 <h4 className={clsx(styles.email, 'h4')}>vaggelisgiats@gmail.com</h4>
               </Link>
               {/* class="link__graphic link__graphic--slide" */}
@@ -105,28 +109,6 @@ function Footer() {
               </svg>
             </div>
           </div>
-        </AppearTitle>
-      </div>
-
-      <div className={styles.middleContainer} style={{ gridColumn: '1 / 9' }}>
-        <AppearTitle isFooter>
-          <div className="p-x">Based in Thessaloniki, Greece</div>
-          <div className={clsx('p-x', styles.middleText)}>
-            Current Time: <Time />
-          </div>
-        </AppearTitle>
-      </div>
-
-      <div className={styles.middleContainer} style={{ gridColumn: '9 / 13' }}>
-        <AppearTitle isFooter>
-          <div className="p-x">Availability</div>
-          <div className={clsx('p-x', styles.middleText)}>Currently available for limited projects</div>
-        </AppearTitle>
-      </div>
-      <div className={styles.middleContainer} style={{ gridColumn: '13 / 17', textAlign: isMobile ? 'left' : 'right' }}>
-        <AppearTitle isFooter>
-          <div className="p-x">© 2025 · Evangelos Giatsidis</div>
-          <div className={clsx('p-x', styles.middleText)}>All Rights Reserved</div>
         </AppearTitle>
       </div>
 

@@ -2,13 +2,17 @@
 import { useEffect, useMemo, useRef } from 'react';
 
 import CustomHead from '@src/components/dom/CustomHead';
+import GeoGrowthProject from '@src/pages/projects/components/geoGrowth/GeoGrowthProject';
 import NextProject from '@src/pages/projects/components/nextProject/NextProject';
+import OperationsAiProject from '@src/pages/projects/components/operationsAi/OperationsAiProject';
 import ProjectDetails from '@src/pages/projects/components/projectDetails/ProjectDetails';
 import ProjectImages from '@src/pages/projects/components/projectsImages/ProjectImages';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import clsx from 'clsx';
+import fs from 'node:fs';
 import { gsap } from 'gsap';
 import projects from '@src/constants/projects';
+import path from 'node:path';
 import styles from '@src/pages/projects/project.module.scss';
 import useIsMobile from '@src/hooks/useIsMobile';
 import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect';
@@ -16,7 +20,7 @@ import { useShallow } from 'zustand/react/shallow';
 import { useStore } from '@src/store';
 import { useWindowSize } from '@darkroom.engineering/hamo';
 
-function Page({ id }) {
+function Page({ id, projectHtml = '', projectToc = [] }) {
   const isMobile = useIsMobile();
   const rightContainerRef = useRef();
   const leftContainerRef = useRef();
@@ -39,7 +43,7 @@ function Page({ id }) {
 
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      if (!isLoading && !isMobile) {
+      if (!['project1', 'project2'].includes(id) && !isLoading && !isMobile) {
         ScrollTrigger.create({
           id: 'project',
           trigger: rightContainerRef.current,
@@ -58,7 +62,7 @@ function Page({ id }) {
       ctx.kill();
       ScrollTrigger.getById('project')?.kill();
     };
-  }, [isMobile, isLoading, windowSize.width]);
+  }, [id, isMobile, isLoading, windowSize.width]);
 
   useEffect(() => {
     if (currentProject) {
@@ -78,36 +82,55 @@ function Page({ id }) {
     };
   }, [currentProject]);
 
-  const seo = useMemo(
-    () => ({
-      title: `Giats - ${currentProject.title} Project`,
-      description: `Check out my work on the ${currentProject.title} project, collaborating with ${currentProject.company}, where I enhanced frontend development with responsive design and optimized user interactions.`,
+  const seo = useMemo(() => {
+    let description = `查看我与${currentProject.company}合作完成的${currentProject.title}。项目通过响应式设计与交互优化，提升了前端体验。`;
+    if (currentProject.id === 'project1') {
+      description = '面向抖音和小红书运营团队的 AI 工作台，串联数据导入、分析诊断、策略资产、内容生成、发布前风控与人工确认。';
+    } else if (currentProject.id === 'project2') {
+      description = '从零规划企业 GEO 内容增长系统，把问题研究、知识证据、内容生产、质量审核与矩阵发布组织成完整工作流。';
+    }
+
+    return {
+      title: `Giats - ${currentProject.title}`,
+      description,
       keywords: [
-        `${currentProject.title} project`,
-        `${currentProject.title} development`,
-        `${currentProject.company} collaboration`,
+        `${currentProject.title}项目`,
+        `${currentProject.title}开发`,
+        `${currentProject.company}合作`,
         `Evangelos Giatsidis ${currentProject.title}`,
         `Giats ${currentProject.title}`,
-        `Frontend development ${currentProject.title}`,
-        `Responsive design ${currentProject.title}`,
-        `User interactions ${currentProject.title}`,
+        `前端开发 ${currentProject.title}`,
+        `响应式设计 ${currentProject.title}`,
+        `用户交互 ${currentProject.title}`,
       ],
-    }),
-    [currentProject],
-  );
+    };
+  }, [currentProject]);
+
+  let projectContent;
+  if (id === 'project1') {
+    projectContent = <OperationsAiProject project={currentProject} projectHtml={projectHtml} projectToc={projectToc} nextProject={projects[projectIndex + 1]} />;
+  } else if (id === 'project2') {
+    projectContent = <GeoGrowthProject project={currentProject} projectHtml={projectHtml} projectToc={projectToc} nextProject={projects[projectIndex + 1]} />;
+  } else {
+    projectContent = (
+      <>
+        <section className={clsx(styles.root, 'layout-grid-inner')}>
+          <div ref={leftContainerRef} className={styles.leftContainer}>
+            <ProjectDetails project={currentProject} />
+          </div>
+          <div ref={rightContainerRef} className={styles.rightContainer}>
+            <ProjectImages project={currentProject} />
+          </div>
+        </section>
+        <NextProject nextProject={projectIndex === projects.length - 1 ? projects[0] : projects[projectIndex + 1]} />
+      </>
+    );
+  }
 
   return (
     <>
       <CustomHead {...seo} />
-      <section className={clsx(styles.root, 'layout-grid-inner')}>
-        <div ref={leftContainerRef} className={styles.leftContainer}>
-          <ProjectDetails project={currentProject} />
-        </div>
-        <div ref={rightContainerRef} className={styles.rightContainer}>
-          <ProjectImages project={currentProject} />
-        </div>
-      </section>
-      <NextProject nextProject={projectIndex === projects.length - 1 ? projects[0] : projects[projectIndex + 1]} />
+      {projectContent}
     </>
   );
 }
@@ -119,7 +142,13 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  return { props: { id: params.id } };
+  if (['project1', 'project2'].includes(params.id)) {
+    const contentDir = path.join(process.cwd(), 'src/content');
+    const projectHtml = fs.readFileSync(path.join(contentDir, `${params.id}.html`), 'utf8');
+    const projectToc = JSON.parse(fs.readFileSync(path.join(contentDir, `${params.id}-toc.json`), 'utf8'));
+    return { props: { id: params.id, projectHtml, projectToc } };
+  }
+  return { props: { id: params.id, projectHtml: '', projectToc: [] } };
 }
 
 export default Page;

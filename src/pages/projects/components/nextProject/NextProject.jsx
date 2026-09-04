@@ -9,12 +9,12 @@ function NextProject({ nextProject }) {
     <>
       <section className={clsx(styles.titleContainer, 'layout-block-inner')}>
         <h1 className={clsx(styles.title, 'h1')}>
-          <AppearByWords>Next Project</AppearByWords>
+          <AppearByWords>下一个项目</AppearByWords>
         </h1>
       </section>
       <section className={clsx(styles.nextRoot, 'layout-block-inner')}>
         <div className={styles.innerContainer}>
-          <Link aria-label={`Go ${nextProject.title}`} id={nextProject.id} scroll={false} href={nextProject.link} className={clsx(styles.card)}>
+          <Link aria-label={`查看${nextProject.title}`} id={nextProject.id} scroll={false} href={nextProject.link} className={clsx(styles.card)}>
             <div className={styles.projectsWrap}>
               <div className={clsx(styles.container, 'layout-grid-inner')}>
                 <div className={styles.projectsDetails}>

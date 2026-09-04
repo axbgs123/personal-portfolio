@@ -62,13 +62,13 @@ function Projects() {
     <>
       <section className={clsx(styles.titleContainer, 'layout-grid-inner')}>
         <h1 className={clsx(styles.title, 'h1')}>
-          <AppearByWords>Selected Projects</AppearByWords>
+          <AppearByWords>精选项目</AppearByWords>
         </h1>
       </section>
       <section ref={rootRef} className={clsx(styles.root, 'layout-block-inner')}>
         <div className={styles.innerContainer}>
           {newProjects.map((project, index) => (
-            <Link aria-label={`Go ${project.title}`} id={project.id} key={project.id} scroll={false} href={project.link} className={clsx(styles.card)}>
+            <Link aria-label={`查看${project.title}`} id={project.id} key={project.id} scroll={false} href={project.link} className={clsx(styles.card)}>
               <div
                 style={
                   !isMobile
@@ -100,7 +100,7 @@ function Projects() {
           ))}
         </div>
         <div className={styles.buttonContainer}>
-          <ButtonLink href="/projects" label="ALL PROJECTS" />
+          <ButtonLink href="/projects" label="全部项目" />
         </div>
       </section>
     </>

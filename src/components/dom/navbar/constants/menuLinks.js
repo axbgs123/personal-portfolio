@@ -1,18 +1,18 @@
 const menuLinks = [
   {
-    title: 'Home',
+    title: '首页',
     href: '/',
   },
   {
-    title: 'About me',
+    title: '关于我',
     href: '/about',
   },
   {
-    title: 'Projects',
+    title: '项目',
     href: '/projects',
   },
   {
-    title: 'Contact',
+    title: '联系我',
     href: undefined,
   },
 ];

@@ -34,7 +34,7 @@ function LinkText({ children, href, svgX, spanX, title, className = undefined, h
 
   return (
     <Link
-      aria-label={`Go ${title}`}
+      aria-label={`前往${title}`}
       target={target ? '_blank' : undefined}
       rel={target ? 'noopener noreferrer' : undefined}
       scroll={false}

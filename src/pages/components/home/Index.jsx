@@ -53,10 +53,17 @@ const performMoves = (rectangles, gridWidth, gridHeight) => {
         moveRect(rect, direction, gridWidth, gridHeight);
         const newPosition = { ...rect };
 
-        const { x, y } = { x: parseFloat(newPosition.x), y: parseFloat(newPosition.y) };
+        const { x, y } = {
+          x: parseFloat(newPosition.x),
+          y: parseFloat(newPosition.y),
+        };
         if (x > -0.5 && x < 90 && y > -0.5 && y < 90 && !isPositionOccupied(rectangles, newPosition)) {
           validMove = true;
-          validMoves.push({ index: newPosition.index, x: newPosition.x, y: newPosition.y });
+          validMoves.push({
+            index: newPosition.index,
+            x: newPosition.x,
+            y: newPosition.y,
+          });
           Object.assign(rectangles[newPosition.index], newPosition);
         } else {
           Object.assign(rect, originalPosition);
@@ -225,14 +232,10 @@ function Home() {
     <section ref={rootRef} className={clsx(styles.root)}>
       <div className={clsx(styles.topContainer, 'layout-grid-inner')}>
         <div className={styles.leftContainer}>
-          <h2 className="h2">Remarkable</h2>
-          <h2 className={clsx('h2', 'bold')}>Virtual Experiences</h2>
+          <h2 className="h2">令人难忘的</h2>
+          <h2 className={clsx('h2', 'bold')}>数字体验</h2>
         </div>
-        {!isMobile && (
-          <h6 className={clsx('h6', styles.rightContainer)}>
-            With years of experience, I create immersive digital environments that elevate your virtual presence. Join me in redefining digital interaction.
-          </h6>
-        )}
+        {!isMobile && <h6 className={clsx('h6', styles.rightContainer)}>凭借多年经验，我打造沉浸式数字环境，让你的线上形象更具感染力。让我们一起重新定义数字交互。</h6>}
       </div>
 
       <div className={styles.bottomContainer}>
@@ -250,12 +253,12 @@ function Home() {
       </div>
       {isMobile && (
         <div className={styles.rightContainerMobile}>
-          <h6 className="h6"> With years of experience, I create immersive digital environments that elevate your virtual presence. Join me in redefining digital interaction.</h6>
+          <h6 className="h6">凭借多年经验，我打造沉浸式数字环境，让你的线上形象更具感染力。让我们一起重新定义数字交互。</h6>
         </div>
       )}
 
       <div ref={infiniteTextRef} className={styles.infiniteContainer}>
-        <InfiniteText text="Scroll Down" length={5} />
+        <InfiniteText text="向下滚动" length={5} />
       </div>
     </section>
   );

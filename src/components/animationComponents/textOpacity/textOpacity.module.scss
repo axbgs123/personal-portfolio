@@ -1,8 +1,11 @@
 @import '@src/styles/functions';
 
 .title {
-  width: 63%;
+  width: 72%;
+  line-height: 1.25;
+
   @include mobile {
     width: 100%;
+    line-height: 1.35;
   }
 }

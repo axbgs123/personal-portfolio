@@ -6,23 +6,28 @@ import { useRef } from 'react';
 
 function TextOpacity({ children, trigger }) {
   const containerRef = useRef();
+  const splitRef = useRef();
 
   const createTextOpacityAnimation = (element, scrollTrigger) => {
-    const splitted = new SplitType(element, { types: 'words' });
-    splitted.words.forEach((word) => gsap.set(word, { opacity: 0 }));
+    const containsChinese = /[\u3400-\u9fff]/.test(element.textContent);
+    const splitted = new SplitType(element, { types: containsChinese ? 'chars' : 'words' });
+    const segments = containsChinese ? splitted.chars : splitted.words;
+    splitRef.current = splitted;
+
+    gsap.set(segments, { opacity: 0, transformOrigin: '50% 50%' });
 
     gsap.fromTo(
-      splitted.words,
+      segments,
       {
         'will-change': 'opacity, transform',
-        z: () => gsap.utils.random(500, 950),
+        z: () => gsap.utils.random(containsChinese ? 120 : 500, containsChinese ? 360 : 950),
         opacity: 0,
-        xPercent: () => gsap.utils.random(-100, 100),
-        yPercent: () => gsap.utils.random(-10, 10),
-        rotationX: () => gsap.utils.random(-90, 90),
+        xPercent: () => gsap.utils.random(containsChinese ? -35 : -100, containsChinese ? 35 : 100),
+        yPercent: () => gsap.utils.random(containsChinese ? -18 : -10, containsChinese ? 18 : 10),
+        rotationX: () => gsap.utils.random(containsChinese ? -45 : -90, containsChinese ? 45 : 90),
       },
       {
-        ease: 'expo',
+        ease: containsChinese ? 'power2.out' : 'expo',
         opacity: 1,
         rotationX: 0,
         rotationY: 0,
@@ -38,8 +43,8 @@ function TextOpacity({ children, trigger }) {
           invalidateOnRefresh: true,
         },
         stagger: {
-          each: 0.006,
-          from: 'random',
+          each: containsChinese ? 0.012 : 0.006,
+          from: containsChinese ? 'start' : 'random',
         },
       },
     );
@@ -53,6 +58,7 @@ function TextOpacity({ children, trigger }) {
 
     return () => {
       ctx.revert();
+      splitRef.current?.revert();
     };
   }, [trigger]);
 

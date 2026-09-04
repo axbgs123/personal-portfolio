@@ -16,7 +16,7 @@ function Quote() {
       <h3 ref={textRef} className={clsx(styles.text, 'h3')}>
         {!isLoading && (
           <TextOpacity textRef={textRef.current} trigger={rootRef.current}>
-            When starting a new project, it&apos;s crucial to choose the appropriate tools. With prior experience in this area, I am confident in selecting the tools that will guide us to success.
+            开始一个新项目时，选对工具至关重要。凭借以往的实践经验，我有信心选择最合适的技术与方法，带领我们走向成功。
           </TextOpacity>
         )}
       </h3>

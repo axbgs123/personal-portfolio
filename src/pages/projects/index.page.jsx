@@ -16,23 +16,23 @@ import { useStore } from '@src/store';
 import { useWindowSize } from '@darkroom.engineering/hamo';
 
 const seo = {
-  title: 'Giats - Projects',
-  description: 'Explore my portfolio to see a range of frontend projects, from responsive websites to web applications. Discover my work with React, Nextjs, React three fiber, Electron and more.',
+  title: 'Giats - 项目',
+  description: '浏览我的前端项目作品，从响应式网站到网页应用，了解我使用 React、Next.js、React Three Fiber 和 Electron 等技术完成的工作。',
   keywords: [
-    'Giats Projects',
-    'Portfolio Showcase',
-    'Frontend Development Examples',
-    'Web Design Portfolio',
-    'Responsive Web Projects',
-    'Web Applications Portfolio',
-    'HTML and CSS Projects',
-    'JavaScript Development',
-    'React Work',
-    'Next.js Projects',
-    'React Three Fiber Projects',
-    'Electron Projects',
-    'Professional Web Development',
-    'Evangelos Giatsidis Projects',
+    'Giats 项目',
+    '作品集展示',
+    '前端开发案例',
+    '网页设计作品集',
+    '响应式网页项目',
+    '网页应用作品集',
+    'HTML 与 CSS 项目',
+    'JavaScript 开发',
+    'React 作品',
+    'Next.js 项目',
+    'React Three Fiber 项目',
+    'Electron 项目',
+    '专业网页开发',
+    '埃万杰洛斯·贾齐迪斯项目',
   ],
 };
 
@@ -81,12 +81,12 @@ function Page() {
     <>
       <CustomHead {...seo} />
       <section className={clsx(styles.titleContainer, 'layout-block-inner')}>
-        <h1 className={clsx(styles.title, 'h1')}>All Projects</h1>
+        <h1 className={clsx(styles.title, 'h1')}>全部项目</h1>
       </section>
       <section ref={rootRef} className={clsx(styles.root, 'layout-block-inner')}>
         <div className={styles.innerContainer}>
           {projects.map((project, index) => (
-            <Link aria-label={`Go ${project.title}`} id={project.id} key={project.id} scroll={false} href={project.link} className={clsx(styles.card)}>
+            <Link aria-label={`查看${project.title}`} id={project.id} key={project.id} scroll={false} href={project.link} className={clsx(styles.card)}>
               <div
                 style={
                   !isMobile

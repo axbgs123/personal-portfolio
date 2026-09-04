@@ -1,0 +1,13 @@
+﻿来源标题,原文链接,发布时间,来源性质,发布平台,内容摘要
+GPT-5.6 正式发布,https://openai.com/index/gpt-5-6/,2026-07-09,官方,OpenAI 官网,OpenAI 发布 GPT-5.6 Sol、Terra 和 Luna，并在 ChatGPT、Codex 与 API 中提供。
+GPT-5.6 的效率与智能设计,https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/,2026-07-29,官方,OpenAI 官网,OpenAI 解释 GPT-5.6 在推理、缓存、工具使用和 agent harness 上的效率优化。
+GPT-5.6 等模型构建同类应用的社区讨论,https://news.ycombinator.com/item?id=48865093,2026-07-25,社区,Hacker News,社区围绕 GPT-5.6 与其他模型的应用构建效果展开讨论。
+Claude Sonnet 5 正式发布,https://www.anthropic.com/news/claude-sonnet-5,2026-06-30,官方,Anthropic 官网,Anthropic 发布 Claude Sonnet 5，强调 agent、工具使用、编码和知识工作的提升。
+Claude Sonnet 5 模型评估报告,https://www.anthropic.com/system-cards,2026-06-30,官方,Anthropic 官网,Anthropic 发布 Sonnet 5 的能力、安全评估与部署说明。
+Claude Sonnet 5 社区讨论,https://news.ycombinator.com/item?id=48736605,2026-06-30,社区,Hacker News,社区重点讨论 Sonnet 5 的速度、成本、推理档位以及与 Opus 的取舍。
+Gemini 3.5 Flash 正式发布,https://blog.google/intl/en-africa/products/explore-get-answers/gemini-3-5/,2026-05-19,官方,Google 官方博客,Google 发布 Gemini 3.5 Flash，定位为面向复杂 agent 工作流的高速模型。
+Google I/O 2026 开发者工具更新,https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/,2026-05-19,官方,Google 官方博客,Google 介绍 Gemini 3.5 Flash、Antigravity、Managed Agents 与 Gemini API 的开发者工作流。
+Gemini 3.5 Flash 社区讨论,https://news.ycombinator.com/item?id=48196570,2026-05-20,社区,Hacker News,社区讨论 Gemini 3.5 Flash 的价格、配额和实际使用体验。
+GitHub Copilot app 技术预览,https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/,2026-05-14,官方,GitHub Blog,GitHub 发布 Copilot app 技术预览，用桌面应用承接 agent 开发、验证和 PR 流程。
+GitHub Copilot app 扩大技术预览,https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app/,2026-06-02,官方,GitHub Blog,GitHub 扩大 Copilot app 可用范围，并加入 canvases、并行会话、浏览器验证和云端自动化。
+GitHub Copilot app 社区反馈,https://www.reddit.com/r/GithubCopilot/comments/1u8f5kt/the_github_copilot_app_is_now_ga/,2026-06-17,社区,Reddit,用户围绕 Copilot app 的可用性、产品变化和实际体验展开讨论。
