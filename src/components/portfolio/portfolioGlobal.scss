@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Portfolio Haas';
+  src: url('/fonts/NeueHaasDisplayRoman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Portfolio Haas';
+  src: url('/fonts/NeueHaasDisplayMedium.woff2') format('woff2');
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Portfolio Haas';
+  src: url('/fonts/NeueHaasDisplayBold.woff2') format('woff2');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  // The approved palette is still monochrome. Vermilion marks a small action
+  // or state; it never replaces full surfaces or the neutral --portfolio-acid.
+  --portfolio-paper: #f6f6f6;
+  --portfolio-ink: #090909;
+  --portfolio-muted: #686868;
+  --portfolio-accent: #d74436;
+  --portfolio-accent-ink: #b83228;
+  --portfolio-accent-on-dark: #ef7768;
+  --portfolio-acid: #d8d8d8;
+  --portfolio-line: #cdcdcd;
+  --portfolio-header-height: 92px;
+  --portfolio-gutter: clamp(24px, 4vw, 72px);
+  --portfolio-font:
+    'Portfolio Haas', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --portfolio-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --portfolio-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --layout-margin: var(--portfolio-gutter);
+}
+html,
+body {
+  font-family: var(--portfolio-font);
+  font-weight: 400;
+  background: #f6f6f6;
+}
+body {
+  user-select: text;
+  -webkit-user-select: text;
+}
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 7px;
+}
+::selection {
+  color: #ffffff;
+  background: var(--portfolio-accent-ink);
+}
+[data-portfolio-content] {
+  min-height: 55vh;
+}
+[data-portfolio-content] section {
+  box-shadow: none;
+  border-radius: 0;
+}
+[data-portfolio-content] > section:first-child {
+  scroll-margin-top: 108px;
+  padding-top: max(8vw, 128px);
+}
+@media (max-width: 760px) {
+  :root {
+    --portfolio-header-height: 76px;
+    --portfolio-gutter: 20px;
+  }
+  [data-portfolio-content] > section:first-child {
+    padding-top: 108px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+  [data-reveal],
+  [data-statement-word] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

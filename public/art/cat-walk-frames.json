@@ -1,0 +1,147 @@
+{
+  "source": "cat-walk-generated-source.png",
+  "frameCount": 8,
+  "cellSize": 384,
+  "baseline": 360,
+  "headSize": 154.45832015037874,
+  "headAnchor": 257.64817330777396,
+  "hitArea": "M180 78H192V84H180ZM180 84H198V90H180ZM318 84H336V90H318ZM180 90H204V96H180ZM312 90H336V96H312ZM180 96H216V102H180ZM306 96H336V102H306ZM180 102H222V108H180ZM300 102H336V108H300ZM180 108H228V114H180ZM246 108H258V114H246ZM264 108H276V114H264ZM294 108H336V114H294ZM180 114H234V120H180ZM246 114H276V120H246ZM288 114H336V120H288ZM180 120H336V126H180ZM180 126H336V132H180ZM180 132H336V138H180ZM180 138H336V144H180ZM180 144H336V150H180ZM42 150H54V156H42ZM180 150H336V156H180ZM30 156H60V162H30ZM180 156H336V162H180ZM12 162H84V168H12ZM180 162H342V168H180ZM6 168H90V174H6ZM174 168H342V174H174ZM6 174H90V180H6ZM174 174H342V180H174ZM6 180H90V186H6ZM174 180H342V186H174ZM6 186H90V192H6ZM174 186H348V192H174ZM6 192H96V198H6ZM174 192H348V198H174ZM12 198H96V204H12ZM174 198H348V204H174ZM12 204H96V210H12ZM174 204H378V210H174ZM12 210H102V216H12ZM174 210H378V216H174ZM18 216H108V222H18ZM174 216H354V222H174ZM18 222H372V228H18ZM24 228H372V234H24ZM24 234H342V240H24ZM366 234H372V240H366ZM30 240H336V246H30ZM36 246H330V252H36ZM48 252H324V258H48ZM54 258H312V264H54ZM66 264H288V270H66ZM66 270H288V276H66ZM66 276H282V282H66ZM66 282H288V288H66ZM66 288H288V294H66ZM60 294H294V300H60ZM54 300H294V306H54ZM48 306H300V312H48ZM42 312H306V318H42ZM42 318H306V324H42ZM42 324H312V330H42ZM36 330H318V336H36ZM36 336H324V342H36ZM36 342H324V348H36ZM36 348H72V354H36ZM78 348H246V354H78ZM252 348H324V354H252ZM42 354H72V360H42ZM84 354H246V360H84ZM258 354H324V360H258Z",
+  "frames": [
+    {
+      "index": 0,
+      "sourceBox": {
+        "left": 83,
+        "top": 108,
+        "width": 342,
+        "height": 276
+      },
+      "scale": 0.9901174368614022,
+      "headWidth": 156,
+      "left": 33,
+      "top": 87,
+      "width": 339,
+      "height": 273,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7895
+    },
+    {
+      "index": 1,
+      "sourceBox": {
+        "left": 55,
+        "top": 111,
+        "width": 312,
+        "height": 273
+      },
+      "scale": 0.9965052912927661,
+      "headWidth": 155,
+      "left": 62,
+      "top": 88,
+      "width": 311,
+      "height": 272,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7820
+    },
+    {
+      "index": 2,
+      "sourceBox": {
+        "left": 33,
+        "top": 114,
+        "width": 327,
+        "height": 270
+      },
+      "scale": 1.0229027824528394,
+      "headWidth": 151,
+      "left": 39,
+      "top": 84,
+      "width": 334,
+      "height": 276,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7746
+    },
+    {
+      "index": 3,
+      "sourceBox": {
+        "left": 69,
+        "top": 111,
+        "width": 342,
+        "height": 273
+      },
+      "scale": 1.0161731588840706,
+      "headWidth": 152,
+      "left": 26,
+      "top": 83,
+      "width": 348,
+      "height": 277,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7793
+    },
+    {
+      "index": 4,
+      "sourceBox": {
+        "left": 74,
+        "top": 55,
+        "width": 350,
+        "height": 274
+      },
+      "scale": 1.0029761048725891,
+      "headWidth": 154,
+      "left": 21,
+      "top": 85,
+      "width": 351,
+      "height": 275,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7717
+    },
+    {
+      "index": 5,
+      "sourceBox": {
+        "left": 44,
+        "top": 62,
+        "width": 327,
+        "height": 268
+      },
+      "scale": 1.0095315042508415,
+      "headWidth": 153,
+      "left": 43,
+      "top": 89,
+      "width": 330,
+      "height": 271,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7943
+    },
+    {
+      "index": 6,
+      "sourceBox": {
+        "left": 21,
+        "top": 61,
+        "width": 353,
+        "height": 268
+      },
+      "scale": 1.0297221343358582,
+      "headWidth": 150,
+      "left": 10,
+      "top": 84,
+      "width": 363,
+      "height": 276,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7533
+    },
+    {
+      "index": 7,
+      "sourceBox": {
+        "left": 64,
+        "top": 59,
+        "width": 333,
+        "height": 270
+      },
+      "scale": 1.0161731588840706,
+      "headWidth": 152,
+      "left": 34,
+      "top": 86,
+      "width": 338,
+      "height": 274,
+      "baseline": 360,
+      "sourceWhitePixelsPreserved": 7718
+    }
+  ]
+}

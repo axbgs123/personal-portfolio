@@ -1,0 +1,352 @@
+.root {
+  --cat-beat: 0;
+  --cat-sway: 0;
+  position: fixed;
+  inset: auto 0 10px;
+  height: 168px;
+  z-index: 72;
+  pointer-events: none;
+  color: #111;
+  opacity: 1;
+  filter: none;
+  isolation: isolate;
+
+  &[data-blocked='true'] {
+    visibility: hidden;
+  }
+  &[data-collapsed='true'] .actor {
+    visibility: hidden;
+  }
+  &[data-piano-stage='true'] .drawing {
+    opacity: 1;
+    pointer-events: none;
+  }
+  &[data-blocked='true'] .actor *,
+  &[data-collapsed='true'] .actor * {
+    animation-play-state: paused !important;
+  }
+}
+
+.actor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 142px;
+  height: 158px;
+  opacity: 1;
+  filter: none;
+  transform: translate3d(
+    var(--cat-x, calc(100vw - 158px)),
+    var(--cat-y, 0px),
+    0
+  );
+}
+.catButton {
+  display: block;
+  width: 136px;
+  height: 148px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  cursor: grab;
+  pointer-events: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  &:active {
+    cursor: grabbing;
+  }
+  &:focus-visible {
+    outline: 1px dashed #868686;
+    outline-offset: 2px;
+    border-radius: 28px;
+  }
+}
+.drawing {
+  display: block;
+  width: 164px;
+  height: 148px;
+  margin-left: -14px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 1;
+  filter: none;
+}
+.sideFacing {
+  transform-origin: 192px 200px;
+}
+.spriteImage {
+  pointer-events: none;
+  opacity: 1;
+  filter: none;
+}
+.spriteHit {
+  // PNG alpha alone does not constrain SVG <image> pointer events.
+  // The contour belongs to the displayed frame, not an all-frame union.
+  pointer-events: fill;
+}
+.root[data-direction='left'] .sideFacing {
+  transform: scaleX(-1);
+}
+.root[data-direction='right'] .sideFacing {
+  transform: scaleX(1);
+}
+.catFallback {
+  display: none;
+  position: absolute;
+  left: 12px;
+  bottom: 25px;
+  padding: 9px 12px;
+  color: #111;
+  background: #f6f6f6;
+  border: 1px solid #a0a0a0;
+  font-size: 12px;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+.root[data-cat-asset='error'] {
+  .drawing {
+    visibility: hidden;
+  }
+  .spriteHit {
+    pointer-events: none;
+  }
+  .catFallback {
+    display: block;
+  }
+}
+.catSpark {
+  position: absolute;
+  left: 65px;
+  top: -2px;
+  color: #777;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 17px;
+}
+.root[data-pose='pounce'] .catSpark,
+.root[data-pose='surprised'] .catSpark {
+  animation: spark 700ms ease-out;
+}
+@keyframes spark {
+  0% {
+    opacity: 0;
+    transform: translateY(5px) scale(0.7);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-9px) scale(0.8);
+  }
+}
+
+.controls {
+  position: fixed;
+  right: 18px;
+  bottom: max(15px, env(safe-area-inset-bottom));
+  pointer-events: auto;
+}
+.more,
+.launcher {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(100 100 100 / 24%);
+  color: #111;
+  background: rgb(246 246 246 / 94%);
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition:
+    background 180ms,
+    color 180ms;
+  &:hover {
+    background: #111;
+    color: #f6f6f6;
+  }
+  &:focus-visible {
+    outline: 2px solid #868686;
+    outline-offset: 3px;
+  }
+}
+.more {
+  width: 37px;
+  height: 37px;
+  opacity: 0.7;
+  &:hover,
+  &:focus-visible,
+  .root[data-controls='true'] & {
+    opacity: 1;
+  }
+}
+.panel {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  width: 230px;
+  max-height: min(420px, calc(100svh - 90px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 17px;
+  background: #f6f6f6;
+  color: #141414;
+  border: 1px solid #b8b8b8;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 10%);
+  font-size: 12px;
+  line-height: 1.65;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 11px;
+    bottom: -5px;
+    width: 8px;
+    height: 8px;
+    background: #f6f6f6;
+    border-right: 1px solid #b8b8b8;
+    border-bottom: 1px solid #b8b8b8;
+    transform: rotate(45deg);
+  }
+  > span {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  p {
+    margin: 8px 0 14px;
+    color: #656565;
+    font-weight: 400;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  button {
+    padding: 6px 0;
+    border: 1px solid #c6c6c6;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    &:hover,
+    &:focus-visible {
+      background: #111;
+      color: #f6f6f6;
+    }
+  }
+  small {
+    display: block;
+    margin-top: 11px;
+    font-size: 10px;
+    color: #777;
+  }
+}
+.instrumentChoice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #d4d4d4;
+  color: #656565;
+  select {
+    width: 100%;
+    min-width: 0;
+    padding: 6px;
+    color: #111;
+    background: #f6f6f6;
+    border: 1px solid #b8b8b8;
+    border-radius: 0;
+    font: inherit;
+    cursor: pointer;
+    &:focus-visible {
+      outline: 2px solid #777;
+      outline-offset: 2px;
+    }
+  }
+}
+.panel .chatEntry {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 8px 10px;
+}
+.launcher {
+  position: fixed;
+  bottom: max(15px, env(safe-area-inset-bottom));
+  right: 18px;
+  width: 37px;
+  height: 37px;
+  pointer-events: auto;
+}
+.launcher[hidden],
+.panel[hidden],
+.controls[hidden] {
+  display: none;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .root {
+    bottom: max(5px, env(safe-area-inset-bottom));
+  }
+  .actor {
+    width: 136px;
+    height: 138px;
+  }
+  .catButton {
+    width: 116px;
+    height: 127px;
+  }
+  .drawing {
+    width: 140px;
+    height: 127px;
+    margin-left: -12px;
+  }
+  .controls {
+    right: 18px;
+    bottom: max(15px, env(safe-area-inset-bottom));
+  }
+  .more {
+    opacity: 0.75;
+    width: 37px;
+    height: 37px;
+  }
+  .panel {
+    width: 213px;
+    small {
+      display: none;
+    }
+  }
+}
+
+.root[data-reduced='true'] {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .root *,
+  .root *::before,
+  .root *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

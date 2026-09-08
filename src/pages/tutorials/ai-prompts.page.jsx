@@ -4,9 +4,9 @@ const page = {
   title: 'AI 提示词',
   eyebrow: 'IMAGE + VIDEO · 精选资料',
   lead: '只留下能直接影响画面与镜头的提示结构。',
-  description: '生图提示词与视频提示词精选资料、通用结构及生成工具入口。',
+  description: '生图提示词资料与视频生成工具链接。',
   keywords: ['AI 提示词', '生图提示词', '视频提示词', 'Midjourney 提示词', 'AI 视频生成'],
-  accent: '#dfe2ff',
+  accent: '#e4e4e4',
   heroWords: ['SUBJECT', 'SCENE', 'LIGHT', 'CAMERA', 'MOTION', 'RHYTHM'],
   stats: [
     { value: '2', label: '提示词分类' },

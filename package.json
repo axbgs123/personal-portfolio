@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "preview:build": "PORTFOLIO_DIST_DIR=.next-content-exhibits-final next build",
+    "preview": "PORTFOLIO_DIST_DIR=.next-content-exhibits-final next start -p 3003",
     "postbuild": "next-sitemap",
     "lint": "next lint"
   },

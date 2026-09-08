@@ -10,7 +10,7 @@ import styles from '@src/pages/tutorials/illustratedTutorials.module.scss';
 function IllustratedTutorialPage({ tutorial, text }) {
   return (
     <>
-      <CustomHead title={`Giats - ${tutorial.title}`} description={`${tutorial.title}图文教程。`} keywords={[tutorial.title, '图文教程']} />
+      <CustomHead title={`陈祉辰｜${tutorial.title}`} description={`${tutorial.title}图文教程。`} keywords={[tutorial.title, '图文教程']} />
       <section className={clsx(styles.detailHero, 'layout-grid-inner')}>
         <div className={clsx(styles.breadcrumb, 'p-x')}>
           <Link scroll={false} href="/tutorials/illustrated">
@@ -45,7 +45,12 @@ function IllustratedTutorialPage({ tutorial, text }) {
 }
 
 export function getStaticPaths() {
-  return { paths: illustratedTutorials.map((tutorial) => ({ params: { slug: tutorial.slug } })), fallback: false };
+  return {
+    paths: illustratedTutorials.map((tutorial) => ({
+      params: { slug: tutorial.slug },
+    })),
+    fallback: false,
+  };
 }
 
 export function getStaticProps({ params }) {

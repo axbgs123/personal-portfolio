@@ -4,15 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NextProject from '@src/pages/projects/components/nextProject/NextProject';
 import clsx from 'clsx';
+import navigateToReadingSection from '@src/pages/tutorials/components/navigateToReadingSection';
 import readerStyles from '@src/pages/tutorials/codexCourse.module.scss';
 import styles from '@src/pages/projects/components/geoGrowth/geoGrowthProject.module.scss';
-import { useShallow } from 'zustand/react/shallow';
-import { useStore } from '@src/store';
 
 function GeoGrowthProject({ project, projectHtml, projectToc, nextProject }) {
   const allSections = useMemo(() => projectToc.flatMap((section) => [section, ...section.children]), [projectToc]);
   const [activeSection, setActiveSection] = useState(allSections[0]?.id);
-  const [lenis] = useStore(useShallow((state) => [state.lenis]));
 
   useEffect(() => {
     const root = document.querySelector('main');
@@ -30,17 +28,7 @@ function GeoGrowthProject({ project, projectHtml, projectToc, nextProject }) {
   }, [allSections]);
 
   const navigateToSection = (event, id) => {
-    event.preventDefault();
-    const target = document.getElementById(id);
-    if (!target) return;
-
-    const offset = window.innerWidth <= 768 ? -window.innerWidth * 0.28 : -100;
-    if (lenis) {
-      lenis.scrollTo(target, { offset, duration: 1.2 });
-    } else {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setActiveSection(id);
+    if (navigateToReadingSection(event, id)) setActiveSection(id);
   };
 
   return (
@@ -55,13 +43,15 @@ function GeoGrowthProject({ project, projectHtml, projectToc, nextProject }) {
         </div>
 
         <div className={readerStyles.heroCopy}>
-          <div className={clsx(readerStyles.eyebrow, 'p-l')}>企业内部孵化项目 · GEO 方法与产品策划 · 2026</div>
-          <h1 className={clsx(readerStyles.title, styles.title, 'h1')}>百言 GEO 内容增长系统</h1>
+          <div className={clsx(readerStyles.eyebrow, 'p-l')}>GEO 方法与产品策划负责人 · 2026</div>
+          <h1 className={clsx(readerStyles.title, styles.title, 'h1')}>
+            <span>百言 GEO</span> <span>内容增长系统</span>
+          </h1>
           <p className={clsx(readerStyles.lead, 'h6')}>把问题研究、知识证据、内容生产、质量审核与矩阵发布连接成可持续迭代的增长工作流。</p>
         </div>
 
         <div className={readerStyles.heroImage}>
-          <Image priority src="/project2/geo/overview.webp" fill sizes="(max-width: 768px) 100vw, 92vw" alt="经过脱敏的百言 GEO 内容增长系统运行总览" />
+          <Image priority src={project.img} fill sizes="(max-width: 768px) 100vw, 92vw" alt="AI 生成概念封面：知识印刷块与逐步展开的内容矩阵" />
         </div>
 
         <div className={styles.stats}>
@@ -75,7 +65,7 @@ function GeoGrowthProject({ project, projectHtml, projectToc, nextProject }) {
           </div>
           <div>
             <span className="h4">125</span>
-            <span className="p-x">知识记录</span>
+            <span className="p-x">知识资产</span>
           </div>
           <div>
             <span className="h4">45</span>

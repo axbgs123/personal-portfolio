@@ -1,0 +1,681 @@
+.page {
+  --ink: #090909;
+  --paper: #f6f6f6;
+  --accent: #dedede;
+  position: relative;
+  z-index: 1;
+  color: var(--paper);
+  background: var(--ink);
+  font-family: var(--portfolio-font);
+  font-weight: 400;
+  user-select: text;
+
+  a {
+    cursor: pointer;
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 8px;
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  min-height: 108svh;
+  overflow: hidden;
+  padding: 146px var(--portfolio-gutter) 0;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.heroTop {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.nameLine {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 5vw;
+
+  h1 {
+    display: flex;
+    padding: 0 0.04em 0.09em 0;
+    overflow: hidden;
+    font-size: clamp(100px, 22.3vw, 400px);
+    font-weight: 550;
+    line-height: 1.12;
+    letter-spacing: -0.07em;
+    > span {
+      display: block;
+    }
+  }
+}
+
+.nameEn {
+  display: block;
+  padding-bottom: 4.1vw;
+  padding-right: 1vw;
+  font-size: clamp(16px, 2.4vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.heroLower {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  margin-top: 0.5vw;
+  padding-bottom: 7vw;
+}
+
+.heroArrow {
+  padding-left: 1vw;
+  font-size: clamp(50px, 7vw, 115px);
+  line-height: 1;
+  font-weight: 450;
+}
+
+.heroStatement {
+  max-width: 600px;
+  > p:last-child {
+    margin-top: 29px;
+    font-size: clamp(26px, 3vw, 49px);
+    line-height: 1.55;
+    letter-spacing: -0.05em;
+  }
+}
+
+.heroRole {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.heroBottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 0 8vw;
+  font-size: 12px;
+  line-height: 1.7;
+  > span {
+    color: #727272;
+  }
+  a {
+    display: inline-flex;
+    gap: 32px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #09090955;
+    &:hover {
+      border-color: var(--ink);
+    }
+  }
+}
+
+.heroOutline {
+  position: absolute;
+  left: 16vw;
+  bottom: -11vw;
+  z-index: 0;
+  width: max-content;
+  color: transparent;
+  -webkit-text-stroke: 1px #090909;
+  opacity: 0.1;
+  font-size: 32vw;
+  line-height: 1;
+  letter-spacing: -0.065em;
+  font-weight: 550;
+  pointer-events: none;
+  user-select: none;
+}
+
+.resumeLayout {
+  --resume-surface: #101010;
+  --resume-text: #f6f6f6;
+  --resume-muted: #b8b8b8;
+  --resume-soft: #999999;
+  --resume-line: #ffffff38;
+  --resume-faint: #ffffff1a;
+  --resume-plane: #767676;
+  --accent: #dedede;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.55fr);
+  gap: clamp(70px, 11vw, 180px);
+  margin: 0 auto;
+  padding: 120px var(--portfolio-gutter) 112px;
+  color: var(--resume-text);
+  background: var(--resume-surface);
+
+  // Keep one high-contrast ink palette; scroll changes only this dark surface.
+  > .sidebar,
+  > .resumeBody {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.resumeAtmosphere {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: clip;
+  pointer-events: none;
+}
+
+.chapterStage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.chapterPlane {
+  position: absolute;
+  inset: -25% -5% -20% 8%;
+  background: var(--resume-plane);
+  clip-path: polygon(78% 0, 100% 0, 25% 100%, 0 100%);
+  opacity: 0.1;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.sidebarInner {
+  position: sticky;
+  top: calc(var(--portfolio-header-height, 92px) + 45px);
+}
+
+.sideStatement {
+  font-size: clamp(38px, 4.2vw, 67px);
+  line-height: 1.4;
+  letter-spacing: -0.055em;
+  margin-bottom: 62px;
+  > span {
+    color: var(--accent);
+  }
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 185px;
+    gap: 18px;
+    font-size: 14px;
+    color: var(--resume-soft);
+    > span {
+      transition: transform 300ms ease;
+    }
+    &:hover,
+    &[aria-current='location'] {
+      color: var(--resume-text);
+    }
+    &:hover > span,
+    &[aria-current='location'] > span {
+      transform: translate(4px, 4px);
+      color: var(--accent);
+    }
+  }
+}
+
+.chapterProgress {
+  width: 185px;
+  height: 1px;
+  margin-top: 34px;
+  background: var(--resume-line);
+  overflow: hidden;
+  i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--resume-text);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+
+.sideNote {
+  margin-top: 36px;
+  font-size: 12px;
+  line-height: 2;
+  color: var(--resume-soft);
+}
+.sideProjectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 26px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--resume-line);
+  font-size: 12px;
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.resumeBody {
+  min-width: 0;
+}
+.resumeSection {
+  padding: 0;
+  margin: 0 0 120px;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  scroll-margin-top: calc(var(--portfolio-header-height, 92px) + 40px);
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--resume-line);
+  h2 {
+    font-size: clamp(28px, 3vw, 46px);
+    font-weight: 450;
+    letter-spacing: -0.055em;
+  }
+  > span {
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    color: var(--resume-soft);
+  }
+}
+
+.experience {
+  padding: 45px 0 54px;
+  border-bottom: 1px solid var(--resume-faint);
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  ul {
+    display: grid;
+    gap: 17px;
+    margin-top: 32px;
+  }
+  li {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--resume-muted);
+  }
+}
+
+.experienceMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--resume-soft);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.experienceTitle {
+  margin-top: 27px;
+  h3 {
+    font-size: clamp(26px, 2.65vw, 41px);
+    line-height: 1.4;
+    font-weight: 450;
+    letter-spacing: -0.045em;
+  }
+  p {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--accent);
+  }
+}
+
+.experienceSummary {
+  margin-top: 25px;
+  max-width: 680px;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: -0.025em;
+}
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 32px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--resume-line);
+  font-size: 12px;
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+}
+
+.education {
+  padding-top: 42px;
+  h3 {
+    margin-top: 28px;
+    font-size: clamp(30px, 3vw, 46px);
+    line-height: 1.5;
+    font-weight: 450;
+    letter-spacing: -0.04em;
+  }
+}
+.educationDate {
+  font-size: 11px;
+  color: var(--resume-soft);
+}
+.degree {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.courseList {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 20px;
+  margin-top: 34px;
+  color: var(--resume-muted);
+  font-size: 14px;
+  line-height: 2;
+  > span {
+    color: var(--resume-soft);
+  }
+}
+
+.capabilities {
+  display: block;
+}
+.capability {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 37px 0 39px;
+  border-bottom: 1px solid var(--resume-faint);
+  h3 {
+    font-size: clamp(27px, 2.8vw, 42px);
+    font-weight: 450;
+    line-height: 1.5;
+    letter-spacing: -0.045em;
+  }
+  p {
+    max-width: 560px;
+    margin: 21px 0 23px;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--resume-muted);
+  }
+  > span {
+    font-size: 11px;
+    line-height: 1.9;
+    color: var(--resume-soft);
+  }
+}
+
+.contactLine {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  p {
+    max-width: 540px;
+    font-size: clamp(27px, 3vw, 43px);
+    line-height: 1.6;
+    letter-spacing: -0.05em;
+  }
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 44px;
+    padding: 0 0 11px;
+    border-bottom: 1px solid var(--resume-line);
+    font-size: 14px;
+  }
+  a > span {
+    color: var(--accent);
+    font-size: 21px;
+    transition: transform 250ms ease;
+  }
+  a:hover > span {
+    transform: translate(4px, -4px);
+  }
+}
+
+@media (max-width: 1050px) {
+  .resumeLayout {
+    gap: 6vw;
+    grid-template-columns: minmax(200px, 0.8fr) minmax(0, 1.55fr);
+  }
+  .sideStatement {
+    font-size: 39px;
+  }
+  .experienceTitle h3 {
+    font-size: 28px;
+  }
+  .experienceSummary {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    min-height: 92svh;
+    padding: 116px var(--portfolio-gutter) 0;
+  }
+  .heroTop {
+    font-size: 11px;
+  }
+  .nameLine {
+    padding-top: 58px;
+    display: block;
+  }
+  .nameLine h1 {
+    font-size: 29vw;
+    padding-bottom: 0.12em;
+  }
+  .nameEn {
+    position: absolute;
+    right: 0;
+    bottom: -41px;
+    padding: 0;
+    font-size: 15px;
+    text-align: right;
+    line-height: 1.12;
+  }
+  .heroLower {
+    grid-template-columns: 0.25fr 1fr;
+    gap: 25px;
+    margin-top: 94px;
+    padding-bottom: 50px;
+  }
+  .heroArrow {
+    font-size: 44px;
+    padding: 0;
+  }
+  .heroRole {
+    font-size: 11px;
+  }
+  .heroStatement > p:last-child {
+    font-size: 23px;
+    line-height: 1.65;
+    margin-top: 18px;
+    letter-spacing: -0.045em;
+  }
+  .heroBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    font-size: 10px;
+    padding-bottom: 88px;
+  }
+  .heroBottom a {
+    font-size: 11px;
+    gap: 20px;
+  }
+  .heroOutline {
+    font-size: 50vw;
+    left: 5vw;
+    bottom: -10vw;
+    opacity: 0.08;
+  }
+  .resumeLayout {
+    display: block;
+    padding: 74px var(--portfolio-gutter) 80px;
+  }
+  .sidebar {
+    margin-bottom: 74px;
+  }
+  .sidebarInner {
+    position: static;
+  }
+  .sideStatement {
+    font-size: 14vw;
+    margin-bottom: 35px;
+    line-height: 1.25;
+  }
+  .sidebar nav {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .sidebar nav a {
+    font-size: 11px;
+    gap: 10px;
+  }
+  .chapterProgress {
+    display: none;
+  }
+  .chapterPlane {
+    inset-inline: -40% -5%;
+    opacity: 0.08;
+  }
+  .sideNote,
+  .sideProjectLink {
+    display: none;
+  }
+  .resumeSection {
+    margin-bottom: 85px;
+    scroll-margin-top: calc(var(--portfolio-header-height, 76px) + 30px);
+  }
+  .sectionHeading {
+    padding-bottom: 23px;
+    gap: 12px;
+  }
+  .sectionHeading h2 {
+    font-size: 30px;
+  }
+  .sectionHeading > span {
+    font-size: 8px;
+  }
+  .experience {
+    padding: 32px 0 40px;
+  }
+  .experienceMeta {
+    font-size: 10px;
+  }
+  .experienceTitle {
+    margin-top: 24px;
+  }
+  .experienceTitle h3 {
+    font-size: 27px;
+  }
+  .experienceTitle p {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+  .experienceSummary {
+    font-size: 18px;
+    margin-top: 22px;
+  }
+  .experience ul {
+    margin-top: 24px;
+    gap: 16px;
+  }
+  .experience li {
+    font-size: 13px;
+    line-height: 1.95;
+  }
+  .textLink {
+    font-size: 11px;
+    margin-top: 28px;
+    gap: 20px;
+  }
+  .education {
+    padding-top: 31px;
+  }
+  .education h3 {
+    font-size: 32px;
+    margin-top: 24px;
+  }
+  .degree {
+    font-size: 14px;
+  }
+  .courseList {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 25px;
+    font-size: 13px;
+  }
+  .capability {
+    padding: 29px 0 32px;
+  }
+  .capability h3 {
+    font-size: 28px;
+  }
+  .capability p {
+    font-size: 13px;
+    margin-top: 16px;
+  }
+  .capability > span {
+    font-size: 10px;
+  }
+  .contactLine {
+    gap: 25px;
+  }
+  .contactLine p {
+    font-size: 29px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page a,
+  .page a > span {
+    transition: none;
+  }
+  .page [data-about-letter],
+  .page [data-about-intro],
+  .page [data-about-reveal],
+  .heroOutline {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .heroOutline {
+    opacity: 0.1 !important;
+  }
+  .chapterPlane {
+    transform: none !important;
+    will-change: auto;
+  }
+  .resumeLayout {
+    --resume-surface: #101010;
+  }
+  .chapterProgress {
+    display: none;
+  }
+}

@@ -157,14 +157,14 @@ function Loader() {
       <div className={styles.innerContainer}>
         <div className={styles.fullNameContainer}>
           <h2 ref={fullNameRef} className={clsx(styles.fullName, 'h2')}>
-            {introOut ? '加载中' : '埃万杰洛斯·贾齐迪斯'}
+            {introOut ? '加载中' : '陈祉辰'}
           </h2>
         </div>
 
         {!introOut && (
           <div className={styles.shortNameContainer}>
             <h2 ref={shortNameRef} className={clsx(styles.shortName, 'h2')}>
-              叫我 Giats 就好
+              AI 产品经理 / AI 应用实践者
             </h2>
           </div>
         )}

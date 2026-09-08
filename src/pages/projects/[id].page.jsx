@@ -13,6 +13,7 @@ import fs from 'node:fs';
 import { gsap } from 'gsap';
 import projects from '@src/constants/projects';
 import path from 'node:path';
+import withImageDimensions from '@src/lib/withImageDimensions';
 import styles from '@src/pages/projects/project.module.scss';
 import useIsMobile from '@src/hooks/useIsMobile';
 import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect';
@@ -91,15 +92,15 @@ function Page({ id, projectHtml = '', projectToc = [] }) {
     }
 
     return {
-      title: `Giats - ${currentProject.title}`,
+      title: `陈祉辰｜${currentProject.title}`,
       description,
       keywords: [
         `${currentProject.title}项目`,
         `${currentProject.title}开发`,
         `${currentProject.company}合作`,
-        `Evangelos Giatsidis ${currentProject.title}`,
-        `Giats ${currentProject.title}`,
-        `前端开发 ${currentProject.title}`,
+        `陈祉辰 ${currentProject.title}`,
+        `AI 产品经理 ${currentProject.title}`,
+        `AI 产品 ${currentProject.title}`,
         `响应式设计 ${currentProject.title}`,
         `用户交互 ${currentProject.title}`,
       ],
@@ -108,9 +109,9 @@ function Page({ id, projectHtml = '', projectToc = [] }) {
 
   let projectContent;
   if (id === 'project1') {
-    projectContent = <OperationsAiProject project={currentProject} projectHtml={projectHtml} projectToc={projectToc} nextProject={projects[projectIndex + 1]} />;
+    projectContent = <OperationsAiProject project={currentProject} projectHtml={projectHtml} projectToc={projectToc} nextProject={projects[(projectIndex + 1) % projects.length]} />;
   } else if (id === 'project2') {
-    projectContent = <GeoGrowthProject project={currentProject} projectHtml={projectHtml} projectToc={projectToc} nextProject={projects[projectIndex + 1]} />;
+    projectContent = <GeoGrowthProject project={currentProject} projectHtml={projectHtml} projectToc={projectToc} nextProject={projects[(projectIndex + 1) % projects.length]} />;
   } else {
     projectContent = (
       <>
@@ -144,7 +145,7 @@ export async function getStaticProps(context) {
   const { params } = context;
   if (['project1', 'project2'].includes(params.id)) {
     const contentDir = path.join(process.cwd(), 'src/content');
-    const projectHtml = fs.readFileSync(path.join(contentDir, `${params.id}.html`), 'utf8');
+    const projectHtml = await withImageDimensions(fs.readFileSync(path.join(contentDir, `${params.id}.html`), 'utf8'));
     const projectToc = JSON.parse(fs.readFileSync(path.join(contentDir, `${params.id}-toc.json`), 'utf8'));
     return { props: { id: params.id, projectHtml, projectToc } };
   }

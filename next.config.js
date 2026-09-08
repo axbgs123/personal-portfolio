@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Separate preview output keeps the last production preview intact while iterating.
+  distDir: process.env.PORTFOLIO_DIST_DIR || '.next',
   pageExtensions: ['page.jsx'],
   experimental: {
     // optimizeCss: true,

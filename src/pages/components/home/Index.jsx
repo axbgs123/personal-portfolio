@@ -232,10 +232,10 @@ function Home() {
     <section ref={rootRef} className={clsx(styles.root)}>
       <div className={clsx(styles.topContainer, 'layout-grid-inner')}>
         <div className={styles.leftContainer}>
-          <h2 className="h2">令人难忘的</h2>
-          <h2 className={clsx('h2', 'bold')}>数字体验</h2>
+          <h2 className="h2">让 AI 真正</h2>
+          <h2 className={clsx('h2', 'bold')}>进入业务</h2>
         </div>
-        {!isMobile && <h6 className={clsx('h6', styles.rightContainer)}>凭借多年经验，我打造沉浸式数字环境，让你的线上形象更具感染力。让我们一起重新定义数字交互。</h6>}
+        {!isMobile && <h6 className={clsx('h6', styles.rightContainer)}>陈祉辰｜AI 产品经理。聚焦 Agent、知识库与内容工作流，把复杂能力整理成可执行、可审核、可迭代的产品。</h6>}
       </div>
 
       <div className={styles.bottomContainer}>
@@ -253,7 +253,7 @@ function Home() {
       </div>
       {isMobile && (
         <div className={styles.rightContainerMobile}>
-          <h6 className="h6">凭借多年经验，我打造沉浸式数字环境，让你的线上形象更具感染力。让我们一起重新定义数字交互。</h6>
+          <h6 className="h6">陈祉辰｜AI 产品经理。聚焦 Agent、知识库与内容工作流，把复杂能力整理成可执行、可审核、可迭代的产品。</h6>
         </div>
       )}
 

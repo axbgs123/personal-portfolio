@@ -44,11 +44,11 @@ function Navbar() {
       <header className={styles.root} role="banner">
         <div className={styles.innerHeader}>
           <Link onClick={goToTop} aria-label="返回首页" scroll={false} href="/">
-            <h4 className={clsx('bold', 'h4')}>GIATS</h4>
+            <h4 className={clsx('bold', 'h4')}>ZHICHEN</h4>
           </Link>
 
           <div className={styles.rightContainer}>
-            {!isMobile && <ButtonLink href="mailto:vaggelisgiats@gmail.com" label="与我联系" />}
+            {!isMobile && <ButtonLink href="mailto:2907107669@qq.com" label="与我联系" />}
             <MenuButton />
           </div>
         </div>

@@ -85,7 +85,7 @@ function Footer() {
       </div>
       <div style={{ gridColumn: isMobile ? '3 / 7' : '5 / 9' }} className={styles.linksContainer}>
         <AppearTitle isFooter>
-          <h6 className={clsx(styles.title, 'h6')}>仓库</h6>
+          <h6 className={clsx(styles.title, 'h6')}>内容与作品</h6>
           {archiveLinks.map((link) => (
             <div key={link.title} className={styles.linkTextContainer}>
               <LinkText className={styles.linkText} title={link.title} href={link.href}>
@@ -100,8 +100,8 @@ function Footer() {
           <h4 className={clsx(styles.workWithMe, 'h4')}>与我合作：</h4>
           <div>
             <div className={styles.link}>
-              <Link aria-label="发送邮件" scroll={false} href="mailto:vaggelisgiats@gmail.com">
-                <h4 className={clsx(styles.email, 'h4')}>vaggelisgiats@gmail.com</h4>
+              <Link aria-label="发送邮件" scroll={false} href="mailto:2907107669@qq.com">
+                <h4 className={clsx(styles.email, 'h4')}>2907107669@qq.com</h4>
               </Link>
               {/* class="link__graphic link__graphic--slide" */}
               <svg className={clsx(styles.linkGraphic)} width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -113,7 +113,7 @@ function Footer() {
       </div>
 
       <div className={styles.giats}>
-        <span>GIATS</span>
+        <span>CHEN ZHICHEN</span>
       </div>
       <div className={styles.goToTop}>
         <GoTop />

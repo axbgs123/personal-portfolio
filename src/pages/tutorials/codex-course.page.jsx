@@ -6,14 +6,13 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import fs from 'node:fs';
 import path from 'node:path';
+import withImageDimensions from '@src/lib/withImageDimensions';
 import styles from '@src/pages/tutorials/codexCourse.module.scss';
-import { useShallow } from 'zustand/react/shallow';
-import { useStore } from '@src/store';
+import navigateToReadingSection from '@src/pages/tutorials/components/navigateToReadingSection';
 
 function CodexCoursePage({ courseHtml, courseToc }) {
   const allSections = useMemo(() => courseToc.flatMap((section) => [section, ...section.children]), [courseToc]);
   const [activeSection, setActiveSection] = useState(allSections[0]?.id);
-  const [lenis] = useStore(useShallow((state) => [state.lenis]));
 
   useEffect(() => {
     const root = document.querySelector('main');
@@ -31,19 +30,13 @@ function CodexCoursePage({ courseHtml, courseToc }) {
   }, [allSections]);
 
   const navigateToSection = (event, id) => {
-    event.preventDefault();
-    const target = document.getElementById(id);
-    if (target && lenis) {
-      const offset = window.innerWidth <= 768 ? -window.innerWidth * 0.28 : -100;
-      lenis.scrollTo(target, { offset, duration: 1.2 });
-      setActiveSection(id);
-    }
+    if (navigateToReadingSection(event, id)) setActiveSection(id);
   };
 
   return (
     <>
       <CustomHead
-        title="Giats - Codex 视频课配套资料"
+        title="陈祉辰｜Codex 视频课配套资料"
         description="Codex 视频课完整配套资料，覆盖安装、Skill、办公自动化、内容生产、浏览器、Computer Use、多智能体和飞书 CLI。"
         keywords={['Codex 教程', 'Codex 视频课配套资料', 'Skill', 'Computer Use', '多智能体']}
       />
@@ -59,7 +52,10 @@ function CodexCoursePage({ courseHtml, courseToc }) {
 
         <div className={styles.heroCopy}>
           <div className={clsx(styles.eyebrow, 'p-l')}>已完结 · 完整课程资料</div>
-          <h1 className={clsx(styles.title, 'h1')}>Codex 视频课配套资料</h1>
+          <h1 className={clsx(styles.title, 'h1')}>
+            <span>Codex 视频课</span>
+            <span>配套资料</span>
+          </h1>
           <p className={clsx(styles.lead, 'h6')}>从第一次打开 Codex，到把复杂工作拆给多个智能体。</p>
         </div>
 
@@ -145,7 +141,7 @@ function CodexCoursePage({ courseHtml, courseToc }) {
 
 export async function getStaticProps() {
   const contentDir = path.join(process.cwd(), 'src/content');
-  const courseHtml = fs.readFileSync(path.join(contentDir, 'codex-course.html'), 'utf8');
+  const courseHtml = await withImageDimensions(fs.readFileSync(path.join(contentDir, 'codex-course.html'), 'utf8'));
   const courseToc = JSON.parse(fs.readFileSync(path.join(contentDir, 'codex-course-toc.json'), 'utf8'));
   return { props: { courseHtml, courseToc } };
 }

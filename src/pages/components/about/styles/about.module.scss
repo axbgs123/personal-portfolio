@@ -64,11 +64,68 @@
         height: 110vw;
         grid-column: 1 / 7;
       }
-      > img {
+      .profilePlate {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: calc(var(--layout-columns-gap) * 1.25);
+        color: #edf5f0;
+        background: radial-gradient(circle at 78% 22%, rgba(216, 244, 109, 0.34), transparent 28%), linear-gradient(145deg, #102821 0%, #173c31 55%, #0b1915 100%);
+        border-radius: calc(var(--layout-columns-gap) * 1);
         @include mobile {
           border-radius: calc(var(--layout-columns-gap) * 0.5);
         }
-        border-radius: calc(var(--layout-columns-gap) * 1);
+
+        &:after {
+          position: absolute;
+          right: -12%;
+          bottom: 16%;
+          width: 68%;
+          aspect-ratio: 1;
+          content: '';
+          border: 1px solid rgba(237, 245, 240, 0.35);
+          border-radius: 50%;
+          box-shadow:
+            0 0 0 4vw rgba(237, 245, 240, 0.035),
+            0 0 0 8vw rgba(237, 245, 240, 0.025);
+        }
+
+        .plateEyebrow {
+          position: relative;
+          z-index: 1;
+          font-size: max(11px, 0.78vw);
+          letter-spacing: 0.13em;
+        }
+
+        > strong {
+          position: relative;
+          z-index: 1;
+          font-size: 5.1vw;
+          font-weight: 500;
+          line-height: 0.94;
+          letter-spacing: -0.06em;
+          @include mobile {
+            font-size: 11vw;
+          }
+        }
+
+        .plateFlow {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          gap: 0.55vw;
+          font-size: max(12px, 0.9vw);
+
+          i {
+            width: 1.4vw;
+            height: 1px;
+            background: #dff46d;
+          }
+        }
       }
     }
   }

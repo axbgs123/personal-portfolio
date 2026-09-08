@@ -6,7 +6,7 @@ import styles from '@src/pages/tutorials/documentLibrary.module.scss';
 function AiToolDocumentPage({ document }) {
   return (
     <>
-      <CustomHead title={`Giats - ${document.title}`} description={`${document.title}原始资料。`} keywords={[document.title, 'AI 工具']} />
+      <CustomHead title={`陈祉辰｜${document.title}`} description={`${document.title}原始资料。`} keywords={[document.title, 'AI 工具']} />
       <section className={styles.reader}>
         <div className={styles.readerBar}>
           <div>

@@ -1,12 +1,12 @@
 const projects = [
   {
     id: 'project3',
-    title: '项目三',
+    title: '直播切片文案生产工具',
     img: '/project3/project3.webp',
     link: '/projects/project3',
-    date: '2023',
+    date: '2024 — 2026',
     liveLink: 'https://www.example.com/',
-    company: '公司二',
+    company: '个人摄影摄像工作室',
     primary: '#2D2D2D',
     accentColor: '#FCFBF7',
     secondary: '#F2EEE7',
@@ -62,18 +62,18 @@ const projects = [
       },
     ],
     desc: [
-      '这是一个融合视觉表达与前端工程的数字体验项目，重点呈现品牌内容与核心功能。',
-      '项目采用响应式布局和流畅动效，在不同设备上保持一致、直观的使用体验。',
-      '通过组件化开发与性能优化，兼顾设计品质、加载速度和后续维护效率。',
+      '针对直播切片业务中多账号、多商品、多素材导致的文案生产低效问题，设计标准化内容生产工具。',
+      '将 RAG 知识库、结构化输入、内容风控与剪映导出串成一条可复用工作流。',
+      '工具累计支持发布 500+ 条视频，并将重复环节进一步沉淀为 Skill 与 Workflow。',
     ],
   },
   {
     id: 'project4',
-    title: '项目四',
+    title: '企业 AI 自动化与知识库',
     img: '/project4/project4.webp',
     link: '/projects/project4',
     date: '2024',
-    company: '公司一',
+    company: '企业 AI 实践',
     liveLink: undefined,
     primary: '#263745',
     accentColor: '#f0f4f1',
@@ -143,7 +143,7 @@ const projects = [
   },
   {
     id: 'project5',
-    title: '项目五',
+    title: '创亿鸭 AI 视频定制流程',
     img: '/project5/project5.webp',
     link: '/projects/project5',
     date: '2024',
@@ -217,19 +217,26 @@ const projects = [
   },
   {
     id: 'project1',
-    title: '运营 AI 平台',
-    img: '/project1/project1-art-v5.webp',
+    title: 'AI 运营智能体与内容分析生成平台',
+    category: 'AI 产品 · 运营工作台',
+    role: '产品负责人 / AI 协作开发',
+    summary: '面向抖音和小红书运营团队，从数据导入、分析诊断到内容生成，把分散的运营动作连接成一套可追溯的工作流程。',
+    decisions: [
+      { title: '先批准，再执行', text: '将智能体建议、执行计划与任务操作分开；人工确认后执行，并持久化保留对话和任务记录。' },
+      { title: '让生成依托运营资产', text: '将爆款素材、账号风格和事实资料分开管理，结合规则、OCR 与平台隔离知识库做发布前检查。' },
+    ],
+    img: '/art/operations-cover.webp',
     link: '/projects/project1',
     date: '2026',
     company: '个人产品项目',
     liveLink: undefined,
-    primary: '#12363A',
-    accentColor: '#EAF4F2',
-    secondary: '#F3F8F7',
-    fillColor: '#D9F0E9',
-    menuColor: '#12363A',
-    menuFontColor: '#F3F8F7',
-    fluidColor: '#53B9A5',
+    primary: '#28282b',
+    accentColor: '#f0f4f1',
+    secondary: '#f0f4f1',
+    fillColor: '#dff46d',
+    menuColor: '#28282b',
+    menuFontColor: '#f0f4f1',
+    fluidColor: '#dff46d',
     images: [
       { src: '/project1/1.webp', tag: 'screenshot', width: 1280, height: 994 },
       { src: '/project1/2.webp', tag: 'screenshot', width: 1440, height: 1413 },
@@ -291,17 +298,24 @@ const projects = [
   {
     id: 'project2',
     title: '百言 GEO 内容增长系统',
-    img: '/project2/project2-art.webp',
+    category: 'GEO · 内容增长',
+    role: 'GEO 方法与产品策划负责人',
+    summary: '针对企业资料分散、内容生产与多平台分发脱节，建立从问题研究到分发收录、测量迭代的 GEO 内容增长流程。',
+    decisions: [
+      { title: '先准备事实，再生成答案', text: '围绕搜索需求组织企业知识与内容任务，规划 19 个内容活动、158 个覆盖单元和 125 条知识资产。' },
+      { title: '把发布设计成受控流程', text: '协作开发多平台发布插件并接入 MCP，通过创建草稿、人工确认、公开发布、状态核验完成交付。' },
+    ],
+    img: '/art/geo-cover.webp',
     link: '/projects/project2',
     date: '2026',
     company: '企业内部孵化项目',
     liveLink: '',
-    primary: '#14271f',
-    accentColor: '#f3f5ef',
-    secondary: '#f7f8f4',
+    primary: '#28282b',
+    accentColor: '#f0f4f1',
+    secondary: '#f0f4f1',
     fillColor: '#dff46d',
-    menuColor: '#14271f',
-    menuFontColor: '#f7f8f4',
+    menuColor: '#28282b',
+    menuFontColor: '#f0f4f1',
     fluidColor: '#dff46d',
     images: [
       {
@@ -334,7 +348,8 @@ const projects = [
   },
 ];
 
-const projectOrder = ['project1', 'project2', 'project3', 'project4', 'project5'];
+// Only cases backed by the supplied project material are part of this portfolio.
+const projectOrder = ['project1', 'project2'];
 const sortedProjects = projectOrder.map((id) => projects.find((project) => project.id === id));
 
 export default sortedProjects;

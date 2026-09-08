@@ -1,3 +1,25 @@
+# 陈祉辰｜个人网站 V2
+
+`portfolio-v2` 分支保存当前新版；`main` 保留此前上传的版本。当前站点包括个人首页、两个产品案例、教程、文字与思考，以及摄影、Skill 和 AIGC 展示。
+
+## 本地运行
+
+建议使用 Node.js 20 或更新的 LTS 版本。首次下载后执行：
+
+```sh
+npm ci --legacy-peer-deps
+npm run preview:build
+npm run preview
+```
+
+访问 `http://localhost:3003`。开发模式使用 `npm run dev`，默认端口为 3000。`node_modules`、`.next*`、本地环境变量及临时素材均不在仓库中。
+
+猫的对话需要自行配置服务端 DeepSeek 密钥；未配置时不调用模型，详见 [CAT-CHAT-SETUP.md](CAT-CHAT-SETUP.md)。摄影原片与正式 Skill 文件待整理，当前仅保留相应方向介绍。
+
+本项目从 Giats 的开源作品集演进而来，保留原始许可和署名。下方为上游项目说明，其中作者介绍及奖项属于原作者，不是本站作者的个人经历。
+
+---
+
 ![giats.me cover](/public/og.png)
 
 # giats.me — Personal Portfolio Website

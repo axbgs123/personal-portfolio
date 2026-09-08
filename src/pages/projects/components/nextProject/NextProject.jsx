@@ -1,40 +1,23 @@
-import AppearByWords from '@src/components/animationComponents/appearByWords/Index';
 import Image from 'next/image';
 import Link from 'next/link';
-import clsx from 'clsx';
-import styles from '@src/pages/projects/components/nextProject/styles/nextProject.module.scss';
+import styles from './styles/nextProjectV2.module.scss';
 
 function NextProject({ nextProject }) {
   return (
-    <>
-      <section className={clsx(styles.titleContainer, 'layout-block-inner')}>
-        <h1 className={clsx(styles.title, 'h1')}>
-          <AppearByWords>下一个项目</AppearByWords>
-        </h1>
-      </section>
-      <section className={clsx(styles.nextRoot, 'layout-block-inner')}>
-        <div className={styles.innerContainer}>
-          <Link aria-label={`查看${nextProject.title}`} id={nextProject.id} scroll={false} href={nextProject.link} className={clsx(styles.card)}>
-            <div className={styles.projectsWrap}>
-              <div className={clsx(styles.container, 'layout-grid-inner')}>
-                <div className={styles.projectsDetails}>
-                  <h6 className={clsx(styles.text, 'h6')}>{nextProject.date}</h6>
-
-                  <h3 className={clsx(styles.text, 'h3')}>{nextProject.title}</h3>
-                </div>
-                <div className={styles.imageContainer}>
-                  <Image priority sizes="100%" src={nextProject.img} fill alt={nextProject.title} />
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.canvas}>
-              <Image priority sizes="100%" src={nextProject.img} fill alt={nextProject.title} />
-            </div>
-          </Link>
+    <section className={styles.nextRoot} aria-label="继续查看项目">
+      <Link href={nextProject.link} scroll={false} className={styles.card} aria-label={`下一个项目：${nextProject.title}`}>
+        <div className={styles.copy}>
+          <span>下一个项目 / {nextProject.date}</span>
+          <h2>{nextProject.title}</h2>
+          <span className={styles.action}>
+            继续探索 <i aria-hidden="true">↗</i>
+          </span>
         </div>
-      </section>
-    </>
+        <div className={styles.image}>
+          <Image src={nextProject.img} fill sizes="(max-width: 760px) 100vw, 42vw" alt={nextProject.title} />
+        </div>
+      </Link>
+    </section>
   );
 }
 export default NextProject;

@@ -4,15 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NextProject from '@src/pages/projects/components/nextProject/NextProject';
 import clsx from 'clsx';
+import navigateToReadingSection from '@src/pages/tutorials/components/navigateToReadingSection';
 import readerStyles from '@src/pages/tutorials/codexCourse.module.scss';
 import styles from '@src/pages/projects/components/operationsAi/operationsAiProject.module.scss';
-import { useShallow } from 'zustand/react/shallow';
-import { useStore } from '@src/store';
 
 function OperationsAiProject({ project, projectHtml, projectToc, nextProject }) {
   const allSections = useMemo(() => projectToc.flatMap((section) => [section, ...section.children]), [projectToc]);
   const [activeSection, setActiveSection] = useState(allSections[0]?.id);
-  const [lenis] = useStore(useShallow((state) => [state.lenis]));
 
   useEffect(() => {
     const root = document.querySelector('main');
@@ -30,13 +28,7 @@ function OperationsAiProject({ project, projectHtml, projectToc, nextProject }) 
   }, [allSections]);
 
   const navigateToSection = (event, id) => {
-    event.preventDefault();
-    const target = document.getElementById(id);
-    if (target && lenis) {
-      const offset = window.innerWidth <= 768 ? -window.innerWidth * 0.28 : -100;
-      lenis.scrollTo(target, { offset, duration: 1.2 });
-      setActiveSection(id);
-    }
+    if (navigateToReadingSection(event, id)) setActiveSection(id);
   };
 
   return (
@@ -51,31 +43,33 @@ function OperationsAiProject({ project, projectHtml, projectToc, nextProject }) 
         </div>
 
         <div className={readerStyles.heroCopy}>
-          <div className={clsx(readerStyles.eyebrow, 'p-l')}>个人产品项目 · 高完成度工程型 MVP · 2026</div>
-          <h1 className={clsx(readerStyles.title, styles.title, 'h1')}>运营内容智能分析与生成平台</h1>
-          <p className={clsx(readerStyles.lead, 'h6')}>把运营数据、策略资产、AI 生成和发布前检查连接成可复盘闭环。</p>
+          <div className={clsx(readerStyles.eyebrow, 'p-l')}>产品负责人 / AI 协作开发 · 2026</div>
+          <h1 className={clsx(readerStyles.title, styles.title, 'h1')}>
+            <span>AI 运营智能体</span> <span>与内容分析生成平台</span>
+          </h1>
+          <p className={clsx(readerStyles.lead, 'h6')}>面向抖音和小红书运营团队，从数据分析到内容生成，让智能体的建议可以执行、审核和复盘。</p>
         </div>
 
         <div className={readerStyles.heroImage}>
-          <Image priority src="/project1/project1-art-v5.webp" fill sizes="(max-width: 768px) 100vw, 92vw" alt="以网站黑白拼贴风格呈现双平台分析、AI 生成和发布检查的运营工作台" />
+          <Image priority src={project.img} fill sizes="(max-width: 768px) 100vw, 92vw" alt="AI 生成概念封面：素材片层、黑色智能体雕塑与内容输出阵列" />
         </div>
 
         <div className={styles.stats}>
           <div>
-            <span className="h4">17</span>
-            <span className="p-x">工作台入口</span>
+            <span className="h4">0 → 1</span>
+            <span className="p-x">MVP 产品规划</span>
           </div>
           <div>
-            <span className="h4">16</span>
-            <span className="p-x">后端业务模块</span>
+            <span className="h4">2</span>
+            <span className="p-x">目标运营平台</span>
           </div>
           <div>
-            <span className="h4">44</span>
-            <span className="p-x">数据库迁移</span>
+            <span className="h4">3</span>
+            <span className="p-x">运营资产分类</span>
           </div>
           <div>
-            <span className="h4">196</span>
-            <span className="p-x">本地提交</span>
+            <span className="h4">人工确认</span>
+            <span className="p-x">任务执行前置条件</span>
           </div>
         </div>
 

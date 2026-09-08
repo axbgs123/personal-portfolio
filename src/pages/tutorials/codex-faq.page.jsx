@@ -6,14 +6,13 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import fs from 'node:fs';
 import path from 'node:path';
+import withImageDimensions from '@src/lib/withImageDimensions';
 import styles from '@src/pages/tutorials/codexCourse.module.scss';
-import { useShallow } from 'zustand/react/shallow';
-import { useStore } from '@src/store';
+import navigateToReadingSection from '@src/pages/tutorials/components/navigateToReadingSection';
 
 function CodexFaqPage({ faqHtml, faqToc }) {
   const allSections = useMemo(() => faqToc.flatMap((section) => [section, ...section.children]), [faqToc]);
   const [activeSection, setActiveSection] = useState(allSections[0]?.id);
-  const [lenis] = useStore(useShallow((state) => [state.lenis]));
 
   useEffect(() => {
     const root = document.querySelector('main');
@@ -31,19 +30,13 @@ function CodexFaqPage({ faqHtml, faqToc }) {
   }, [allSections]);
 
   const navigateToSection = (event, id) => {
-    event.preventDefault();
-    const target = document.getElementById(id);
-    if (target && lenis) {
-      const offset = window.innerWidth <= 768 ? -window.innerWidth * 0.28 : -100;
-      lenis.scrollTo(target, { offset, duration: 1.2 });
-      setActiveSection(id);
-    }
+    if (navigateToReadingSection(event, id)) setActiveSection(id);
   };
 
   return (
     <>
       <CustomHead
-        title="Giats - Codex 常见问题与解决方案"
+        title="陈祉辰｜Codex 常见问题与解决方案"
         description="Codex 安装、ChatGPT 会员订阅和 DeepSeek V4 接入的常见问题与完整解决方案。"
         keywords={['Codex 常见问题', 'Codex 安装失败', 'ChatGPT 订阅', 'DeepSeek V4']}
       />
@@ -145,7 +138,7 @@ function CodexFaqPage({ faqHtml, faqToc }) {
 
 export async function getStaticProps() {
   const contentDir = path.join(process.cwd(), 'src/content');
-  const faqHtml = fs.readFileSync(path.join(contentDir, 'codex-faq.html'), 'utf8');
+  const faqHtml = await withImageDimensions(fs.readFileSync(path.join(contentDir, 'codex-faq.html'), 'utf8'));
   const faqToc = JSON.parse(fs.readFileSync(path.join(contentDir, 'codex-faq-toc.json'), 'utf8'));
   return { props: { faqHtml, faqToc } };
 }

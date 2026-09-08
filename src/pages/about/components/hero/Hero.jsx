@@ -48,11 +48,11 @@ function Hero() {
   return (
     <section ref={rootRef} className={clsx(styles.root, 'layout-block-inner')}>
       <header className={styles.titleContainer}>
-        <h2 className={clsx(styles.title, 'h2')}>从设计到部署，打造像素级精准的界面。</h2>
+        <h2 className={clsx(styles.title, 'h2')}>从需求研究到验收交付，让 AI 产品真正跑进业务。</h2>
       </header>
       <div className={styles.wrapper}>
         <div ref={heroImageRef} className={styles.imageContainer}>
-          <Image priority quality={100} src="/giats/back.webp" sizes="100%" fill alt="埃万杰洛斯·贾齐迪斯背影" />
+          <Image priority quality={100} src="/project1/project1-art-v5.webp" sizes="100%" fill alt="AI 运营智能体与内容分析生成平台" />
         </div>
       </div>
     </section>

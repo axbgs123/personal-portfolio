@@ -1,0 +1,946 @@
+.lab {
+  --piano-black: #090909;
+  --piano-white: #f7f7f7;
+  --piano-gray: #818181;
+  --piano-chrome: #c5c5c5;
+  --rhythm-beat: 0;
+  --rhythm-note: 0;
+  --rhythm-position: 50%;
+  padding: 56px 4vw 44px;
+  overflow: hidden;
+  color: var(--piano-white);
+  background: var(--piano-black);
+  font-family: 'Neue Haas Grotesk Display Pro', 'PingFang SC', sans-serif;
+}
+
+.heading,
+.instrument,
+.credits {
+  max-width: 1500px;
+  margin-inline: auto;
+}
+.eyebrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--piano-gray);
+}
+.titleRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 26px 0 32px;
+}
+.titleRow h2 {
+  font-size: clamp(48px, 5.5vw, 86px);
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.065em;
+  white-space: nowrap;
+}
+.titleRow h2 br {
+  display: none;
+}
+.titleRow p {
+  padding: 0 1vw 8px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--piano-chrome);
+}
+.titleRow p > span {
+  display: block;
+  margin-top: 12px;
+  color: var(--piano-gray);
+  font-size: 11px;
+}
+.instrument {
+  border-top: 1px solid rgb(247 247 247 / calc(0.3 + var(--rhythm-beat) * 0.55));
+}
+
+.soundDisplay {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.15fr) minmax(
+      0,
+      0.65fr
+    ) 144px;
+  align-items: flex-end;
+  gap: clamp(18px, 2.6vw, 40px);
+  min-height: 150px;
+  padding: 19px 0 23px;
+}
+.companionStage {
+  position: relative;
+  width: 144px;
+  height: 140px;
+  align-self: end;
+  border-bottom: 1px solid #f7f7f72b;
+  pointer-events: none;
+
+  > span {
+    position: absolute;
+    right: 0;
+    bottom: -16px;
+    color: var(--piano-gray);
+    font-size: 9px;
+    letter-spacing: 0.07em;
+  }
+}
+.noteDisplay {
+  min-width: 0;
+}
+.noteDisplay > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--piano-gray);
+  font-size: 10px;
+}
+.noteDisplay strong {
+  display: block;
+  font-size: clamp(42px, 5.5vw, 85px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.065em;
+  white-space: nowrap;
+}
+.noteDisplay strong.chordLabel {
+  font-size: clamp(28px, 3.6vw, 54px);
+}
+.meter > div {
+  display: flex;
+  gap: clamp(2px, 0.25vw, 5px);
+  align-items: flex-end;
+  height: 60px;
+}
+.meter i {
+  display: block;
+  flex: 1;
+  height: 100%;
+  background: var(--piano-chrome);
+  transform: scaleY(0.025);
+  transform-origin: bottom;
+  will-change: transform;
+}
+.meter i:nth-child(3n) {
+  background: var(--piano-white);
+}
+.meter > span {
+  display: block;
+  padding-top: 13px;
+  color: var(--piano-gray);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.modeBar {
+  display: flex;
+  border-top: 1px solid #f7f7f745;
+}
+.modeBar button {
+  flex: 1;
+  min-height: 43px;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--piano-gray);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.modeBar button + button {
+  border-left: 1px solid #f7f7f725;
+}
+.modeBar button[aria-pressed='true'] {
+  background: var(--piano-white);
+  color: var(--piano-black);
+}
+.modeBar button:hover:not([aria-pressed='true']) {
+  color: var(--piano-white);
+  background: #ffffff0b;
+}
+.followPanel,
+.recordPanel {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  gap: 18px 32px;
+  padding: 20px 0;
+  border-top: 1px solid #f7f7f725;
+}
+.followCue > span,
+.recordClock > span {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--piano-gray);
+  font-size: 10px;
+}
+.followCue > strong,
+.recordClock > strong {
+  display: block;
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-variant-numeric: tabular-nums;
+}
+.followCue > small,
+.recordClock > small {
+  display: block;
+  margin-top: 10px;
+  color: var(--piano-chrome);
+  font-size: 10px;
+}
+.followSequence {
+  min-width: 0;
+}
+.followSequence > p {
+  margin: 0 0 11px;
+  font-size: 11px;
+  color: var(--piano-gray);
+}
+.followSequence > p strong {
+  color: var(--piano-white);
+}
+.followSequence > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  overflow: hidden;
+}
+.followSequence > div > span {
+  flex: 0 0 auto;
+  padding: 8px 9px;
+  border: 1px solid #f7f7f72c;
+  color: var(--piano-gray);
+  font-size: 11px;
+  line-height: 1;
+}
+.followSequence > div > .nextPitch {
+  background: var(--piano-white);
+  color: var(--piano-black);
+  border-color: var(--piano-white);
+}
+.followSequence > div > .completePhrase {
+  padding-left: 0;
+  border: 0;
+  color: var(--piano-white);
+  font-size: 15px;
+}
+.followSequence > small {
+  display: block;
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--piano-chrome);
+}
+.modeActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.modeActions button {
+  min-height: 43px;
+  padding: 12px 18px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.modeActions button[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: default;
+}
+.recordClock > span > i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border: 1px solid var(--piano-gray);
+}
+.recordClock > span > .recordingDot {
+  background: var(--piano-white);
+  border-color: var(--piano-white);
+}
+.recordDescription > p {
+  margin: 0 0 10px;
+  color: var(--piano-white);
+  font-size: 17px;
+  line-height: 1.4;
+}
+.recordDescription > span,
+.recordDescription > small {
+  display: block;
+  color: var(--piano-chrome);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.recordDescription > small {
+  margin-top: 4px;
+  color: var(--piano-gray);
+  font-size: 10px;
+}
+.recordEmpty {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--piano-gray);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.scoreBar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 18px 0;
+  border-top: 1px solid #f7f7f725;
+}
+.controlLabel {
+  display: block;
+  margin-bottom: 13px;
+  color: var(--piano-gray);
+  font-size: 11px;
+}
+.scoreChoices {
+  display: flex;
+  gap: 0;
+}
+.scoreChoices button {
+  border: 1px solid #f7f7f745;
+  border-radius: 0;
+  padding: 12px 19px;
+  margin-right: -1px;
+  background: transparent;
+  color: var(--piano-chrome);
+  font-size: 13px;
+  cursor: pointer;
+}
+.scoreChoices button[aria-pressed='true'] {
+  position: relative;
+  border-color: var(--piano-white);
+  background: var(--piano-white);
+  color: var(--piano-black);
+}
+.scoreChoices button:hover {
+  color: var(--piano-black);
+  background: var(--piano-chrome);
+}
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.scoreMeta {
+  display: block;
+  padding-right: 18px;
+  color: var(--piano-chrome);
+  font-size: 11px;
+  text-align: right;
+  line-height: 1.7;
+}
+.scoreMeta small {
+  display: block;
+  color: var(--piano-gray);
+  font-size: 10px;
+}
+.playButton,
+.stopButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 46px;
+  padding: 13px 22px;
+  border: 1px solid var(--piano-white);
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+.playButton {
+  background: var(--piano-white);
+  color: var(--piano-black);
+}
+.stopButton {
+  background: transparent;
+  color: var(--piano-white);
+}
+.transport button:disabled,
+.transport button[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: default;
+}
+.playProgress {
+  height: 2px;
+  background: #f7f7f720;
+}
+.playProgress > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--portfolio-accent-on-dark);
+  transform-origin: left;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0 17px;
+}
+.enableButton {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-height: 38px;
+  padding: 7px 0;
+  background: none;
+  color: var(--piano-white);
+  border: 0;
+  border-radius: 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+.enableButton[aria-disabled='true'] {
+  cursor: default;
+  color: var(--piano-gray);
+}
+.enableButton > span {
+  font-size: 17px;
+}
+.enableButton > .readyText {
+  font-size: 10px;
+  color: var(--piano-chrome);
+}
+.soundControls {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.volume {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--piano-chrome);
+}
+.volume input {
+  appearance: none;
+  width: 112px;
+  height: 20px;
+  background: transparent;
+  accent-color: var(--piano-white);
+  cursor: pointer;
+}
+.volume input::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--piano-gray);
+}
+.volume input::-webkit-slider-thumb {
+  appearance: none;
+  width: 8px;
+  height: 18px;
+  margin-top: -8px;
+  border-radius: 0;
+  background: var(--piano-white);
+}
+.volume input::-moz-range-track {
+  height: 2px;
+  background: var(--piano-gray);
+}
+.volume input::-moz-range-thumb {
+  width: 8px;
+  height: 18px;
+  border: 0;
+  border-radius: 0;
+  background: var(--piano-white);
+}
+.volume output {
+  min-width: 22px;
+  text-align: right;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.sustain {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--piano-chrome);
+  font-size: 11px;
+  cursor: pointer;
+}
+.sustain > span {
+  padding: 5px 9px;
+  border: 1px solid var(--piano-gray);
+  color: var(--piano-gray);
+}
+.sustain[aria-pressed='true'] > span {
+  background: var(--piano-white);
+  color: var(--piano-black);
+  border-color: var(--piano-white);
+}
+
+.keyboardScroll {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 18px;
+  scrollbar-color: var(--piano-chrome) #272727;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+  border-top: 2px solid rgb(247 247 247 / calc(0.2 + var(--rhythm-beat) * 0.75));
+}
+.keyboardScroll::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  top: 0;
+  left: clamp(0%, calc(var(--rhythm-position) - 5%), 90%);
+  width: 10%;
+  height: 3px;
+  background: var(--piano-white);
+  opacity: var(--rhythm-note);
+}
+.keyboardScroll::-webkit-scrollbar {
+  height: 5px;
+}
+.keyboardScroll::-webkit-scrollbar-track {
+  background: #272727;
+}
+.keyboardScroll::-webkit-scrollbar-thumb {
+  background: var(--piano-chrome);
+  border-radius: 0;
+}
+.keyboardRanges {
+  display: none;
+}
+.keyboard {
+  position: relative;
+  height: clamp(195px, 18vw, 270px);
+  min-width: 720px;
+  border-bottom: 7px solid #3d3d3d;
+  background: var(--piano-white);
+  isolation: isolate;
+}
+.pianoKey {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  border-radius: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.whiteKey {
+  z-index: 1;
+  height: 100%;
+  background: var(--piano-white);
+  border: 0;
+  border-right: 1px solid #09090970;
+  box-shadow: inset 0 -5px 0 #b9b9b9;
+  color: var(--piano-black);
+}
+.whiteKey:hover {
+  background: #e0e0e0;
+}
+.blackKey {
+  z-index: 2;
+  height: 61%;
+  background: var(--piano-black);
+  border: 1px solid #313131;
+  border-top: 0;
+  box-shadow:
+    inset 0 -7px 0 #292929,
+    2px 4px 0 #09090945;
+  color: var(--piano-white);
+}
+.blackKey:hover {
+  background: #282828;
+}
+.whiteKey.keyActive {
+  background: var(--piano-chrome);
+  box-shadow: inset 0 -2px 0 #969696;
+  transform: translateY(3px);
+}
+.blackKey.keyActive {
+  background: var(--piano-gray);
+  box-shadow: inset 0 -2px 0 #5f5f5f;
+  transform: translateY(3px);
+}
+.pianoKey:focus-visible {
+  outline: 3px solid var(--piano-gray);
+  outline-offset: -5px;
+}
+.pianoKey > .keyNote {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+}
+.pianoKey > kbd {
+  position: absolute;
+  bottom: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: inherit;
+  font-size: 10px;
+  opacity: 0.5;
+}
+.blackKey > .keyNote {
+  bottom: 30px;
+  font-size: 9px;
+}
+.blackKey > kbd {
+  bottom: 14px;
+  font-size: 9px;
+  opacity: 0.6;
+}
+.keyActive > kbd {
+  opacity: 1;
+}
+.keyActive::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 20px;
+  background: currentColor;
+}
+.keyExpected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: currentColor;
+}
+.keyExpected > .keyNote {
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.keyIncorrect::before {
+  content: '×';
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.keyboardFooter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 9px;
+  color: var(--piano-gray);
+  font-size: 10px;
+  line-height: 1.8;
+}
+.keyboardFooter p > span {
+  display: none;
+}
+.keyboardFooter > span {
+  white-space: nowrap;
+}
+.status {
+  min-height: 19px;
+  padding-top: 16px;
+  color: var(--piano-chrome);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.credits {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 37px;
+  padding-top: 18px;
+  border-top: 1px solid #f7f7f725;
+  color: var(--piano-gray);
+  font-size: 9px;
+  line-height: 1.8;
+}
+.credits a {
+  color: var(--piano-chrome);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.credits a + a {
+  margin-left: 14px;
+}
+.lab button:focus-visible,
+.lab a:focus-visible,
+.lab input:focus-visible {
+  outline: 2px solid var(--piano-white);
+  outline-offset: 4px;
+}
+.lab .pianoKey:focus-visible {
+  outline: 3px solid var(--piano-gray);
+  outline-offset: -5px;
+}
+
+@media (max-width: 1000px) {
+  .followPanel,
+  .recordPanel {
+    grid-template-columns: 110px 1fr;
+  }
+  .modeActions {
+    grid-column: 2;
+  }
+  .scoreBar {
+    align-items: flex-start;
+  }
+  .transport {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .scoreMeta {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+  .scoreChoices button {
+    padding: 11px 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .modeBar button {
+    padding: 12px 6px;
+    font-size: 11px;
+  }
+  .followPanel,
+  .recordPanel {
+    grid-template-columns: 84px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+  }
+  .followCue > strong,
+  .recordClock > strong {
+    font-size: 36px;
+  }
+  .followCue > small,
+  .recordClock > small {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+  .followSequence > div > span:nth-child(n + 5) {
+    display: none;
+  }
+  .followSequence > p,
+  .followSequence > small {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+  .followSequence > div {
+    gap: 4px;
+  }
+  .followSequence > div > span {
+    padding: 8px 6px;
+    font-size: 10px;
+  }
+  .modeActions {
+    grid-column: 1 / -1;
+  }
+  .modeActions > button {
+    flex: 1;
+  }
+  .recordDescription > p {
+    font-size: 14px;
+  }
+  .recordDescription > span,
+  .recordDescription > small,
+  .recordEmpty {
+    font-size: 9px;
+  }
+  .keyboardRanges {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 18px;
+    font-size: 10px;
+    color: var(--piano-chrome);
+    button {
+      min-height: 44px;
+      padding: 0 14px;
+      border: 1px solid var(--piano-gray);
+      font-size: 12px;
+    }
+    button:hover {
+      background: var(--piano-white);
+      color: var(--piano-black);
+    }
+  }
+  .lab {
+    padding: 72px 5vw 43px;
+  }
+  .eyebrow {
+    font-size: 9px;
+  }
+  .titleRow {
+    display: block;
+    margin: 28px 0 36px;
+  }
+  .titleRow h2 {
+    font-size: clamp(54px, 13.3vw, 90px);
+    line-height: 1.08;
+    white-space: normal;
+  }
+  .titleRow h2 br {
+    display: block;
+  }
+  .titleRow p {
+    margin-top: 24px;
+    padding: 0;
+    font-size: 13px;
+  }
+  .titleRow p > span {
+    margin-top: 14px;
+    font-size: 10px;
+  }
+  .soundDisplay {
+    grid-template-columns: minmax(0, 1fr) 144px;
+    gap: 16px;
+    padding: 23px 0;
+    min-height: 0;
+  }
+  .noteDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .noteDisplay > span {
+    margin: 0;
+    font-size: 9px;
+  }
+  .noteDisplay strong {
+    font-size: 35px;
+  }
+  .noteDisplay strong.chordLabel {
+    font-size: 26px;
+  }
+  .meter > div {
+    height: 22px;
+    gap: 3px;
+  }
+  .meter > span {
+    display: none;
+  }
+  .soundDisplay > :nth-child(2),
+  .meter {
+    grid-column: 1;
+  }
+  .companionStage {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    align-self: center;
+  }
+  .scoreBar {
+    display: block;
+    padding: 20px 0;
+  }
+  .controlLabel {
+    font-size: 10px;
+    margin-bottom: 11px;
+  }
+  .scoreChoices {
+    width: 100%;
+  }
+  .scoreChoices button {
+    flex: 1;
+    min-height: 43px;
+    padding: 12px 5px;
+    font-size: 12px;
+  }
+  .transport {
+    flex-wrap: nowrap;
+    margin-top: 17px;
+    gap: 8px;
+  }
+  .scoreMeta {
+    flex: 1;
+    text-align: left;
+    font-size: 10px;
+  }
+  .scoreMeta small {
+    font-size: 9px;
+  }
+  .playButton,
+  .stopButton {
+    min-height: 43px;
+    padding: 12px 14px;
+    gap: 8px;
+    font-size: 11px;
+  }
+  .settings {
+    display: block;
+    padding: 10px 0 18px;
+  }
+  .enableButton {
+    font-size: 11px;
+  }
+  .soundControls {
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 6px;
+  }
+  .volume {
+    gap: 10px;
+    font-size: 10px;
+  }
+  .volume input {
+    width: 106px;
+  }
+  .sustain {
+    font-size: 10px;
+  }
+  .keyboard {
+    height: 210px;
+    min-width: 750px;
+  }
+  .keyboardFooter {
+    gap: 16px;
+    font-size: 9px;
+  }
+  .keyboardFooter p > span {
+    display: block;
+  }
+  .keyboardFooter > span {
+    display: none;
+  }
+  .status {
+    font-size: 10px;
+  }
+  .credits {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 28px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whiteKey.keyActive,
+  .blackKey.keyActive {
+    transform: none;
+  }
+}

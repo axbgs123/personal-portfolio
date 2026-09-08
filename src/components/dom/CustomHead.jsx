@@ -2,23 +2,22 @@ import NextHead from 'next/head';
 import { NextSeo } from 'next-seo';
 import PropTypes from 'prop-types';
 
-const SITE_URL = 'https://giats.me';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002';
 const OG_IMAGE = `${SITE_URL}/og.png`;
 
 const getSchema = () => ({
   '@context': 'http://schema.org',
   '@type': 'Person',
-  name: '埃万杰洛斯（Giats）·贾齐迪斯',
-  jobTitle: '高级前端开发者',
+  name: '陈祉辰',
+  jobTitle: 'AI 产品与内容实践者',
   url: SITE_URL,
   image: OG_IMAGE,
-  email: 'mailto:vaggelisgiats@gmail.com',
-  sameAs: ['https://www.linkedin.com/in/giats/', 'https://github.com/Giats2498', 'https://twitter.com/Giats_', 'https://www.instagram.com/giats_/'],
+  email: 'mailto:2907107669@qq.com',
+  sameAs: [],
   alumniOf: [
-    { '@type': 'Organization', name: '公司一' },
-    { '@type': 'Organization', name: '公司二' },
-    { '@type': 'Organization', name: '公司三' },
-    { '@type': 'Organization', name: '公司四' },
+    { '@type': 'CollegeOrUniversity', name: '泉州师范学院' },
+    { '@type': 'Organization', name: '百言科技（杭州）有限公司' },
+    { '@type': 'Organization', name: '福建赛牡丹数字科技有限公司' },
   ],
 });
 
@@ -30,12 +29,12 @@ function CustomHead({ title = '', description, keywords }) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta httpEquiv="x-dns-prefetch-control" content="off" />
         <meta name="robots" content={process.env.NODE_ENV !== 'development' ? 'index,follow' : 'noindex,nofollow'} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="keywords" content={keywords && keywords.length ? keywords.join(',') : keywords} />
-        <meta name="author" content="埃万杰洛斯（Giats）·贾齐迪斯" />
+        <meta name="author" content="陈祉辰" />
         <meta name="referrer" content="no-referrer" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="geo.region" content="US" />
+        <meta name="geo.region" content="CN-ZJ" />
 
         {/* Canonical and Title */}
         <link rel="canonical" href={SITE_URL} />
@@ -54,14 +53,9 @@ function CustomHead({ title = '', description, keywords }) {
         <meta name="twitter:image" content={OG_IMAGE} />
 
         {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333" />
-        <meta name="msapplication-TileColor" content="#f0f4f1" />
-        <meta name="theme-color" content="#f0f4f1" />
+        <link rel="icon" type="image/svg+xml" href="/zc-mark.svg" />
+        <meta name="msapplication-TileColor" content="#090909" />
+        <meta name="theme-color" content="#f6f6f6" />
 
         {/* Schema */}
         {/* eslint-disable-next-line react/no-danger */}

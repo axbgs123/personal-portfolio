@@ -1,6 +1,5 @@
 import AppearTitle from '@src/components/animationComponents/appearTitle/Index';
 import ButtonLink from '@src/components/animationComponents/buttonLink/Index';
-import Image from 'next/image';
 import clsx from 'clsx';
 import { gsap } from 'gsap';
 import styles from '@src/pages/components/about/styles/about.module.scss';
@@ -42,7 +41,25 @@ function About() {
 
   const renderImageContainer = () => (
     <div className={styles.imageContainer}>
-      <Image priority src="/giats/front.webp" sizes="100%" fill alt="埃万杰洛斯·贾齐迪斯" />
+      <div className={styles.profilePlate}>
+        <span className={styles.plateEyebrow}>AI PRODUCT / HANGZHOU</span>
+        <strong>
+          从问题
+          <br />
+          到流程
+          <br />
+          再到结果
+        </strong>
+        <div className={styles.plateFlow}>
+          <span>研究</span>
+          <i />
+          <span>设计</span>
+          <i />
+          <span>交付</span>
+          <i />
+          <span>迭代</span>
+        </div>
+      </div>
     </div>
   );
 
@@ -51,7 +68,7 @@ function About() {
       <div className={clsx(styles.nameContainer, 'layout-block-inner')}>
         <AppearTitle>
           <h1 className={clsx('h1', 'medium')}>你好，我是</h1>
-          <h1 className={clsx('h1', 'medium')}>埃万杰洛斯·贾齐迪斯！</h1>
+          <h1 className={clsx('h1', 'medium')}>陈祉辰！</h1>
         </AppearTitle>
       </div>
 
@@ -59,28 +76,28 @@ function About() {
         {isMobile ? renderImageContainer() : null}
         <div className={clsx(styles.descWrapper)} ref={animatedImageRef}>
           <AppearTitle>
-            <div className="p-l">“自学开发的独立成长经历，</div>
-            <div className="p-l">让我能够以富有创意且高效的方式</div>
-            <div className="p-l">解决问题，并推动你的项目目标</div>
-            <div className="p-l">顺利实现。”</div>
+            <div className="p-l">“我关心的不只是模型能做什么，</div>
+            <div className="p-l">更是 AI 如何进入真实工作流程，</div>
+            <div className="p-l">被人理解、审核、使用，</div>
+            <div className="p-l">并持续产生结果。”</div>
           </AppearTitle>
         </div>
         {!isMobile ? renderImageContainer() : null}
         <div className={clsx(styles.descWrapperBottom)}>
           {!isMobile ? (
             <AppearTitle key="desktop-descWrapperBottom">
-              <h6 className="h6">我是一名来自希腊、充满热情的前端开发者。</h6>
-              <h6 className="h6">我对设计有敏锐的判断，也始终专注于</h6>
-              <h6 className="h6">打造流畅自然的用户体验。我擅长用</h6>
-              <h6 className="h6">简洁、高效的代码，让网页应用真正</h6>
-              <h6 className="h6">鲜活起来。</h6>
+              <h6 className="h6">我是一名数字媒体技术专业的 AI 产品实践者。</h6>
+              <h6 className="h6">我同时关注产品策划、AI 工作流、内容运营</h6>
+              <h6 className="h6">与视觉表达，能从用户问题出发完成需求拆解、</h6>
+              <h6 className="h6">方案设计、协作开发、测试验收和知识沉淀。</h6>
+              <h6 className="h6">目前在杭州寻找 AI 产品经理相关机会。</h6>
             </AppearTitle>
           ) : (
             <AppearTitle key="mobile-descWrapperBottom">
-              <h6 className="h6">我是一名来自希腊、充满热情的前端开发者。</h6>
-              <h6 className="h6">我对设计有敏锐的判断，也始终专注于打造</h6>
-              <h6 className="h6">流畅自然的用户体验。我擅长用简洁、高效的代码，</h6>
-              <h6 className="h6">让网页应用真正鲜活起来。</h6>
+              <h6 className="h6">我是一名数字媒体技术专业的 AI 产品实践者。</h6>
+              <h6 className="h6">我同时关注产品策划、AI 工作流、内容运营与视觉表达，</h6>
+              <h6 className="h6">能从用户问题出发完成需求拆解、方案设计、</h6>
+              <h6 className="h6">协作开发、测试验收和知识沉淀。</h6>
             </AppearTitle>
           )}
           <div className={clsx(styles.buttonContainer)}>

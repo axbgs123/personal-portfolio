@@ -1,137 +1,31 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable no-nested-ternary */
-
-import CustomHead from '@src/components/dom/CustomHead';
-import Image from 'next/image';
 import Link from 'next/link';
-import clsx from 'clsx';
-import { gsap } from 'gsap';
-import projects from '@src/constants/projects';
-import styles from '@src/pages/projects/projects.module.scss';
-import useIsMobile from '@src/hooks/useIsMobile';
-import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect';
-import { useRef } from 'react';
-import { useShallow } from 'zustand/react/shallow';
-import { useStore } from '@src/store';
-import { useWindowSize } from '@darkroom.engineering/hamo';
+import CustomHead from '@src/components/dom/CustomHead';
+import ProjectStages from '@src/components/portfolio/ProjectStages';
+import styles from './projectsV2.module.scss';
 
-const seo = {
-  title: 'Giats - 项目',
-  description: '浏览我的前端项目作品，从响应式网站到网页应用，了解我使用 React、Next.js、React Three Fiber 和 Electron 等技术完成的工作。',
-  keywords: [
-    'Giats 项目',
-    '作品集展示',
-    '前端开发案例',
-    '网页设计作品集',
-    '响应式网页项目',
-    '网页应用作品集',
-    'HTML 与 CSS 项目',
-    'JavaScript 开发',
-    'React 作品',
-    'Next.js 项目',
-    'React Three Fiber 项目',
-    'Electron 项目',
-    '专业网页开发',
-    '埃万杰洛斯·贾齐迪斯项目',
-  ],
-};
-
-function Page() {
-  const isMobile = useIsMobile();
-
-  const windowSize = useWindowSize();
-  const rootRef = useRef();
-  const projectRefs = useRef([]);
-  const [isLoading] = useStore(useShallow((state) => [state.isLoading]));
-
-  const setupProjectAnimations = () => {
-    const ctx = gsap.context(() => {
-      if (!isLoading) {
-        projectRefs.current.slice(0, -1).forEach((projectRef, index) => {
-          gsap.set(projectRef, { yPercent: 0 });
-          gsap
-            .timeline({
-              scrollTrigger: {
-                id: `projectRef-${index}`,
-                trigger: rootRef.current,
-                start: `top+=${windowSize.height * index}`,
-                end: () => `+=${(projectRefs.current.length - 2) * windowSize.height}`,
-                scrub: true,
-                scroller: document?.querySelector('main'),
-                invalidateOnRefresh: true,
-              },
-            })
-            .to(projectRef, {
-              yPercent: 100,
-              stagger: 1,
-            });
-        });
-      }
-    });
-
-    return ctx;
-  };
-
-  useIsomorphicLayoutEffect(() => {
-    const ctx = setupProjectAnimations();
-    return () => ctx.kill();
-  }, [isLoading, windowSize.height]);
-
+export default function ProjectsPage() {
   return (
     <>
-      <CustomHead {...seo} />
-      <section className={clsx(styles.titleContainer, 'layout-block-inner')}>
-        <h1 className={clsx(styles.title, 'h1')}>全部项目</h1>
-      </section>
-      <section ref={rootRef} className={clsx(styles.root, 'layout-block-inner')}>
-        <div className={styles.innerContainer}>
-          {projects.map((project, index) => (
-            <Link aria-label={`查看${project.title}`} id={project.id} key={project.id} scroll={false} href={project.link} className={clsx(styles.card)}>
-              <div
-                style={
-                  !isMobile
-                    ? {
-                        height: index === projects.length - 1 ? '200svh' : `${200 + 100 * index}svh`,
-                        top: index === 0 ? '0px' : '-100svh',
-                      }
-                    : {
-                        height: index === projects.length - 1 ? '100svh' : `${200 + 100 * index}svh`,
-                        top: index === 0 ? '0px' : '-50svh',
-                      }
-                }
-                className={styles.projectsWrap}
-              >
-                <div className={clsx(styles.container, 'layout-grid-inner')}>
-                  <div className={styles.projectsDetails}>
-                    <h6 className={clsx(styles.text, 'h6')}>{project.date}</h6>
-                    <h3 className={clsx(styles.text, 'h3')}>{project.title}</h3>
-                  </div>
-                  <div className={styles.imageContainer}>
-                    <Image priority={index === 0} sizes="100%" src={project.img} fill alt={project.title} />
-                  </div>
-                </div>
-              </div>
-              <div
-                ref={(el) => {
-                  projectRefs.current[index] = el;
-                }}
-                className={styles.canvas}
-              >
-                <Image
-                  priority={index === 0}
-                  sizes="100%"
-                  className={index === 0 ? styles.firstCard : index === projects.length - 1 ? styles.lastCard : undefined}
-                  src={project.img}
-                  fill
-                  alt={project.title}
-                />
-              </div>
-            </Link>
-          ))}
+      <CustomHead
+        title="陈祉辰｜AI 产品项目"
+        description="陈祉辰的 AI 产品案例：AI 运营智能体与内容分析生成平台、百言 GEO 内容增长系统。了解需求判断、产品方案、人工审核机制与项目交付。"
+        keywords={['陈祉辰', 'AI 产品实践', 'AI 运营智能体', 'GEO 内容增长', '产品作品集', 'Agent 产品设计']}
+      />
+      <div className={styles.page}>
+        <header className={styles.intro}>
+          <p className={styles.eyebrow}>PROJECT ARCHIVE / 2026</p>
+          <div>
+            <h1>项目</h1>
+            <p>从发现问题到设计方案，再到协作开发与验收。两项 AI 产品实践，以及其中的关键判断。</p>
+          </div>
+        </header>
+        <ProjectStages variant="archive" />
+        <div className={styles.continue}>
+          <Link href="/tutorials" scroll={false}>
+            看教程与知识积累<span aria-hidden="true">↗</span>
+          </Link>
         </div>
-      </section>
+      </div>
     </>
   );
 }
-
-export default Page;

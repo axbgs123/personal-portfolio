@@ -1,0 +1,78 @@
+.rhythm {
+  min-width: 0;
+  color: var(--piano-white);
+}
+.visual {
+  position: relative;
+  padding-right: 45px;
+  height: 89px;
+}
+.visual svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.beatCount {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+  width: 38px;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  font-size: 30px;
+  letter-spacing: -0.055em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--piano-gray);
+}
+.rhythm[data-active='true'] .beatCount {
+  color: var(--portfolio-accent-on-dark);
+}
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--piano-gray);
+}
+.beats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.beats i {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--piano-gray);
+  border-radius: 50%;
+}
+.beats i:first-child {
+  border-radius: 0;
+  width: 6px;
+  height: 6px;
+}
+.beats i[data-current='true'] {
+  border-color: var(--portfolio-accent-on-dark);
+  background: var(--portfolio-accent-on-dark);
+}
+@media (max-width: 760px) {
+  .visual {
+    height: 68px;
+    padding-right: 32px;
+  }
+  .beatCount {
+    font-size: 25px;
+    width: 26px;
+    bottom: 21px;
+  }
+  .legend {
+    gap: 8px;
+    font-size: 9px;
+  }
+  .beats {
+    gap: 6px;
+  }
+}

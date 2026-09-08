@@ -1,0 +1,31 @@
+// Shared exhibit gutter only. Each category owns its presentation and motion.
+.instruments {
+  padding: 8px var(--portfolio-gutter, 32px) 88px;
+  background: #f6f6f6;
+  color: #090909;
+  font-family: var(--portfolio-font), 'PingFang SC', sans-serif;
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+  }
+  button,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button {
+    font-family: inherit;
+  }
+  input[type='range'] {
+    accent-color: var(--portfolio-accent-ink, #b83228);
+    height: 44px;
+    cursor: pointer;
+    min-width: 0;
+  }
+}
+@media (max-width: 760px) {
+  .instruments {
+    padding-bottom: 56px;
+  }
+}

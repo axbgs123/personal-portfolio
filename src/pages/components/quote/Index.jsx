@@ -16,7 +16,7 @@ function Quote() {
       <h3 ref={textRef} className={clsx(styles.text, 'h3')}>
         {!isLoading && (
           <TextOpacity textRef={textRef.current} trigger={rootRef.current}>
-            开始一个新项目时，选对工具至关重要。凭借以往的实践经验，我有信心选择最合适的技术与方法，带领我们走向成功。
+            产品不是功能清单，而是把用户问题、业务规则、模型能力与人工判断，组织成一条真正能够运行的路径。
           </TextOpacity>
         )}
       </h3>

@@ -1,6 +1,6 @@
-import ArchivePage from '@src/components/archive/ArchivePage';
+import TutorialWorkbench from '@src/components/tutorials/TutorialWorkbench';
 import archivePages from '@src/constants/archivePages';
 
 export default function TutorialsPage() {
-  return <ArchivePage page={archivePages.tutorials} />;
+  return <TutorialWorkbench page={archivePages.tutorials} />;
 }

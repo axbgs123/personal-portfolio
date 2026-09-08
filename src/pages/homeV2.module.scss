@@ -1,0 +1,474 @@
+.root {
+  color: #090909;
+  background: #f6f6f6;
+  overflow: clip;
+  font-weight: 400;
+  --gutter: var(--portfolio-gutter);
+  > section {
+    box-shadow: none;
+  }
+}
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-family: var(--portfolio-mono);
+  letter-spacing: 0.09em;
+  color: #767676;
+  margin-bottom: 26px;
+}
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: flex-end;
+  margin-bottom: 64px;
+  h2 {
+    font-size: clamp(42px, 5.6vw, 90px);
+    line-height: 1.2;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+}
+.approach {
+  background: #090909;
+  color: #f6f6f6;
+  padding: 80px var(--gutter) 88px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  > :not(.approachAtmosphere) {
+    position: relative;
+    z-index: 1;
+  }
+}
+.approachAtmosphere {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.approachCut {
+  position: absolute;
+  inset: 0;
+  background: #272727;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
+}
+.approachMark {
+  position: absolute;
+  width: 80%;
+  right: -16%;
+  top: 4%;
+  color: #ffffff;
+  opacity: 0.055;
+}
+.approachTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .eyebrow {
+    color: #a4a4a4;
+    margin: 0;
+  }
+}
+.methodMark {
+  display: block;
+  color: #dedede;
+  width: 90px;
+  height: 60px;
+}
+.approach h2 {
+  font-size: clamp(45px, 8vw, 132px);
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  margin-top: 50px;
+  span {
+    color: #525252;
+    display: inline-block;
+  }
+  span:nth-of-type(2) {
+    margin-left: 10%;
+    font-weight: 350;
+  }
+  span:nth-of-type(3) {
+    margin-left: 31%;
+  }
+}
+.methodBottom {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: end;
+  gap: 8%;
+  margin-top: 80px;
+  > p {
+    font-size: 13px;
+    color: #9d9d9d;
+    line-height: 1.9;
+  }
+}
+.process > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #c7c7c7;
+}
+.processTrack {
+  height: 1px;
+  background: #464646;
+  i {
+    display: block;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background: #dedede;
+  }
+}
+.experience {
+  padding: 115px var(--gutter) 95px;
+  background: #f6f6f6;
+}
+.textLink {
+  font-size: 13px;
+  border-bottom: 1px solid #b6b6b6;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  span {
+    margin-left: 24px;
+  }
+}
+.experienceRow {
+  display: block;
+  border-top: 1px solid #cdcdcd;
+  padding: 35px 0;
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+  summary {
+    display: grid;
+    grid-template-columns: 24% 1fr 24% 20px;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+}
+.date {
+  font-size: 12px;
+  font-family: var(--portfolio-mono);
+  color: #7e7e7e;
+  align-self: start;
+  padding-top: 8px;
+}
+.company {
+  font-size: clamp(21px, 2.3vw, 36px);
+  font-weight: 500;
+  line-height: 1.4;
+  small {
+    display: block;
+    font-size: 12px;
+    color: #858585;
+    margin-top: 8px;
+  }
+}
+.metric {
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  small {
+    display: block;
+    color: #7f7f7f;
+    font-size: 11px;
+    margin-top: 12px;
+    letter-spacing: 0;
+  }
+}
+.expandIcon {
+  font-size: 26px;
+  transition: transform 0.4s;
+}
+.experienceRow[open] .expandIcon {
+  transform: rotate(45deg);
+  color: var(--portfolio-accent-ink);
+}
+.experienceDetail {
+  margin-left: calc(24% + 20px);
+  padding-top: 24px;
+  max-width: 620px;
+  font-size: 14px;
+  color: #6a6a6a;
+  line-height: 1.9;
+  > span {
+    display: block;
+    font-size: 11px;
+    color: #8e8e8e;
+    margin-top: 14px;
+  }
+}
+.library {
+  padding: 100px var(--gutter) 110px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #090909;
+  color: #f6f6f6;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 8%;
+  > :not(.libraryAtmosphere) {
+    position: relative;
+    z-index: 1;
+  }
+  .eyebrow {
+    color: #b8b8b8;
+  }
+  h2 {
+    font-size: clamp(36px, 4.8vw, 76px);
+    line-height: 1.25;
+    letter-spacing: -0.055em;
+    span {
+      color: #949494;
+    }
+  }
+  > div > p {
+    font-size: 14px;
+    color: #b5b5b5;
+    line-height: 1.95;
+    margin-top: 25px;
+  }
+}
+.libraryAtmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  i {
+    position: absolute;
+    inset: -50% 40%;
+    background: #202020;
+    transform: rotate(-14deg);
+  }
+  > span {
+    position: absolute;
+    left: -4%;
+    top: 10%;
+    font-size: clamp(320px, 40vw, 720px);
+    font-weight: 750;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff17;
+  }
+  b {
+    display: block;
+    font-weight: inherit;
+    animation: glyphIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+@keyframes glyphIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) skewY(6deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.libraryLinks a {
+  padding: 30px 0;
+  border-top: 1px solid #595959;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition:
+    padding 0.3s,
+    background 0.3s,
+    color 0.3s;
+  &:last-child {
+    border-bottom: 1px solid #595959;
+  }
+  h3 {
+    font-size: clamp(25px, 2.7vw, 40px);
+    letter-spacing: -0.04em;
+  }
+  p {
+    font-size: 12px;
+    color: #b7b7b7;
+    margin-top: 9px;
+  }
+  &:hover {
+    padding-inline: 20px;
+    background: #f6f6f6;
+    color: #090909;
+    p,
+    .libraryLabel {
+      color: #555555;
+    }
+  }
+  .libraryArrow {
+    transition: transform 0.4s;
+  }
+  &:hover .libraryArrow {
+    transform: rotate(45deg);
+    color: var(--portfolio-accent-ink);
+  }
+}
+.libraryLabel {
+  font-size: 9px;
+  letter-spacing: 0.045em;
+  color: #b7b7b7;
+  width: 58px;
+}
+.libraryArrow {
+  color: var(--portfolio-accent-on-dark);
+  margin-left: auto;
+  font-size: 30px;
+}
+@keyframes turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 1700px) {
+  .root {
+    --gutter: var(--portfolio-gutter);
+  }
+}
+@media (max-width: 1000px) {
+  .experienceRow summary {
+    grid-template-columns: 21% 1fr 21% 20px;
+  }
+  .experienceDetail {
+    margin-left: calc(21% + 20px);
+  }
+}
+@media (max-width: 760px) {
+  .root {
+    --gutter: var(--portfolio-gutter);
+  }
+  .sectionHeading {
+    display: block;
+    margin-bottom: 40px;
+    h2 {
+      font-size: 44px;
+    }
+    .textLink {
+      display: inline-flex;
+      margin-top: 24px;
+    }
+  }
+  .eyebrow {
+    font-size: 10px;
+    margin-bottom: 22px;
+  }
+  .approach {
+    padding: 48px var(--gutter) 55px;
+    margin-top: 0;
+  }
+  .methodMark {
+    width: 64px;
+    height: 44px;
+  }
+  .approach h2 {
+    font-size: 11.6vw;
+    line-height: 1.35;
+    margin-top: 32px;
+    span:nth-of-type(2) {
+      margin-left: 4%;
+    }
+    span:nth-of-type(3) {
+      margin-left: 21%;
+    }
+  }
+  .methodBottom {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 45px;
+    > p {
+      font-size: 12px;
+    }
+  }
+  .process > div:last-child {
+    font-size: 10px;
+  }
+  .experience {
+    padding: 75px var(--gutter);
+  }
+  .experienceRow {
+    padding: 24px 0;
+    summary {
+      grid-template-columns: 1fr 29% 18px;
+      gap: 12px;
+    }
+  }
+  .date {
+    grid-column: 1/-1;
+    padding: 0 0 8px;
+    font-size: 11px;
+  }
+  .company {
+    font-size: 20px;
+    small {
+      font-size: 10px;
+    }
+  }
+  .metric {
+    font-size: 34px;
+    small {
+      font-size: 9px;
+      line-height: 1.5;
+    }
+  }
+  .experienceDetail {
+    margin-left: 0;
+    font-size: 12px;
+    padding-top: 23px;
+  }
+  .library {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 65px var(--gutter) 80px;
+    h2 {
+      font-size: 44px;
+    }
+    > div > p {
+      font-size: 12px;
+    }
+  }
+  .libraryLinks a {
+    gap: 16px;
+    padding: 24px 0;
+    h3 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+  .libraryLabel {
+    width: 44px;
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .libraryAtmosphere b {
+    animation: none;
+  }
+  .approach h2 span {
+    color: #f6f6f6;
+  }
+  .processTrack i {
+    transform: none;
+  }
+  .expandIcon,
+  .libraryLinks a,
+  .libraryArrow {
+    transition: none;
+  }
+}

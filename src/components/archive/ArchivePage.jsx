@@ -1,71 +1,64 @@
-import AppearTitle from '@src/components/animationComponents/appearTitle/Index';
 import CustomHead from '@src/components/dom/CustomHead';
+import ArchiveField from '@src/components/archive/ArchiveField';
+import ArchiveInstruments, { instrumentCodes } from '@src/components/archive/ArchiveInstruments';
+import projects from '@src/constants/projects';
+import writingArticles from '@src/constants/writingArticles';
+import illustratedTutorials from '@src/constants/illustratedTutorials';
 import Link from 'next/link';
-import clsx from 'clsx';
 import styles from '@src/components/archive/archivePage.module.scss';
 
-function ArchivePage({ page }) {
+const coverByHref = Object.fromEntries([
+  ...projects.map((project) => [project.link, { src: project.img, fit: 'cover' }]),
+  ...writingArticles.filter((article) => article.images?.[0]).map((article) => [`/writing/${article.slug}`, { ...article.images[0], fit: 'contain' }]),
+  [
+    '/tutorials/codex-course',
+    {
+      src: '/codex-course/hero.png',
+      alt: 'Codex 官方产品页面与桌面工作区',
+      fit: 'contain',
+    },
+  ],
+  ['/tutorials/illustrated', { src: illustratedTutorials[0].cover, fit: 'contain' }],
+]);
+
+function ArchivePage({ page, parent }) {
+  const entries = page.entries.map((entry) => ({
+    ...entry,
+    image: entry.image || coverByHref[entry.href],
+    // These are unverified placeholder series, not an existing photo inventory.
+    meta: page.code === 'PHOTOGRAPHY' ? entry.meta.replace(/\s*·\s*\d+\s*张/g, '') : entry.meta,
+    status: entry.href ? entry.status : '详情待补充',
+    linkLabel: entry.linkLabel || (entry.href?.startsWith('/projects/') ? '查看完整案例' : '打开查看'),
+  }));
+
   return (
     <>
-      <CustomHead title={`Giats - ${page.title}`} description={page.intro} keywords={page.keywords} />
-
-      <section className={clsx(styles.hero, 'layout-grid-inner')} style={{ '--archive-accent': page.accent }}>
-        <div className={clsx(styles.heroMeta, 'p-x')}>
-          <span>仓库 / {page.code}</span>
-          <span>{String(page.entries.length).padStart(2, '0')} 个条目</span>
+      <CustomHead title={`陈祉辰｜${page.title}`} description={page.intro} keywords={page.keywords} />
+      <header className={styles.hero}>
+        <div className={styles.meta}>
+          <nav aria-label="当前位置" className={styles.breadcrumb}>
+            {parent ? (
+              <Link scroll={false} href={parent.href}>
+                {parent.title}
+              </Link>
+            ) : (
+              <span>仓库</span>
+            )}
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">{page.title}</span>
+          </nav>
+          <span>{page.code === 'PHOTOGRAPHY' || page.code === 'PERSONAL SKILLS' || page.code === 'AIGC' ? `${entries.length} 个方向` : `${entries.length} 个条目`}</span>
         </div>
-
-        <div className={styles.heroContent}>
-          <h1 className={clsx(styles.heroTitle, 'h1')}>{page.title}</h1>
-          <p className={clsx(styles.heroIntro, 'h6')}>{page.intro}</p>
+        <div className={styles.heading}>
+          <h1>{page.title}</h1>
+          {page.intro && <p>{page.intro}</p>}
         </div>
-
-        <div className={styles.heroRail} aria-hidden="true">
-          <span>{page.title}</span>
-          <span>{page.title}</span>
-          <span>{page.title}</span>
-        </div>
-      </section>
-
-      <section className={clsx(styles.catalog, 'layout-block-inner')} style={{ '--archive-accent': page.accent }}>
-        <div className={styles.catalogHeader}>
-          <h2 className="h4">档案目录</h2>
-          <span className="p-x">按最近更新排序</span>
-        </div>
-
-        <div className={styles.entries}>
-          {page.entries.map((entry, index) => {
-            const entryContent = (
-              <article className={styles.entry}>
-                <div className={clsx(styles.entryIndex, 'p-x')}>{String(index + 1).padStart(2, '0')}</div>
-                <div className={styles.entryMain}>
-                  <div className={clsx(styles.entryMeta, 'p-x')}>{entry.meta}</div>
-                  <h3 className={clsx(styles.entryTitle, 'h3')}>{entry.title}</h3>
-                  <p className={clsx(styles.entryDesc, 'p-l')}>{entry.desc}</p>
-                </div>
-                <div className={styles.entryAside}>
-                  <span className="p-x">{entry.status}</span>
-                  <span className={styles.arrow} aria-hidden="true">
-                    ↗
-                  </span>
-                </div>
-              </article>
-            );
-
-            return (
-              <AppearTitle key={entry.title}>
-                {entry.href ? (
-                  <Link className={styles.entryLink} aria-label={`打开${entry.title}`} scroll={false} href={entry.href}>
-                    {entryContent}
-                  </Link>
-                ) : (
-                  entryContent
-                )}
-              </AppearTitle>
-            );
-          })}
-        </div>
-      </section>
+      </header>
+      {instrumentCodes.includes(page.code) ? (
+        <ArchiveInstruments key={page.code} code={page.code} entries={entries} title={page.title} />
+      ) : (
+        <ArchiveField key={page.code} entries={entries} title={page.title} />
+      )}
     </>
   );
 }

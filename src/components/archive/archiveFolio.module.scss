@@ -1,0 +1,409 @@
+.folio {
+  --folio-spine: 80px;
+  --folio-page: min(820px, calc(100vw - 180px));
+  padding: 0 clamp(20px, 4vw, 64px) 56px;
+  box-shadow: none;
+  border-radius: 0;
+  background: #f4f4f4;
+  color: #111;
+  font-family:
+    var(--font-primary), 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.toolbar,
+.navigation,
+.trackNote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.toolbar {
+  padding: 14px 0;
+  border-top: 1px solid #b9b9b9;
+  p {
+    margin: 0;
+  }
+}
+
+.navigation {
+  gap: 8px;
+  button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 40px;
+    border: 1px solid #b9b9b9;
+    border-radius: 0;
+    background: transparent;
+    color: #111;
+    font-size: 24px;
+    cursor: pointer;
+    transition:
+      color 160ms ease,
+      background 160ms ease;
+  }
+  button:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+  button:hover:not(:disabled) {
+    color: #f4f4f4;
+    background: #111;
+  }
+  button:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 3px;
+  }
+}
+
+.position {
+  min-width: 52px;
+  margin-right: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.track {
+  container-type: inline-size;
+  position: relative;
+  display: flex;
+  isolation: isolate;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-padding-inline: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #686868 #dedede;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page {
+  display: flex;
+  flex: 0 0 var(--folio-spine);
+  min-width: 0;
+  height: clamp(520px, 65svh, 650px);
+  overflow: hidden;
+  background: #e5e5e5;
+  border-right: 1px solid #b9b9b9;
+  transition:
+    flex-basis 480ms cubic-bezier(0.22, 0.8, 0.24, 1),
+    background-color 250ms ease;
+  &:nth-child(2n) {
+    background: #ececec;
+  }
+}
+
+.spine {
+  position: relative;
+  display: flex;
+  flex: 0 0 var(--folio-spine);
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  width: var(--folio-spine);
+  min-width: 0;
+  height: 100%;
+  padding: 18px 12px 20px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+  &:hover {
+    background: #d5d5d5;
+  }
+  &:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: -5px;
+  }
+}
+
+.spineMark {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+}
+.spineFoot {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.spineTitle {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  max-height: calc(100% - 90px);
+  max-width: 100%;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0.025em;
+  font-weight: 500;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+.open {
+  flex-basis: var(--folio-page);
+  background: #fff;
+  &:nth-child(2n) {
+    background: #fff;
+  }
+  .spine {
+    background: #111;
+    color: #f4f4f4;
+  }
+  .spine:hover {
+    background: #262626;
+  }
+  .spine:focus-visible {
+    outline-color: #fff;
+  }
+}
+
+.panel {
+  display: flex;
+  flex: 0 0 calc(var(--folio-page) - var(--folio-spine));
+  flex-direction: column;
+  width: calc(var(--folio-page) - var(--folio-spine));
+  min-width: 0;
+  padding: clamp(20px, 2.3vw, 34px);
+  animation: unfold 420ms cubic-bezier(0.22, 0.8, 0.24, 1) both;
+  &[hidden] {
+    display: none;
+  }
+}
+
+.pageMeta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #686868;
+  span:last-child {
+    flex-shrink: 0;
+  }
+}
+
+.image {
+  position: relative;
+  flex: 1 1 42%;
+  min-height: 110px;
+  max-height: 280px;
+  width: 100%;
+  margin-bottom: 22px;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.copy {
+  min-width: 0;
+  h2 {
+    margin: 0;
+    font-size: clamp(25px, 2.65vw, 38px);
+    line-height: 1.24;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin: 16px 0 0;
+    color: #686868;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+}
+
+.textOnly {
+  .copy {
+    margin-top: auto;
+  }
+  .copy h2 {
+    max-width: 16em;
+    font-size: clamp(32px, 4.1vw, 58px);
+  }
+  .copy p {
+    -webkit-line-clamp: 5;
+  }
+}
+
+.pageFoot {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.openLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  border-top: 1px solid #b9b9b9;
+  padding-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  small {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #686868;
+    margin-top: 4px;
+  }
+  > span:last-child {
+    font-size: 28px;
+    line-height: 1;
+    transition: transform 180ms ease;
+  }
+  &:hover > span:last-child {
+    transform: translate(3px, -3px);
+  }
+  &:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 4px;
+  }
+}
+
+.pending {
+  display: block;
+  padding-top: 16px;
+  border-top: 1px solid #b9b9b9;
+  font-size: 13px;
+  color: #686868;
+}
+.trackNote {
+  padding-top: 13px;
+  color: #686868;
+}
+
+@keyframes unfold {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1001px) {
+  .folio[data-compact='true'] .open {
+    --folio-page: calc(100cqw - var(--folio-fold-count) * var(--folio-spine));
+  }
+}
+
+@media (max-width: 900px) {
+  .folio {
+    --folio-spine: 64px;
+    --folio-page: calc(100vw - 124px);
+  }
+  .spine {
+    padding-inline: 8px;
+  }
+  .spineTitle {
+    font-size: 18px;
+  }
+  .pageMeta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .folio {
+    --folio-spine: 56px;
+    --folio-page: calc(100vw - 88px);
+    padding-bottom: 36px;
+  }
+  .toolbar {
+    gap: 10px;
+  }
+  .toolbar > p {
+    max-width: 120px;
+  }
+  .navigation {
+    gap: 5px;
+  }
+  .position {
+    min-width: 42px;
+    margin-right: 0;
+  }
+  .page {
+    height: auto;
+    min-height: 590px;
+  }
+  .spine {
+    padding-inline: 6px;
+    height: auto;
+    align-self: stretch;
+  }
+  .spineTitle {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+  .panel {
+    padding: 18px 16px;
+  }
+  .pageMeta {
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+  .image {
+    flex: 0 0 190px;
+    height: 190px;
+    max-height: none;
+    margin-bottom: 20px;
+  }
+  .copy h2 {
+    font-size: 24px;
+    line-height: 1.28;
+  }
+  .copy p {
+    margin-top: 12px;
+    -webkit-line-clamp: 3;
+  }
+  .textOnly .copy h2 {
+    font-size: clamp(24px, 6.2vw, 30px);
+  }
+  .textOnly .copy p {
+    -webkit-line-clamp: 5;
+  }
+  .pageFoot {
+    padding-top: 20px;
+  }
+  .trackNote {
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .trackNote span:last-child {
+    max-width: 125px;
+    text-align: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page,
+  .spine,
+  .panel,
+  .navigation button,
+  .openLink > span:last-child {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}

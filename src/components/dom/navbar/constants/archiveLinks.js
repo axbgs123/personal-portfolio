@@ -12,7 +12,7 @@ const archiveLinks = [
     href: '/photography',
   },
   {
-    title: '文字',
+    title: '文字与思考',
     href: '/writing',
   },
   {

@@ -1,0 +1,230 @@
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  visibility: hidden;
+  pointer-events: none;
+  color: #f6f6f6;
+  overflow: hidden;
+  // Offscreen route panels and the oversized mark must be clipped without
+  // creating a scroll container. `hidden` alone lets focus/scroll anchoring
+  // move this fixed layer's contents on narrow screens.
+  overflow: clip;
+  overflow-anchor: none;
+}
+.columns {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  div {
+    height: 102%;
+    background: #090909;
+    margin-right: -1px;
+    transform: none;
+  }
+}
+.copy {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.openingBackdrop {
+  display: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.openingPlane {
+  position: absolute;
+  inset: -1px;
+  background: #090909;
+  // An overlap avoids an antialiased seam on fractional device pixels.
+  clip-path: polygon(0 0, 70.2% 0, 30.2% 100%, 0 100%);
+  &:last-child {
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+  }
+}
+.quickLine {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #090909;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+}
+.opening {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+.openingDock {
+  position: absolute;
+  top: max(28px, 6svh);
+  left: 7%;
+  width: 64px;
+  aspect-ratio: 3 / 2;
+  pointer-events: none;
+}
+.signature {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: min(88vw, 126svh);
+  height: auto;
+  color: #f6f6f6;
+  overflow: visible;
+  transform-origin: center;
+  // The complete mark exists in the initial DOM. JS transforms its scale and
+  // position in the same layout effect that exposes the curtain: no blank beat.
+  transform: translate(-50%, -50%);
+}
+.openingQuote {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: min(86%, 1120px);
+  margin: 0 auto;
+  padding: max(56px, 9svh) 0 max(112px, 14svh);
+  color: #f6f6f6;
+  opacity: 0;
+  visibility: hidden;
+  > p {
+    margin: 0;
+    width: 100%;
+    font-family: var(--portfolio-font);
+    font-size: clamp(32px, 5.15vw, 76px);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.045em;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+  > footer {
+    width: 100%;
+    margin-top: clamp(24px, 4vw, 50px);
+    color: #a7a7a7;
+    font-family: var(--portfolio-font);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+    overflow-wrap: break-word;
+    cite {
+      font-style: normal;
+    }
+  }
+}
+.skip {
+  position: absolute;
+  bottom: 6%;
+  right: 6%;
+  padding: 15px 22px;
+  border: 1px solid #666666;
+  border-radius: 0;
+  font-size: 13px;
+  &:hover {
+    color: #090909;
+    background: #dedede;
+  }
+  &:focus-visible {
+    outline: 2px solid #dedede;
+    outline-offset: 5px;
+  }
+}
+.destination {
+  width: 88%;
+  position: relative;
+  > span {
+    color: #a5a5a5;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+  p {
+    font-size: clamp(46px, 10vw, 160px);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    padding: 24px 0;
+  }
+  i {
+    display: block;
+    font-size: 80px;
+    color: #dedede;
+    font-style: normal;
+  }
+}
+@media (max-width: 760px) {
+  .signature {
+    width: 96vw;
+  }
+  .openingDock {
+    left: 24px;
+    top: 32px;
+    width: 52px;
+  }
+  .openingQuote {
+    width: calc(100% - 48px);
+    padding: 64px 0 128px;
+    > p {
+      font-size: clamp(27px, 7.4vw, 45px);
+      line-height: 1.24;
+      letter-spacing: -0.035em;
+    }
+    > footer {
+      margin-top: 30px;
+      max-width: 310px;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+  }
+  .destination p {
+    font-size: 14vw;
+  }
+  .destination i {
+    font-size: 50px;
+  }
+  .quickLine {
+    top: 74px;
+  }
+}
+@media (max-height: 560px) {
+  .signature {
+    width: min(88vw, 124svh);
+  }
+  .openingDock {
+    top: 20px;
+    width: 44px;
+  }
+  .openingQuote {
+    padding: 24px 0 78px;
+    > p {
+      font-size: clamp(24px, 7.8vh, 42px);
+      line-height: 1.14;
+    }
+    > footer {
+      margin-top: 18px;
+      font-size: 11px;
+    }
+  }
+  .skip {
+    bottom: 3%;
+    padding: 11px 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .curtain {
+    display: none;
+  }
+}
