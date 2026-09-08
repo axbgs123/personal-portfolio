@@ -1,10 +1,25 @@
-# 陈祉辰｜个人网站 V2
+# 陈祉辰｜AI 产品 · 内容 · 创作
 
-`main` 为当前最新版，`portfolio-v2` 保留新版开发分支；此前版本可从 Git 提交历史恢复。当前站点包括个人首页、两个产品案例、教程、文字与思考，以及摄影、Skill 和 AIGC 展示。
+这是我的个人网站与作品集，记录我在 AI 产品、内容工作流和视觉创作中的实践。
+
+我关注如何把真实需求拆成可执行的流程，让 AI 从一次演示走向可以持续使用的产品。网站既展示项目的设计判断与交付成果，也收录日常积累的教程、文章与创作。
+
+## 网站内容
+
+- **项目案例**：AI 运营智能体与内容分析生成平台、百言 GEO 内容增长系统，包含项目背景、方案、流程、界面与复盘。
+- **教程**：Codex 视频课配套资料、AI 工具原文档、生图与视频提示词入口、图文教程成品。
+- **文字与思考**：围绕 AI、产品与技术应用的文章，保留正文与配图。
+- **摄影、个人 Skill 与 AIGC**：记录视觉创作和可复用方法；摄影原片与正式 Skill 文件尚待整理，目前只展示已有方向介绍。AIGC 展示已用于本站的生成式项目主视觉。
+
+## 视觉与交互
+
+以黑白灰为主色，少量朱红标记交互状态。开场与页面转场、可展开的教程书脊、项目画幅、文字档案机和图像局部检视，共同组织内容的浏览节奏。
+
+网站还有可演奏的钢琴与黑白猫“墨墨”。钢琴支持预设曲目；猫可以响应鼠标与音乐，并提供独立的聊天入口。
 
 ## 本地运行
 
-建议使用 Node.js 20 或更新的 LTS 版本。首次下载后执行：
+使用 Node.js 20 或更新的 LTS 版本：
 
 ```sh
 npm ci --legacy-peer-deps
@@ -12,94 +27,25 @@ npm run preview:build
 npm run preview
 ```
 
-访问 `http://localhost:3003`。开发模式使用 `npm run dev`，默认端口为 3000。`node_modules`、`.next*`、本地环境变量及临时素材均不在仓库中。
+预览地址：`http://localhost:3003`。开发模式使用 `npm run dev`，默认端口为 3000。
 
-猫的对话需要自行配置服务端 DeepSeek 密钥；未配置时不调用模型，详见 [CAT-CHAT-SETUP.md](CAT-CHAT-SETUP.md)。摄影原片与正式 Skill 文件待整理，当前仅保留相应方向介绍。
+技术栈：Next.js、React、SCSS Modules、GSAP、Lenis，以及用于钢琴演奏的 Web Audio。
 
-本项目从 Giats 的开源作品集演进而来，保留原始许可和署名。下方为上游项目说明，其中作者介绍及奖项属于原作者，不是本站作者的个人经历。
+猫的聊天使用本站服务端 API 对接 DeepSeek，需要自行配置服务端密钥。未配置时不调用模型，详见 [DeepSeek 对话配置](CAT-CHAT-SETUP.md)。
 
----
+## 版本与资料
 
-![giats.me cover](/public/og.png)
+- `main` 是当前默认版本，`portfolio-v2` 保留新版开发分支；旧版可从提交历史恢复。
+- 本仓库为私有源码备份，上传 GitHub 不等于网站已部署上线。
+- 不上传 `node_modules`、`.next*`、环境变量、密钥及临时目录。
+- 内容与图片按各自来源保留；视频提示词仅提供原链接，不托管原视频。
 
-# giats.me — Personal Portfolio Website
+## 来源与署名
 
-This is the **original source code** for [giats.me](https://giats.me), the personal portfolio website of **Evangelos Giatsidis**.
+本站在 [Giats 的开源作品集](https://github.com/Giats2498/giats-portfolio) 基础上改造。
 
-I designed and built this project from scratch using modern web technologies to push the creative limits of front-end development. The site blends smooth animation, layered visuals, and technical precision to present my work in a unique and immersive way.
+Original portfolio design and development by Evangelos Giatsidis — [giats.me](https://giats.me)。
 
-> 🏆 **Multi-award-winning site, featured on major design platforms**:
->
-> - 🥇 [CSS Design Awards — WOTD + 3 Special Kudos](https://www.cssdesignawards.com/sites/giats-portfolio/46067/)
-> - 🥈 [Awwwards — Honorable Mention](https://www.awwwards.com/sites/https-giats-me)
-> - 🥉 [GSAP — Site of the Day](https://gsap.com/showcase/?page=1)
+原始版权与许可见 [LICENSE](LICENSE)。原作者图片、品牌及其他第三方内容不在本站可转授权范围内，不能将代码许可视为全部素材的使用许可。
 
----
-
-## ⭐ Show Some Love
-
-If you find this project useful, inspiring, or just cool, please consider giving it a star on GitHub!  
-Your support helps me keep improving and sharing my work. Thank you! 🙏
-
----
-
-## 🧠 Concept & Structure
-
-The visual foundation of giats.me is built around a **three-phase layering system**:
-
-1. **The Background Phase**  
-   A dynamic, animated 3D world rendered with React Three Fiber, serving as the visual foundation of the site.
-
-2. **The Main Website Phase**  
-   This layer contains all the actual content — projects, about section, contact, etc. Structurally clean and minimal to let animations breathe.
-
-3. **The Fluid Animation Layer (Above All)**  
-   A real-time fluid simulation overlays the entire interface, using `mix-blend-mode` and the cursor to create an interactive, artistic brush effect. It responds to user input, adding a subtle but powerful sense of depth and responsiveness.
-
-### 🪟 “Window” Effect
-
-Throughout the content layer, I created intentional **cut-out sections** or “windows” that act as **holes in the layout**, letting the background animation show through. These openings create a surreal experience where the layers visually bleed into each other, amplifying the immersive feel of the site.
-
----
-
-## ⚙️ Tech Stack
-
-- **Framework:** [Next.js](https://nextjs.org/) (React)
-- **3D & Canvas:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
-- **Animation:** [GSAP](https://greensock.com/gsap/) with ScrollTrigger
-- **Transitions & Scroll UX:** Custom GSAP-powered page transitions and smooth scroll behavior
-- **Styling:** SCSS / CSS Modules
-- **Hosting:** [Vercel](https://vercel.com)
-
----
-
-## 📸 Assets & Privacy Notice
-
-- Personal and client-related visuals (e.g., images, logos, portraits) have been **blurred, replaced, or omitted** to respect privacy and copyright.
-- The full visual experience is available at [giats.me](https://giats.me).
-- **Do not reuse images or branding without permission.**
-
----
-
-## 📄 License & Attribution
-
-This project is licensed under the **MIT License (with attribution required)**.
-
-> If you use this code or parts of it, **credit is required**:
->
-> _"Original portfolio design and development by Evangelos Giatsidis — [giats.me](https://giats.me)"_
-
-You are welcome to learn from or build upon this project, but **do not claim it as your own or use it commercially without permission.**
-
----
-
-## 📬 Contact
-
-- 📧 Email: [vaggelisgiats@gmail.com](mailto:vaggelisgiats@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/giats](https://www.linkedin.com/in/giats/)
-- 🌐 Website: [giats.me](https://giats.me)
-- 🐦 X (Twitter): [@Giats\_](https://x.com/Giats_)
-
----
-
-Thank you for checking out my portfolio. I hope this project inspires or helps you in your own creative journey.
+钢琴采样来自 Alexander Holm 的 Salamander Grand Piano（CC BY 3.0），完整说明见 [钢琴素材署名](public/audio/piano/ATTRIBUTION.md)。
