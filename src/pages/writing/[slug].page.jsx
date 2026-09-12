@@ -1,25 +1,38 @@
+/* eslint-disable react/no-array-index-key -- Immutable document nodes retain their source order. */
 import CustomHead from '@src/components/dom/CustomHead';
-import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 import writingArticles from '@src/constants/writingArticles';
 import styles from '@src/pages/writing/writingArticle.module.scss';
 
-function WritingArticlePage({ article, nextArticle, articleNumber }) {
-  const imagesByPosition = article.images.reduce((positions, image, index) => {
-    const position = Math.max(1, Math.round(((index + 1) * article.paragraphs.length) / (article.images.length + 1)));
-    positions[position] = [...(positions[position] || []), image];
-    return positions;
-  }, {});
+function ArticleBlocks({ nodes, title }) {
+  return nodes.map((node, index) => {
+    const children = node.children ? <ArticleBlocks nodes={node.children} title={title} /> : null;
+    if (node.type === 'blank_line') return null;
+    if (node.type === 'text') return node.raw;
+    if (node.type === 'strong') return <strong key={index}>{children}</strong>;
+    if (node.type === 'heading') {
+      const Heading = `h${Math.max(2, Math.min(6, node.attrs.level))}`;
+      return <Heading key={index}>{children}</Heading>;
+    }
+    if (node.type === 'image') return null;
+    if (node.type === 'paragraph') {
+      if (node.children.every((child) => child.type === 'image')) return null;
+      return <p key={index}>{children}</p>;
+    }
+    return null;
+  });
+}
 
+function WritingArticlePage({ article, nextArticle, articleNumber }) {
   return (
     <>
-      <CustomHead title={`陈祉辰｜${article.title}`} description={article.excerpt} keywords={['文字与思考', 'AI 观察', article.title]} />
+      <CustomHead title={`陈祉辰｜${article.title}`} description={article.excerpt} keywords={['口播稿', 'AI 观察', article.title]} />
 
       <section className={clsx(styles.hero, 'layout-grid-inner')}>
         <div className={clsx(styles.breadcrumb, 'p-x')}>
           <Link scroll={false} href="/writing">
-            文字与思考
+            口播稿
           </Link>
           <span>/</span>
           <span>{String(articleNumber).padStart(2, '0')}</span>
@@ -41,16 +54,7 @@ function WritingArticlePage({ article, nextArticle, articleNumber }) {
         </aside>
 
         <article className={styles.articleBody}>
-          {article.paragraphs.map((paragraph, index) => (
-            <div key={paragraph}>
-              <p>{paragraph}</p>
-              {(imagesByPosition[index + 1] || []).map((image, imageIndex) => (
-                <figure className={styles.figure} key={image.src}>
-                  <Image src={image.src} width={image.width} height={image.height} sizes="(max-width: 768px) 100vw, 62vw" alt={`${article.title} 配图 ${imageIndex + 1}`} />
-                </figure>
-              ))}
-            </div>
-          ))}
+          <ArticleBlocks nodes={article.blocks} title={article.title} />
         </article>
       </section>
 
@@ -76,11 +80,12 @@ export function getStaticPaths() {
   };
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
+  const { default: fullArticles } = await import('@src/content/writing-feishu.json');
   const index = writingArticles.findIndex((article) => article.slug === params.slug);
   return {
     props: {
-      article: writingArticles[index],
+      article: fullArticles[index],
       nextArticle: writingArticles[(index + 1) % writingArticles.length],
       articleNumber: index + 1,
     },

@@ -23,18 +23,45 @@ const contents = {
       { title: '图文教程', href: '/tutorials/illustrated' },
     ],
   },
-  '/photography': { code: 'PHOTOGRAPHY', symbol: '◉', description: '摄影与视觉记录。', previews: [] },
-  '/writing': {
-    code: 'WRITING',
-    symbol: '¶',
-    description: '关于 AI、科技与商业变化的观察，也记录实践中的判断与问题。',
+  '/photography': {
+    code: 'PHOTO / VIDEO',
+    symbol: '◉',
+    description: '照片、视频与真实现场的视觉交付。',
     previews: [
-      { title: '豆包手机被围堵后，大家为什么还要往里冲？', href: '/writing/doubao-phone-rush' },
-      { title: 'FDE 不是新岗位——AI时代真正稀缺的是这四种能力', href: '/writing/fde-four-capabilities' },
+      {
+        title: '商业活动摄影与视频交付',
+        href: '/photography/commercial-delivery',
+      },
+      { title: '真人竖屏短剧', href: '/photography/short-drama' },
     ],
   },
-  '/personal-skills': { code: 'PERSONAL SKILLS', symbol: '⌥', description: '个人方法与可复用的 AI 工作流。', previews: [] },
-  '/aigc': { code: 'AIGC', symbol: '✳', description: '图像、视频与生成式创作的入口。', previews: [] },
+  '/writing': {
+    code: 'SCRIPTS',
+    symbol: '¶',
+    description: '面向 AI、科技与商业内容的口播稿与选题表达。',
+    previews: [
+      {
+        title: '豆包手机被围堵后，大家为什么还要往里冲？',
+        href: '/writing/doubao-phone-rush',
+      },
+      {
+        title: 'FDE 不是新岗位——AI时代真正稀缺的是这四种能力',
+        href: '/writing/fde-four-capabilities',
+      },
+    ],
+  },
+  '/personal-skills': {
+    code: 'PERSONAL SKILLS',
+    symbol: '⌥',
+    description: '个人方法与可复用的 AI 工作流。',
+    previews: [],
+  },
+  '/aigc': {
+    code: 'AIGC',
+    symbol: '✳',
+    description: '图像、视频与生成式创作的入口。',
+    previews: [],
+  },
 };
 
 export default function ArchiveDeck({ path, onFollow }) {
@@ -57,7 +84,11 @@ export default function ArchiveDeck({ path, onFollow }) {
     event.preventDefault();
     setSelected(next);
     buttons.current[next]?.focus({ preventScroll: true });
-    buttons.current[next]?.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'auto' });
+    buttons.current[next]?.scrollIntoView({
+      block: 'nearest',
+      inline: 'nearest',
+      behavior: 'auto',
+    });
   };
 
   const follow = (event, href) => {

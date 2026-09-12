@@ -140,7 +140,7 @@ export default function ProjectPortals({ variant = 'home' }) {
       {!archive && (
         <div className={styles.bottom}>
           <span>概念封面 · 案例内含真实界面</span>
-          <Link href="/projects" scroll={false}>
+          <Link href="/more-projects" scroll={false}>
             项目档案 <span aria-hidden="true">↗</span>
           </Link>
         </div>

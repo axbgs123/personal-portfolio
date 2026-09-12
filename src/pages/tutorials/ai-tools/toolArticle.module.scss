@@ -1,0 +1,78 @@
+.article {
+  width: 100%;
+  max-width: 1120px;
+  margin: 16px auto 80px;
+  font-size: 17px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+  p {
+    margin: 0 0 16px;
+    white-space: pre-wrap;
+  }
+  h2 {
+    margin: 44px 0 18px;
+    font-size: clamp(21px, 2.2vw, 28px);
+    line-height: 1.4;
+    font-weight: 700;
+  }
+  a {
+    color: #bc352b;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  a:hover {
+    color: #111;
+  }
+  a:focus-visible {
+    outline: 2px solid #bc352b;
+    outline-offset: 4px;
+  }
+  strong {
+    font-weight: 700;
+  }
+}
+.tableScroll {
+  width: 100%;
+  overflow-x: auto;
+  margin: 24px 0 40px;
+  border-top: 2px solid #161616;
+  &:focus-visible {
+    outline: 2px solid #bc352b;
+    outline-offset: 3px;
+  }
+  table {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  th,
+  td {
+    padding: 16px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #d8d8d8;
+    min-width: 110px;
+  }
+  th {
+    background: #ededeb;
+    font-weight: 700;
+  }
+  td {
+    background: rgba(255, 255, 255, 0.45);
+  }
+  p {
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  .article {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .tableScroll th,
+  .tableScroll td {
+    padding: 12px;
+  }
+}

@@ -54,9 +54,6 @@ const aiToolDocuments = [
     title: 'AI 其他工具',
     sourceFile: 'AI 其他工具_MR5PiBY3hB1QUGDAzBilm3.docx',
   },
-].map((document) => ({
-  ...document,
-  pdf: `/ai-tools-documents/${document.slug}.pdf`,
-}));
+];
 
 export default aiToolDocuments;

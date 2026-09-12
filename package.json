@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "preview:build": "PORTFOLIO_DIST_DIR=.next-content-exhibits-final next build",
-    "preview": "PORTFOLIO_DIST_DIR=.next-content-exhibits-final next start -p 3003",
+    "preview:build": "PORTFOLIO_DIST_DIR=.next-swiss-release next build",
+    "preview": "PORTFOLIO_DIST_DIR=.next-swiss-release next start -p 3005",
     "postbuild": "next-sitemap",
     "lint": "next lint"
   },

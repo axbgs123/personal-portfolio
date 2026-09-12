@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  ...(process.env.PORTFOLIO_STANDALONE === '1' ? { output: 'standalone' } : {}),
   // Separate preview output keeps the last production preview intact while iterating.
   distDir: process.env.PORTFOLIO_DIST_DIR || '.next',
   pageExtensions: ['page.jsx'],
@@ -13,7 +14,10 @@ const nextConfig = {
   // },
   reactStrictMode: false, // Recommended for the `pages` directory, default in `app`.
 
-  images: {},
+  // Portfolio media is already exported as web-friendly WebP assets. Serving
+  // it directly avoids request-time Sharp work and memory spikes on the 2 GiB
+  // production server.
+  images: { unoptimized: true },
   webpack(config, { isServer }) {
     // config.resolve.alias = {
     //   ...config.resolve.alias,

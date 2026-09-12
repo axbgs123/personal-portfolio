@@ -2,7 +2,7 @@ import NextHead from 'next/head';
 import { NextSeo } from 'next-seo';
 import PropTypes from 'prop-types';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://chenzhichen.cc';
 const OG_IMAGE = `${SITE_URL}/og.png`;
 
 const getSchema = () => ({

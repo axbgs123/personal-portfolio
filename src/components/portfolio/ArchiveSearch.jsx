@@ -11,8 +11,9 @@ const categories = [
   { id: 'all', label: '全部' },
   { id: 'projects', label: '项目' },
   { id: 'tutorials', label: '教程' },
-  { id: 'writing', label: '文字与思考' },
-  { id: 'skills', label: '个人 Skill' },
+  { id: 'writing', label: '口播稿' },
+  { id: 'skills', label: 'Skill 与工作流提效' },
+  { id: 'photography', label: '照片视频' },
 ];
 const isPlainClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
 
@@ -121,7 +122,12 @@ export default function ArchiveSearch() {
     const app = document.getElementById('__next');
     const { lenis } = useStore.getState();
     const menuWasOpen = menuWasOpenRef.current || Boolean(document.querySelector('[data-archive-dialog]:not([data-archive-search])'));
-    lockRef.current = { app, wasInert: app?.inert || false, wasStopped: Boolean(lenis?.isStopped), menuWasOpen };
+    lockRef.current = {
+      app,
+      wasInert: app?.inert || false,
+      wasStopped: Boolean(lenis?.isStopped),
+      menuWasOpen,
+    };
     if (app) app.inert = true;
     lenis?.stop();
     inputRef.current?.focus({ preventScroll: true });
@@ -198,7 +204,13 @@ export default function ArchiveSearch() {
   const results = useMemo(() => index?.searchArchive(query, category) || [], [index, query, category]);
   const counts = useMemo(() => {
     const all = index?.searchArchive(query) || [];
-    return all.reduce((totals, result) => ({ ...totals, [result.category]: (totals[result.category] || 0) + 1 }), { all: all.length });
+    return all.reduce(
+      (totals, result) => ({
+        ...totals,
+        [result.category]: (totals[result.category] || 0) + 1,
+      }),
+      { all: all.length },
+    );
   }, [index, query]);
 
   const followResult = (event, href) => {
@@ -228,7 +240,7 @@ export default function ArchiveSearch() {
         <header className={styles.top}>
           <div>
             <h2 id="archive-search-title">站内搜索</h2>
-            <span>项目 / 教程 / 文字 / SKILL</span>
+            <span>项目 / 教程 / 口播稿 / SKILL / 照片视频</span>
           </div>
           <button type="button" onClick={() => closeSearch()} className={styles.close} aria-label="关闭站内搜索">
             关闭 <span aria-hidden="true">×</span>

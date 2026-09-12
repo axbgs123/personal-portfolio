@@ -10,7 +10,7 @@
 }
 .eyebrow {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   font-family: var(--portfolio-mono);
   letter-spacing: 0.09em;
   color: #767676;
@@ -52,7 +52,7 @@
   position: absolute;
   inset: 0;
   background: #272727;
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
+  clip-path: inset(0% 100% 0% 0%);
 }
 .approachMark {
   position: absolute;
@@ -102,7 +102,7 @@
   gap: 8%;
   margin-top: 80px;
   > p {
-    font-size: 13px;
+    font-size: 16px;
     color: #9d9d9d;
     line-height: 1.9;
   }
@@ -112,7 +112,7 @@
   justify-content: space-between;
   gap: 15px;
   margin-top: 18px;
-  font-size: 12px;
+  font-size: 14px;
   color: #c7c7c7;
 }
 .processTrack {
@@ -131,7 +131,7 @@
   background: #f6f6f6;
 }
 .textLink {
-  font-size: 13px;
+  font-size: 14px;
   border-bottom: 1px solid #b6b6b6;
   padding-bottom: 10px;
   white-space: nowrap;
@@ -201,7 +201,7 @@
   margin-left: calc(24% + 20px);
   padding-top: 24px;
   max-width: 620px;
-  font-size: 14px;
+  font-size: 16px;
   color: #6a6a6a;
   line-height: 1.9;
   > span {
@@ -251,7 +251,7 @@
   i {
     position: absolute;
     inset: -50% 40%;
-    background: #202020;
+    background: transparent;
     transform: rotate(-14deg);
   }
   > span {
@@ -364,7 +364,7 @@
     }
   }
   .eyebrow {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 22px;
   }
   .approach {
@@ -391,11 +391,11 @@
     gap: 40px;
     margin-top: 45px;
     > p {
-      font-size: 12px;
+      font-size: 16px;
     }
   }
   .process > div:last-child {
-    font-size: 10px;
+    font-size: 12px;
   }
   .experience {
     padding: 75px var(--gutter);
@@ -427,7 +427,7 @@
   }
   .experienceDetail {
     margin-left: 0;
-    font-size: 12px;
+    font-size: 16px;
     padding-top: 23px;
   }
   .library {

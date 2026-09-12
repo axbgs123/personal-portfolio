@@ -8,10 +8,6 @@ const menuLinks = [
     href: '/about',
   },
   {
-    title: '项目',
-    href: '/projects',
-  },
-  {
     title: '联系我',
     href: undefined,
   },

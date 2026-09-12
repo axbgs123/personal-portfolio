@@ -719,7 +719,7 @@ $muted: #666666;
     transform 0.35s var(--portfolio-ease),
     background 0.3s;
 }
-.materialDrawer:hover,
+.materialDrawer:not([aria-disabled]):hover,
 .materialDrawer:focus-visible {
   transform: translateX(-9px);
   background: white;

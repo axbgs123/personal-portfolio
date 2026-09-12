@@ -8,7 +8,7 @@ export default function AiToolsWheel({ documents }) {
   const document = browser.active;
   return (
     <TutorialFrame title="AI 工具" description="AI 工具分类资料与实践指南。" keywords={['AI 工具']} kind="tool-wheel">
-      <CatalogSearch browser={browser} label="检索工具分类" countLabel="份原始 PDF" />
+      <CatalogSearch browser={browser} label="检索工具分类" countLabel="个工具分类" />
       {document ? (
         <div className={styles.toolStation}>
           <div className={styles.wheelHousing}>
@@ -47,15 +47,12 @@ export default function AiToolsWheel({ documents }) {
             <div className={styles.outputSlot} aria-hidden="true" />
             <Link scroll={false} className={styles.pdfSheet} href={`/tutorials/ai-tools/${document.slug}`} key={document.slug}>
               <span className={styles.fileType}>
-                PDF<span>原始资料</span>
+                工具<span>介绍与链接</span>
               </span>
               <h2>{document.title}</h2>
               <span className={styles.sheetRules} aria-hidden="true" />
               <span className={styles.sheetLink}>在本站阅读原文 ↗</span>
             </Link>
-            <a className={styles.originalLink} href={document.pdf} target="_blank" rel="noopener noreferrer">
-              单独打开原文件 ↗
-            </a>
           </div>
         </div>
       ) : (

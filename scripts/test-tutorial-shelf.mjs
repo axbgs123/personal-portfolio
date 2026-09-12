@@ -9,13 +9,15 @@ const require = createRequire(import.meta.url);
 const root = new URL('../', import.meta.url);
 const read = (path) => readFileSync(new URL(path, root), 'utf8');
 const source = read('src/components/tutorials/TutorialWorkbench.jsx');
-const css = require('sass').compile(fileURLToPath(new URL('src/components/tutorials/tutorialRouter.module.scss', root))).css;
+const { css } = require('sass').compile(fileURLToPath(new URL('src/components/tutorials/tutorialRouter.module.scss', root)));
+
+const migrated = vm.runInNewContext(`${read('src/constants/migratedPortfolio.js').replace(/export const /g, 'const ')}\n({ migratedProjectEntries, migratedPhotographyEntry, migratedShortDramaEntry })`);
 const constant = (path, name) =>
   vm.runInNewContext(
     `${read(path)
       .replace(/^import[^\n]*\n/gm, '')
       .replace(/export default[^;]*;/g, '')}\n${name}`,
-    { writingArticles: [] },
+    { writingArticles: [], ...migrated },
   );
 const aiToolDocuments = constant('src/constants/aiToolDocuments.js', 'aiToolDocuments');
 const illustratedTutorials = constant('src/constants/illustratedTutorials.js', 'illustratedTutorials');
@@ -96,14 +98,16 @@ function harness(inputPage = page, { mobile = false, reduced = false, useLenis =
       }),
     },
     requestAnimationFrame: (callback) => {
-      const id = ++frameId;
+      frameId += 1;
+      const id = frameId;
       frames.set(id, callback);
       return id;
     },
     cancelAnimationFrame: (id) => frames.delete(id),
     useId: () => 'tutorial-shelf-test',
     useRef: (initial) => {
-      const index = refIndex++;
+      const index = refIndex;
+      refIndex += 1;
       refs[index] ||= { current: initial };
       return refs[index];
     },
@@ -302,7 +306,7 @@ test('each disclosure has a unique labelled region and hidden pages leave the vi
 
 test('arrows/Home/End open adjacent books and move focus; modifiers and Enter are not intercepted', () => {
   const shelf = harness();
-  for (const [origin, key, target] of [
+  [
     [0, 'ArrowRight', 1],
     [1, 'ArrowDown', 2],
     [2, 'ArrowLeft', 1],
@@ -310,12 +314,12 @@ test('arrows/Home/End open adjacent books and move focus; modifiers and Enter ar
     [0, 'End', 3],
     [3, 'Home', 0],
     [0, 'ArrowLeft', 0],
-  ]) {
+  ].forEach(([origin, key, target]) => {
     assert.equal(shelf.key(origin, key), true);
     assert.equal(shelf.selected(), target);
     assert.equal(shelf.focused(), target);
-  }
-  for (const modifier of ['altKey', 'ctrlKey', 'metaKey', 'isComposing']) assert.equal(shelf.key(0, 'End', { [modifier]: true }), false);
+  });
+  ['altKey', 'ctrlKey', 'metaKey', 'isComposing'].forEach((modifier) => assert.equal(shelf.key(0, 'End', { [modifier]: true }), false));
   assert.equal(shelf.key(0, 'Enter'), false);
   assert.equal(shelf.selected(), 0);
 });

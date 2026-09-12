@@ -12,7 +12,13 @@ import styles from './archiveMachine.module.scss';
  * Critique: don't imitate a casino (no reels, prizes, flashing lights or audio).
  * Search is an equal route; random discovery is optional, never a content gate.
  */
-const initialState = { queue: [], history: [], cursor: -1, query: '', searchOpen: false };
+const initialState = {
+  queue: [],
+  history: [],
+  cursor: -1,
+  query: '',
+  searchOpen: false,
+};
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
 export function shuffledIds(ids, random = Math.random) {
@@ -100,7 +106,12 @@ export default function ArchiveMachine({ entries, storageId = 'writing' }) {
     } catch {
       // A blocked or outdated session must not block the machine.
     }
-    commit(restored || { ...initialState, queue: shuffledIds(entries.map((entry) => entry.id)) });
+    commit(
+      restored || {
+        ...initialState,
+        queue: shuffledIds(entries.map((entry) => entry.id)),
+      },
+    );
     setReady(true);
     return () => window.clearTimeout(timerRef.current);
   }, [commit, entries, entryMap, storageKey]);
@@ -141,14 +152,24 @@ export default function ArchiveMachine({ entries, storageId = 'writing' }) {
     const { current } = stateRef;
     const [id, ...queue] = current.queue;
     if (!id) return;
-    printEntry(entryMap.get(id), { ...current, queue, history: [...current.history, id], cursor: current.history.length });
+    printEntry(entryMap.get(id), {
+      ...current,
+      queue,
+      history: [...current.history, id],
+      cursor: current.history.length,
+    });
   };
 
   const visit = (entry) => {
     const { current } = stateRef;
     const existing = current.history.indexOf(entry.id);
     const history = existing < 0 ? [...current.history, entry.id] : current.history;
-    commit({ ...current, history, queue: current.queue.filter((id) => id !== entry.id), cursor: existing < 0 ? history.length - 1 : existing });
+    commit({
+      ...current,
+      history,
+      queue: current.queue.filter((id) => id !== entry.id),
+      cursor: existing < 0 ? history.length - 1 : existing,
+    });
     // Keep the search panel and query intact when returning from the article.
   };
 
@@ -161,7 +182,12 @@ export default function ArchiveMachine({ entries, storageId = 'writing' }) {
 
   const restart = () => {
     if (busyRef.current) return;
-    commit({ ...stateRef.current, queue: shuffledIds(entries.map((entry) => entry.id)), history: [], cursor: -1 });
+    commit({
+      ...stateRef.current,
+      queue: shuffledIds(entries.map((entry) => entry.id)),
+      history: [],
+      cursor: -1,
+    });
     setAnnouncement('已开始新一轮，计数归零。');
   };
 
@@ -181,7 +207,7 @@ export default function ArchiveMachine({ entries, storageId = 'writing' }) {
         <div>
           <span className={styles.eyebrow}>陈祉辰的内容仓库</span>
           <h1>
-            文字与思考<span aria-hidden="true">.</span>
+            口播稿<span aria-hidden="true">.</span>
           </h1>
         </div>
         <p>
@@ -263,7 +289,7 @@ export default function ArchiveMachine({ entries, storageId = 'writing' }) {
             </div>
             <div className={styles.display}>
               <span>
-                本轮已看<small>文字与思考 · 看过不重复</small>
+                本轮已看<small>口播稿 · 看过不重复</small>
               </span>
               <output aria-label={`文章本轮已看 ${seenCount} 篇，共 ${entries.length} 篇`}>
                 <strong>{String(seenCount).padStart(2, '0')}</strong>
@@ -294,7 +320,10 @@ export default function ArchiveMachine({ entries, storageId = 'writing' }) {
                 onPointerDown={(event) => {
                   if (event.button !== 0 || busyRef.current) return;
                   suppressClick.current = false;
-                  dragRef.current = { pointerId: event.pointerId, startY: event.clientY };
+                  dragRef.current = {
+                    pointerId: event.pointerId,
+                    startY: event.clientY,
+                  };
                   event.currentTarget.setPointerCapture(event.pointerId);
                 }}
                 onPointerMove={(event) => {

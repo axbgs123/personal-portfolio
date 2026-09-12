@@ -1,0 +1,15 @@
+.playTitle { display: inline !important; }
+.playTitle > span { display: inline-block !important; transition: transform .45s cubic-bezier(.2,.8,.2,1), color .35s; }
+.playTitle > span:hover { transform: translateY(-.06em) skewY(-5deg); color: #e14335; }
+.playTitle > span[data-inverted] { transform: translateY(-.06em) skewY(-5deg); color: #e14335; }
+.playTitle > span[data-inverted]:hover { transform: none; color: inherit; }
+.dial { width: clamp(95px,12vw,210px); aspect-ratio: 1; border: 0; background: none; position: relative; margin-right: 7vw; cursor: crosshair; }
+.disk { position: absolute; inset: 0; background: #080808; border-radius: 50%; }
+.needle { position: absolute; width: 145%; height: 6px; left: 50%; top: 50%; background: #e14335; transform-origin: left; transition: transform .3s ease-out; pointer-events: none; }
+.dial small { position: absolute; top: calc(100% + 18px); left: 0; width: 100%; font-size: 12px; color: #777; opacity: 0; transition: opacity .3s; }.dial:hover small,.dial:focus-visible small { opacity: 1; }
+.ripples { position: absolute; inset: 0; pointer-events: none; }.ripples i { position: absolute; inset: 0; border: 1px solid #e14335; border-radius: 50%; animation: ripple 1.4s ease-out forwards; }.ripples i:nth-child(2) { animation-delay: .15s; }.ripples i:nth-child(3) { animation-delay: .3s; }
+@keyframes ripple { from { transform: scale(.7); opacity: .7; } to { transform: scale(2.5); opacity: 0; } }
+.game { margin-top: 35px; position: relative; border-top: 1px solid #ccc; border-bottom: 1px solid #ddd; outline-offset: 5px; }.game canvas { display: block; width: 100%; height: 170px; }.gameTools { display: flex; justify-content: space-between; padding: 12px 0; font-size: 13px; color: #666; }.gameTools button { background: none; border: none; color: #111; cursor: pointer; }.gameTools button:hover { color: #e14335; }
+.gameTools { flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.gameTools select { font: inherit; color: #111; background: transparent; border: 1px solid #ccc; padding: 4px 8px; border-radius: 0; }
+@media(prefers-reduced-motion:reduce) { .playTitle > span,.needle { transition: none; }.ripples i { animation: none; opacity: 0; } }

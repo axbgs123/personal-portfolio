@@ -1,0 +1,7288 @@
+{
+  "writing": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI 写作工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "注意：部分海外工具可能无法在国内网络环境中直接访问。有合适替代品时，建议优先选择国内工具。免费额度、模型和功能变化较快，请以官网实时信息为准。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "写作类工具",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "1、百言 AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "登录地址："
+        },
+        {
+          "text": "百言AI",
+          "href": "https://ai.baiyan.tech/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "2、DeepSeek 网页版"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://chat.deepseek.com/",
+          "href": "https://chat.deepseek.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：中文长文、提纲、改写润色、资料总结和逻辑分析。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：网页端可直接使用；涉及事实、数据和最新信息时仍需人工核对。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "3、Kimi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://www.kimi.com/",
+          "href": "https://www.kimi.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：长文阅读、资料整理、内容策划和写作辅助。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：支持长上下文、联网搜索和文件处理，适合先研究再写作。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "4、WPS AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://x.wps.cn/introduction/writing",
+          "href": "https://x.wps.cn/introduction/writing"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：周报、方案、通知、公文、邮件和办公文档。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：直接集成在 WPS 文档中，支持起草、续写、扩写、缩写、改写和润色。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "5、腾讯文档 AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://docs.qq.com/",
+          "href": "https://docs.qq.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：在线协作文档、团队共创和现有内容润色。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：在腾讯文档编辑界面内直接调用；具体入口和可用功能以当前版本为准。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "6、密塔写作猫"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://xiezuocat.com/",
+          "href": "https://xiezuocat.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：中文长文、文章大纲、文本校对、改写和润色。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：写作与校对结合，适合需要反复修改中文表达的用户。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "7、Cherry Studio"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://www.cherry-ai.com/",
+          "href": "https://www.cherry-ai.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：希望在电脑端统一调用多个模型的用户。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：可集中管理不同 AI 服务，并支持知识库、智能体等功能；部分模型需要自行配置服务。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "海外及专业写作工具",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "1、ChatGPT"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://chatgpt.com/",
+          "href": "https://chatgpt.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：头脑风暴、搭建结构、起草、改写、调整语气和多轮修改。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "注意：部分地区的访问和付费方式可能受限制。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "2、Claude"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://claude.ai/",
+          "href": "https://claude.ai/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：长文分析、结构调整、保持作者语气以及细致的编辑反馈。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "注意：部分地区可能无法直接访问。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "3、Notion AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://www.notion.com/product/ai",
+          "href": "https://www.notion.com/product/ai"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：已经使用 Notion 管理笔记、项目和团队知识的用户。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：可在页面中生成、改写、总结和翻译内容，并结合工作区资料使用。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "注意：免费和 Plus 用户通常只有有限试用次数，完整 AI 功能以当前套餐为准。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "4、Grammarly"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://www.grammarly.com/ai-writing-assistant",
+          "href": "https://www.grammarly.com/ai-writing-assistant"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：英文邮件、报告、求职材料和商务沟通。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：侧重英文语法、清晰度、语气和改写，可在多种网页与桌面应用中使用。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "5、QuillBot"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://quillbot.com/",
+          "href": "https://quillbot.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：英文改写、压缩、语法检查和同义表达。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "注意：免费功能和字数限制以官网实时说明为准。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 中文综合写作：百言 AI、DeepSeek、Kimi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 中文办公文档：WPS AI、腾讯文档 AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 中文长文校对：密塔写作猫"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 多模型桌面工作流：Cherry Studio"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 通用创作与多轮修改：ChatGPT、Claude"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 知识库与团队写作：Notion AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 英文校对与改写：Grammarly、QuillBot"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "推荐的 AI 写作流程"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "明确目标：写给谁看、解决什么问题、希望读者采取什么行动。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "提供素材：把事实、数据、案例、观点和必须保留的信息交给 AI。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "先列大纲：长文先确认结构，再分段生成，避免一次生成整篇导致内容空泛。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "人工补充：加入真实经历、业务数据、具体案例和个人判断。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "分轮修改：分别检查事实、逻辑、语气、篇幅和格式，不要只说“帮我优化”。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "最终核验：检查人名、日期、数字、政策、引用和链接后再发布。"
+        }
+      ]
+    }
+  ],
+  "image-generation": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI 图像生成与设计工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "按任务选择工具：快速生成图片、编辑已有图片、制作商业视觉，或寻找 Stable Diffusion 模型。国内外产品的免费额度和访问规则可能调整，以官网实时页面为准。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "一、国内常用与模型平台"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "国内访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "即梦 AI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "自媒体配图、插画、人像和创意图片"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "文生图、参考图生成、局部重绘、扩图和智能画布"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费体验，高级能力和额度可能调整"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可直接访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://jimeng.jianying.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可灵 AI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "图片创作、图生视频、短片素材"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "文生图、图片编辑、参考图生成及图片转视频"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "注册后可体验，更多额度和高级模式付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可直接访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://klingai.kuaishou.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "通义万相"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "海报、插画、人像及图文内容"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "文生图、图片编辑、文字与图表生成、多模态创作"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供体验额度，API 和部分高级能力按量计费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可直接访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://tongyi.aliyun.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "LibLibAI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Stable Diffusion 在线生图、模型和工作流"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "聚合多种图片模型，支持文生图、图生图、智能编辑和模型社区"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "注册后可免费试用，会员和 API 付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可直接访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.liblib.art/ai-tool/image-generator"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "吐司 TusiArt"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "在线运行 Stable Diffusion、寻找模型和 LoRA"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "云端生图、模型社区、作品同款，无需本地显卡"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费在线生图和试用算力，更多算力付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可直接访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://tusiart.com/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "二、设计与商业视觉"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "国内访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Lovart"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "品牌视觉、电商图、广告和整套营销素材"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "AI 设计代理，可从需求自动生成多尺寸视觉、编辑元素并维护品牌风格"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可免费开始并提供免费额度，高级功能付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受地区或登录方式影响"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.lovart.ai/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Canva 可画"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "海报、社交媒体配图、PPT 和模板化设计"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "AI 生图、魔法编辑、扩图、去背景，并可直接进入模板排版"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费版可体验部分 AI 能力，高级功能需要订阅"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "中国版可直接访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.canva.cn/magic/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Adobe Firefly"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "商业图片、创意广告、Adobe 工作流"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "图片生成、生成式填充、扩图、文字效果和矢量生成"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费计划提供有限生成次数，更多额度需要订阅"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受网络、地区和账号限制"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.adobe.com/products/firefly.html"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Recraft"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Logo、图标、矢量插画和品牌素材"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "生成位图与可编辑矢量图，支持文字、Mockup 和图片编辑"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费计划提供每日积分；免费作品公开且不适合直接商用"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受网络环境影响"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.recraft.ai/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "三、海外主流与模型社区"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "国内访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "ChatGPT Images"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "对话式生图、中文海报、图片修改"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "通过自然语言生成和编辑图片，可处理文字、细节及透明背景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费版支持有限图片生成，付费计划额度更高"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受网络和地区限制"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://chatgpt.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Gemini"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "多图融合、参考图生成和自然语言修改"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持生成图片、上传多张参考图、连续对话编辑"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费账号可有限使用，订阅计划提供更高额度"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受网络、地区和账号限制"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://gemini.google.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Midjourney"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "高审美插画、概念艺术、时尚及视觉探索"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "风格表现和画面氛围较强，适合大量探索创意方向"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "网页版目前没有免费试用，主要采用订阅制"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "通常需要海外网络环境"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.midjourney.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Ideogram"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "海报、Logo、带文字图片和角色一致性"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "擅长图片中文字、排版、品牌视觉及角色参考"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费计划提供有限慢速额度，免费生成内容默认公开"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受网络环境影响"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://ideogram.ai/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Civitai"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Stable Diffusion 模型、LoRA 和工作流资源"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "浏览、分享和下载社区模型，部分模型支持站内生成"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "浏览及部分模型下载免费；生成可能消耗平台积分"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "通常需要海外网络环境"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://civitai.com/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "中文提示词和日常快速出图：即梦 AI、通义万相"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "图片生成后继续做视频：可灵 AI、即梦 AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "品牌、电商和整套营销视觉：Lovart、Canva 可画"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Adobe 设计工作流：Adobe Firefly"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Stable Diffusion 模型和工作流：LibLibAI、吐司、Civitai"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Logo、图标和矢量素材：Recraft、Ideogram"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "对话式生成和反复修改：ChatGPT、Gemini"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "强风格和概念艺术：Midjourney"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "使用提醒"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "免费额度、模型版本和国内访问情况会变化，以官网实时说明为准。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "上传真人照片、证件、产品资料或未公开设计前，请检查平台的隐私政策。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "免费计划生成的图片不一定支持商用，尤其注意模型、LoRA、字体、素材和人物肖像的授权范围。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "免费生成内容可能默认公开，例如 Recraft、Ideogram 和部分模型社区；商业项目应先确认隐私与授权条款。"
+        }
+      ]
+    }
+  ],
+  "image-editing": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI 图像处理工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "按实际任务选择工具：图片放大与修复、抠图去物、图片转矢量。以下工具均提供免费功能、免费额度或免费开源版本。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "一、图片放大、清晰修复与老照片处理"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "主要特点"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Upscayl"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "本地放大、批量处理、隐私图片"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费开源，本地运行，支持 Windows、macOS、Linux"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "完全免费开源"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://upscayl.org/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Upscale.media"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "临时在线放大、模糊图片变清晰"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "无需安装，操作简单，适合快速处理"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "每日提供免注册免费额度"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.upscale.media/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Bigjpg"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "动漫、插画和普通照片放大"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持降噪和放大，对动漫线条效果较好"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可免注册免费使用，高分辨率和批量处理收费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://bigjpg.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "waifu2x"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "动漫、扫描图及轻度照片修复"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持降噪和1.6倍、2倍放大，页面简单"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费且无需注册"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.waifu2x.net/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "ImageColorizer"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "老照片上色、划痕修复、人脸增强"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "集成多种老照片修复功能，入门简单"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费基础功能"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://imagecolorizer.com/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "二、抠图、去背景与去除多余元素"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "主要特点"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "remove.bg"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "人像、商品图快速去背景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "自动识别主体，可输出透明或纯色背景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "基础预览免费，高清和批量处理收费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.remove.bg/zh"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Clipdrop"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "去背景、去物、扩图和图片放大"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "一个网站包含多种轻量图片处理工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "部分功能提供免费额度"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://clipdrop.co/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Cleanup.pictures"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "去除路人、杂物、文字和瑕疵"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "涂抹需要删除的区域即可自动修复"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "基础分辨率可免注册免费使用"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://cleanup.pictures/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Pixian.AI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "商品图、人像及批量抠图"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可输出透明背景，支持背景换色和 API"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "低分辨率抠图免费且无需注册"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://pixian.ai/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "WatermarkRemover.io"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "去除本人或已获授权图片中的水印、标志和文字"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "自动识别水印，适合单张快速处理"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "单张图片可免费处理"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.watermarkremover.io/zh"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "三、图片转矢量"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "主要特点"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Autotracer"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Logo、图标、插画和扫描线稿矢量化"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "将 JPG、PNG 等转换为 SVG、EPS、AI 或 PDF"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费、无需注册，并可下载结果"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.autotracer.org/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "四、免注册即可用"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "以下工具可以直接打开网页处理图片："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Upscale.media",
+          "href": "https://www.upscale.media/pricing"
+        },
+        {
+          "text": "：每日可免注册免费放大一张图片。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Bigjpg",
+          "href": "https://bigjpg.com/"
+        },
+        {
+          "text": "：可直接上传处理；未登录时需保持浏览器页面开启。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "waifu2x",
+          "href": "https://www.waifu2x.net/"
+        },
+        {
+          "text": "：可直接进行图片降噪和放大。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Pixian.AI",
+          "href": "https://pixian.ai/"
+        },
+        {
+          "text": "：可免费进行低分辨率抠图。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Cleanup.pictures",
+          "href": "https://cleanup.pictures/"
+        },
+        {
+          "text": "：可直接去除图片中的杂物，免费输出有分辨率限制。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "WatermarkRemover.io",
+          "href": "https://www.watermarkremover.io/zh"
+        },
+        {
+          "text": "：可免费处理单张图片。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Autotracer",
+          "href": "https://www.autotracer.org/"
+        },
+        {
+          "text": "：无需注册，可直接转换并下载矢量文件。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "免费额度、输出分辨率和注册规则可能调整，以官网实时说明为准。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "五、怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "隐私图片或需要本地批量放大：Upscayl"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "免注册快速放大：Upscale.media、Bigjpg、waifu2x"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "老照片上色与修复：ImageColorizer"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "一键去背景：remove.bg、Pixian.AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "去除路人、杂物或文字：Cleanup.pictures、Clipdrop"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "去除已获授权的水印：WatermarkRemover.io"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "图片转 SVG 等矢量格式：Autotracer"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "使用提醒：",
+          "bold": true
+        },
+        {
+          "text": "上传含有人脸、证件或商业机密的图片前，请先查看工具的隐私政策。去水印功能仅应用于本人拥有或已获得授权的图片。"
+        }
+      ]
+    }
+  ],
+  "presentation": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI PPT 工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "优先推荐可以免费体验的工具。“完全免费、免登录”工具单独列出；其他工具的免费额度、导出权限和模板范围可能调整，请以官网实时说明为准。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "一、完全免费或免登录工具"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "是否 AI 生成"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "登录要求"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "导出方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "SlideGen"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "是"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "输入主题、文字或 PDF 自动生成完整演示文稿，可在线预览和编辑"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "大部分功能免登录；保存到云端时才需要账号"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费导出 PPTX，无水印"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://slidegen.net/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Marp"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "需配合 AI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "将 ChatGPT、DeepSeek 等生成的 Markdown 大纲直接转换成幻灯片"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "开源工具，无需注册账号"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费导出 PPTX、PDF、HTML 和图片"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://marp.app/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "提示：",
+          "bold": true
+        },
+        {
+          "text": "SlideGen 属于较新的海外工具，适合临时制作普通演示，不建议上传商业机密、客户资料或敏感文件。Marp 本身不负责撰写内容，但完全开源免费，适合让 AI 先生成 Markdown 幻灯片代码，再转换成 PPT。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "二、国内常用工具"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "使用形式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "WPS AI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工作汇报、总结、课件"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "根据主题或文档生成大纲、内容和整套 PPT，可在 WPS 中继续编辑"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费体验额度，部分功能和更大用量需要会员"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "网页、WPS 客户端"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://ai.wps.cn/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "AiPPT"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "商务汇报、教育课件、方案演示"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持主题、文档、链接和大纲生成，提供在线编辑、换模板及 AI 美化"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费版可以生成基础 PPT，高级布局和部分导出能力付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "网页、客户端、Office/WPS 插件"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.aippt.cn/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "ChatPPT"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "快速生成中文 PPT、联网整理内容"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "输入需求生成大纲和页面，支持在线编辑、本地 PPT 美化及演讲稿"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费生成入口，更多模型、模板和高级能力需要会员"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "网页、Office/WPS 插件"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://chat-ppt.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "iSlide AI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "已有文档转 PPT、专业排版与美化"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持主题或文档生成、智能排版、一键换肤，并提供大量 PPT 素材"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "注册后有免费体验次数，部分模板、素材和 AI 能力付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "网页、PowerPoint/WPS 插件"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.islide.cc/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "秒出 PPT"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "快速生成初稿、Word 或 PDF 转 PPT"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "对话式生成、文档和网页导入、在线修改内容与版式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费生成体验，部分模板和导出权益可能收费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "网页"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://10sppt.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "夸克文档"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "学习课件、论文答辩、日常办公"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "输入主题生成 PPT，并提供文档资源和模板"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "AI 生成可以体验，部分精品模板和下载、导出功能需要会员"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "网页、夸克 App"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://doc.quark.cn/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "三、设计与海外工具"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "国内访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Canva 可画"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "高颜值演示、品牌宣传、社交媒体展示"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "AI 生成初稿、海量模板、图像素材、动画和多人协作"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费版可制作和演示 PPT，部分 AI、品牌及高级素材功能付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "中国版可直接访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.canva.cn/create/presentations/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Gamma"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "路演、提案、课程和网页式演示"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "根据主题、大纲或文件生成演示，可自动排版并导出多种格式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费计划，AI 用量和单次生成页数有限"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受网络环境影响"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://gamma.app/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "完全免费、希望免登录：SlideGen"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "完全免费、重视隐私和可控性：Marp"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "日常办公及传统 PPT 兼容：WPS AI、AiPPT"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "中文内容快速生成：ChatPPT、秒出 PPT"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "将 Word、Markdown 或大纲转换成 PPT：iSlide AI、AiPPT"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "学生课件和论文答辩：夸克文档"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "重视设计感和素材：Canva 可画"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "路演、提案和网页式演示：Gamma"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "使用提醒"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "“免费生成”不等于“免费导出 PPTX”，使用前应确认导出格式、水印和模板权限。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "小众免登录工具不适合上传商业机密、个人隐私及未公开资料。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI 生成的数字、案例和引用可能有误，正式演示前必须人工核对。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "商业项目需确认模板、字体、图片、图标和 AI 生成素材的授权范围。"
+        }
+      ]
+    }
+  ],
+  "video": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI 视频工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "更新于 2026 年 8 月"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "以下顺序主要考虑国内用户的使用便利度与综合实用性，不代表绝对性能排名。部分海外工具可能受网络环境、所在地区或订阅方案限制。模型版本、价格和免费额度更新较快，请以官网实时信息为准。生成或上传素材时，请确认拥有相应版权和使用权。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "1、即梦 AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "字节跳动旗下的一站式 AI 创作平台，支持文生视频、图生视频、首尾帧控制和多参考素材生成。中文提示词理解较好，适合短视频、广告创意、剧情片段和社交媒体素材创作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://jimeng.jianying.com/",
+          "href": "https://jimeng.jianying.com/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "2、可灵 AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "快手推出的 AI 图像与视频创作平台。当前视频模型支持文生视频、图生视频、多镜头叙事、主体一致性控制以及原生音频生成，适合电影感画面、人物表演和产品广告。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://app.klingai.com/cn/",
+          "href": "https://app.klingai.com/cn/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "3、通义万相"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "阿里巴巴推出的视觉生成平台，支持文生视频、图生视频、参考生视频、角色一致性、多镜头叙事和音画同步。适合影视预演、广告、电商和创意内容制作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://tongyi.aliyun.com/",
+          "href": "https://tongyi.aliyun.com/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "4、Vidu"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "生数科技推出的 AI 视频生成平台，支持文生视频、图生视频、首尾帧和多参考图生成。人物、物体与场景一致性控制较突出，适合动画、广告、影视分镜和连续角色内容。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://www.vidu.com/",
+          "href": "https://www.vidu.com/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "5、海螺 AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "MiniMax 旗下的 AI 视频创作平台，支持文生视频、图生视频和主体参考。动作、表情和风格化画面表现较好，也提供面向长视频与多镜头创作的可视化工作流。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://hailuoai.video/",
+          "href": "https://hailuoai.video/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "6、PixVerse"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "面向短视频和社交媒体创作的 AI 视频平台，支持文生视频、图生视频、多镜头、视频延长、动作控制、口型与音频生成。模板和热门特效丰富，适合快速制作传播型内容。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://app.pixverse.ai/",
+          "href": "https://app.pixverse.ai/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "7、剪映"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合完成从素材生成到后期剪辑的一站式视频制作。提供 AI 文字成片、营销成片、智能字幕、配音、抠像、画质增强、补帧和智能音效等功能，适合短视频、自媒体和营销内容。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://www.capcut.cn/",
+          "href": "https://www.capcut.cn/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "8、Runway"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "专业级生成式视频创作平台，支持文生视频、图生视频、视频编辑和镜头控制。当前模型在复杂动作、运镜、提示词遵循和视觉质感方面表现突出，适合影视概念设计、广告与专业创意制作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://runwayml.com/",
+          "href": "https://runwayml.com/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "9、Google Flow"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Google 推出的 AI 影视创作平台，整合 Veo、Gemini 等生成模型，支持文生视频、首尾帧、参考素材、视频延长、原生音频和场景搭建。适合电影感片段、故事分镜及连续场景创作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://labs.google/fx/tools/flow",
+          "href": "https://labs.google/fx/tools/flow"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "10、Adobe Firefly"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Adobe 的一站式生成式创意平台，可通过文字或图片生成视频，并在同一工作区完成剪辑、延长、配音、音乐与音效处理。还可调用多种合作方视频模型，适合已经使用 Adobe 工作流的设计师与商业创作者。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://firefly.adobe.com/",
+          "href": "https://firefly.adobe.com/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "11、Luma Dream Machine"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Luma AI 推出的图像与视频创作平台，支持图生视频、首尾帧控制、角色参考、视频延长、循环和自然语言修改。适合电影感镜头、视觉概念探索和视频风格转换。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://lumalabs.ai/dream-machine",
+          "href": "https://lumalabs.ai/dream-machine"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "12、InVideo AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "偏向“一句话生成完整视频”的在线工具。输入主题后，可自动生成脚本、画面、配音、字幕、音乐和转场，并能通过文字指令继续修改，适合解说、营销、社交媒体和无真人出镜视频。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "https://invideo.io/make/ai-video-generator/",
+          "href": "https://invideo.io/make/ai-video-generator/"
+        }
+      ]
+    }
+  ],
+  "mind-map": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI 思维导图工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "注意：部分海外工具可能无法在国内网络环境中直接访问。免费额度、会员价格和功能可能调整，请以官网实时信息为准。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "主流综合工具"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "1、Xmind AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://xmind.com/ai",
+          "href": "https://xmind.com/ai"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：头脑风暴、读书笔记、项目规划、文章大纲和知识整理。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：输入文字、网页链接或上传文件即可生成思维导图，还能通过对话继续扩展、修改和重组内容。支持网页端、电脑端和移动端，综合体验较成熟。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "2、GitMind"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://gitmind.cn/mindmap",
+          "href": "https://gitmind.cn/mindmap"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：快速生成思维导图、学习笔记、会议记录和多人协作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：支持 AI 一键生成思维导图、智能问答、在线编辑、团队实时协作和多端同步，中文用户上手比较方便。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "3、ProcessOn"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://www.processon.com/",
+          "href": "https://www.processon.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：思维导图、流程图、组织架构图、项目规划和团队协作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：可以用 AI 生成思维导图、流程图、会议提纲、待办清单和 SWOT 分析，还支持 Markdown、多人实时协作及多种格式导出。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "4、boardmix 博思白板"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://boardmix.cn/ai-mind-map-maker/",
+          "href": "https://boardmix.cn/ai-mind-map-maker/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：团队头脑风暴、在线会议、产品策划和可视化协作。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：输入主题即可生成可编辑的思维导图，还能在无限画布中加入流程图、时间轴、便签和其他图形，适合多人共同整理方案。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "5、TreeMind 树图"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://shutu.cn/",
+          "href": "https://shutu.cn/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：学习笔记、读书总结、工作计划、课程整理和知识归纳。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：支持一句话生成思维导图，也可以把图片或文档转换为可编辑的导图，提供丰富的中文模板和多人协作功能。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "免登录免费在线工具"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "1、Adobe Acrobat AI 思维导图"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "网址："
+        },
+        {
+          "text": "https://www.adobe.com/sg/acrobat/online/mind-map.html",
+          "href": "https://www.adobe.com/sg/acrobat/online/mind-map.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：无需登录即可免费使用。上传 PDF、Word、PPT、Excel 或 TXT 文件，AI 会自动提取内容并生成思维导图；登录后才能长期保存和协作。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "2、MyMap AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "网址："
+        },
+        {
+          "text": "https://www.mymap.ai/tools/mindmap-maker",
+          "href": "https://www.mymap.ai/tools/mindmap-maker"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：无需注册即可试用 AI 生成思维导图，支持输入主题以及上传 PDF、文档和图片。免费体验有额度限制，保存和高级功能可能需要账号。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "3、Markmap"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "网址："
+        },
+        {
+          "text": "https://markmap.js.org/",
+          "href": "https://markmap.js.org/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：完全免费、免登录、开源。粘贴 Markdown 内容即可生成可交互的思维导图，适合文章大纲和技术内容；不提供 AI 自动写内容功能。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "4、Mermaid Live Editor"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "网址："
+        },
+        {
+          "text": "https://mermaid.live/",
+          "href": "https://mermaid.live/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：免费、免登录，输入简单的层级代码即可生成思维导图，并支持导出图片或 SVG，比较适合熟悉 Markdown 或代码的用户。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "怎么选择"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 综合体验和专业制图：Xmind AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 中文在线使用：GitMind、ProcessOn"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 团队白板与协作：boardmix"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 学习资料和中文模板：TreeMind"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 免登录 AI 生成：Adobe Acrobat、MyMap AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• Markdown 与技术内容：Markmap、Mermaid Live Editor"
+        }
+      ]
+    }
+  ],
+  "rag": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI RAG 知识库工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "RAG（检索增强生成）可以让 AI 根据指定文档回答问题，并尽量给出内容来源。选择工具时，应重点考虑使用难度、数据是否上传云端、模型费用、引用能力和团队权限。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "云端知识库通常需要登录。希望完全免费、免登录且资料不离开电脑，优先选择 AnythingLLM Desktop 或 Obsidian；开源自部署工具的软件本身免费，但服务器、模型 API 或显卡仍可能产生费用。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "一、完全免费、开源或本地部署"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费与登录"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "使用难度"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "AnythingLLM Desktop"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "个人文档问答、本地私有知识库"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持 PDF、Word、网页等资料，可连接 Ollama、本地模型或云端模型"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "开源免费；桌面版无需注册，资料默认保存在本地"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "低"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://anythingllm.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Obsidian"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Markdown 笔记、个人第二大脑"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "本地文件管理、双向链接和丰富插件；安装 AI 插件后可实现语义搜索与问答"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "个人使用免费，无需注册；部分 AI 模型或插件可能收费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "低至中"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://obsidian.md/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "RAGFlow"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "复杂 PDF、扫描件和企业文档"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "强调深度文档解析、混合检索、重排和带引用回答"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "开源，可免费自部署；需要服务器及模型"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "中至高"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://ragflow.io/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Dify 社区版"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "构建知识库机器人、智能体和工作流"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可视化创建 RAG 应用，支持多种模型、检索策略、工作流及 API"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "社区版开源，可免费自部署；模型调用可能产生费用"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "中"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://dify.ai/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "MaxKB"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "企业问答助手、内部知识库"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "文档导入、智能问答、模型接入和企业级智能体构建"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "开源，可免费自部署；云服务和企业能力可能收费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "中"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://maxkb.pro/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "FastGPT 社区版"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "生产级知识库、客服和业务智能体"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持多格式文档、混合检索、重排、引用、工作流和 API"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "社区版可自部署；模型、服务器及部分商业能力可能收费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "中至高"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://fastgpt.cn/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "二、国内在线与无代码工具"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "是否登录"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "腾讯 ima"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "个人资料整理、共享知识库、中文内容问答"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "导入文档、网页等资料，支持个人和共享知识库，并可基于资料问答"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "基础功能可免费使用，具体容量和权益以页面为准"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "需要腾讯账号"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://ima.qq.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "扣子 Coze"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "无代码智能体、知识库机器人和自动化工作流"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "上传资料创建知识库，并与智能体、插件和工作流组合"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可免费开始，模型调用和部分高级能力存在额度限制"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "需要登录"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.coze.cn/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "HelpLook"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "产品帮助中心、客服机器人和对外知识库"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "创建帮助中心、FAQ、产品文档站，并基于内容提供 AI 问答"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费方案和 AI 体验，更多容量及企业功能付费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "需要登录"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.helplook.net/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "飞书知识问答"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "企业内部文档、消息和知识库统一问答"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "根据用户权限搜索飞书消息、文档及知识库，回答时提供来源"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "基础知识库可使用；AI 知识问答的可用范围取决于组织版本"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "需要飞书组织账号"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.feishu.cn/product/wiki"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "三、个人研究与海外工具"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "核心能力"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "免费方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "国内访问"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "NotebookLM"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "论文研究、课程学习、多资料交叉分析"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "支持 PDF、网页、音频、视频和办公文档，回答附带引用，还能生成摘要、脑图和音频概览"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "标准版可免费使用，有笔记本、资料数量和每日使用限制"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "需要 Google 账号，可能受网络环境影响"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://notebooklm.google.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Notion AI"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Notion 笔记、团队资料和跨应用搜索"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "搜索 Notion 工作区，并可连接 Slack、Google Drive、Jira 等企业数据源"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "普通知识管理可免费使用；高级 AI 搜索主要面向付费版本"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可能受网络和账号影响"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网",
+                  "href": "https://www.notion.so/product/ai"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "完全免费、免登录、本地保存：AnythingLLM Desktop"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "已经使用 Markdown 笔记：Obsidian"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "个人学习、论文和资料研究：NotebookLM、腾讯 ima"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "复杂 PDF、扫描件和高质量引用：RAGFlow"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "无代码创建知识库机器人：Dify、扣子"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "快速搭建企业内部知识库：MaxKB、FastGPT"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "产品帮助中心和智能客服：HelpLook"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "企业资料已经集中在飞书：飞书知识问答"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "团队资料已经集中在 Notion：Notion AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "使用提醒"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "开源免费不等于运行完全零成本，本地模型需要电脑性能，云端模型和服务器可能收费。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "涉及客户资料、合同、财务或未公开内容时，优先使用本地部署，并关闭不必要的数据采集。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "上传资料前应检查文件版权、个人信息和商业秘密。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "RAG 可以减少幻觉，但不能完全消除错误；重要答案应检查引用原文。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "云端工具通常必须登录才能保存和管理知识库，不建议为了“免登录”而将敏感文件上传到来源不明的网站。"
+        }
+      ]
+    }
+  ],
+  "digital-human": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": " AI 数字人工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "数字人工具大致分为三类：快速生成口播视频、直播与营销获客、企业培训与交互服务。建议先根据场景试用，再决定是否购买会员或联系企业服务。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "国内常用工具"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "主要特点"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "费用方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "剪映（使用方法课程中有）"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "日常口播、短视频、自媒体"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "剪辑与数字人功能结合，提供公共形象、声音及定制数字人，适合已有剪辑习惯的用户"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "部分功能可体验；高级功能按会员或算力收费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "剪映官网",
+                  "href": "https://www.jianying.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "闪剪"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "个人 IP、知识口播、门店获客、批量成片"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可克隆形象和声音，输入文案生成口播视频，并提供直播切片、批量创作等功能"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "订阅制；企业/API 服务另行计费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "闪剪官网",
+                  "href": "https://shanjian.tv/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "万兴播爆"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "跨境营销、产品介绍、多语言口播、数字人直播"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供多地区数字人、配音、定制数字人和多语言营销视频制作"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可试用；会员订阅及企业服务"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "万兴播爆官网",
+                  "href": "https://virbo.wondershare.cn/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "百度智能云曦灵"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "企业宣传、培训、客服、直播及交互数字人"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "覆盖形象定制、视频合成、对话交互、直播和私有化部署，适合企业项目"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "企业服务为主，按方案询价"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "曦灵数字人平台",
+                  "href": "https://cloud.baidu.com/product/open-special.html"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "硅基智能"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "电商直播、品牌营销、智能客服、数字员工"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "偏企业级数字人解决方案，覆盖视频、直播及实时交互场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "企业服务为主，按需求询价"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "硅基智能官网",
+                  "href": "https://www.guiji.ai/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "海外主流工具"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "工具"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "适用场景"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "主要特点"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "费用方式"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "官网"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "HeyGen"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "多语言口播、品牌营销、视频翻译、出海内容"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可创建个人数字分身，提供公共数字人、声音克隆和多语言视频本地化"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费体验；个人、团队及企业订阅"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "HeyGen 官网",
+                  "href": "https://www.heygen.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Synthesia"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "企业培训、课程、产品演示、内部沟通"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "偏企业视频制作，适合把文档或演示内容批量转成数字人培训视频"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "提供免费方案；个人、团队及企业订阅"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Synthesia 官网",
+                  "href": "https://www.synthesia.io/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "D-ID"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "照片数字人、交互式数字人、客服与教育"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "可将图片生成会说话的数字人，并支持实时对话型视觉智能体"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "订阅制；企业及 API 服务另行计费"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "D-ID 官网",
+                  "href": "https://www.d-id.com/"
+                }
+              ]
+            }
+          ]
+        ],
+        [
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Captions"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "社交媒体口播、广告素材、移动端视频制作"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "集数字分身、字幕、翻译、眼神修正和 AI 剪辑于一体，适合短内容创作者"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "订阅制，具体以官网或应用内为准"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "spans": [
+                {
+                  "text": "Captions 官网",
+                  "href": "https://captions.ai/"
+                }
+              ]
+            }
+          ]
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "想快速制作中文口播：优先试用剪映、闪剪或万兴播爆。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "做电商直播、企业营销或智能客服：重点了解硅基智能、百度曦灵。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "做多语言和出海内容：可以比较 HeyGen、万兴播爆和 Captions。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "做企业培训、课程或内部沟通：优先比较 Synthesia、HeyGen 和百度曦灵。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "只需要让照片开口或开发交互数字人：可以试用 D-ID。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "温馨提示：数字人价格和可用额度变化较快，请以官网实时信息为准。克隆真人形象或声音前，应获得本人明确授权；发布内容时还需遵守相应平台的 AI 内容标识规则。"
+        }
+      ]
+    }
+  ],
+  "text-to-speech": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI文字转语音"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "免费文字转语音"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "更新时间：2026年8月3日"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "一、在线即用"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "TTSMaker官网："
+        },
+        {
+          "text": "https://ttsmaker.com/",
+          "href": "https://ttsmaker.com/"
+        },
+        {
+          "text": "特点：支持中文、英文等多语言，可直接试听并下载音频；支持导出 SRT 字幕。免费额度和可用声音以官网实时显示为准。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "TTSMaker 马克配音资料夸克网盘："
+        },
+        {
+          "text": "https://pan.quark.cn/s/d27ed3ffab37",
+          "href": "https://pan.quark.cn/s/d27ed3ffab37"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "二、免费 / 开源方案"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "edge-tts项目地址："
+        },
+        {
+          "text": "https://github.com/rany2/edge-tts",
+          "href": "https://github.com/rany2/edge-tts"
+        },
+        {
+          "text": "适合：批量配音、生成 MP3 和字幕、需要调节语速 / 音量 / 音调。说明：无需 Microsoft Edge、Windows 或 API Key，但需要联网。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "GPT-SoVITS项目地址："
+        },
+        {
+          "text": "https://github.com/RVC-Boss/GPT-SoVITS",
+          "href": "https://github.com/RVC-Boss/GPT-SoVITS"
+        },
+        {
+          "text": "适合：中文语音克隆、少样本训练、本地部署。说明：部署门槛较高，建议优先使用项目官方整合包或在线演示。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Fish Speech项目地址："
+        },
+        {
+          "text": "https://github.com/fishaudio/fish-speech",
+          "href": "https://github.com/fishaudio/fish-speech"
+        },
+        {
+          "text": "适合：追求自然度、多语言与本地部署的进阶用户。说明：对电脑配置有一定要求；使用前请查看项目最新安装文档与许可说明。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "三、怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 临时配音、零安装：TTSMaker"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 批量生成音频和字幕：edge-tts"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 克隆指定音色：GPT-SoVITS"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 本地高质量生成：Fish Speech"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "四、实用建议"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 长文按 150–300 字分段生成，更方便调整停顿和重音。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 先用 2–3 句话试听，再生成全文，避免返工。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 中文口播稿适当加入逗号、句号和换行，语气通常更自然。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 上传未公开文稿或真人声音前，先确认平台的隐私和数据使用规则。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 商用前请再次核对工具官网的最新授权条款。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 未经本人明确授权，不要克隆或冒用他人声音。"
+        }
+      ]
+    }
+  ],
+  "face-swap": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI换脸工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "FaceFusion 是一款可在本地运行的人脸处理工具，支持图片与视频换脸，并提供人脸增强、表情修复、口型同步、年龄调整等处理模块。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "一、下载与官方入口"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "现有离线整合包 V3.0下载地址："
+        },
+        {
+          "text": "https://pan.quark.cn/s/edf7c0a48f1f",
+          "href": "https://pan.quark.cn/s/edf7c0a48f1f"
+        },
+        {
+          "text": "注意：这是资料库现有的第三方整合包，版本较旧，并非 FaceFusion 官方安装程序。运行前建议先查杀病毒，不要安装来源不明的附加软件。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官方项目GitHub："
+        },
+        {
+          "text": "https://github.com/facefusion/facefusion",
+          "href": "https://github.com/facefusion/facefusion"
+        },
+        {
+          "text": "官方文档："
+        },
+        {
+          "text": "https://docs.facefusion.io/",
+          "href": "https://docs.facefusion.io/"
+        },
+        {
+          "text": "版本发布："
+        },
+        {
+          "text": "https://github.com/facefusion/facefusion/releases",
+          "href": "https://github.com/facefusion/facefusion/releases"
+        },
+        {
+          "text": "官方安装程序："
+        },
+        {
+          "text": "https://facefusion.io/shop",
+          "href": "https://facefusion.io/shop"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "截至2026年8月，官方最新公开版本为 3.6.1。官方说明也提示，源码安装需要一定的命令行基础；不熟悉环境配置的用户可以考虑官方 Windows 或 macOS 一键安装程序。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "二、主要功能"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 人脸替换：将授权的来源人脸替换到图片或视频中"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 人脸增强：改善换脸后的清晰度与面部细节"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 表情修复：尽量保留或恢复目标人物的表情"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 人脸编辑：调整部分面部特征"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 口型同步：根据音频调整人物口型"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 年龄调整：改变面部呈现的年龄特征"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 视频背景移除：新版可配合背景移除处理器使用"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 批量任务：支持批量运行、任务队列和命令行处理"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官方处理器说明："
+        },
+        {
+          "text": "https://docs.facefusion.io/usage/cli-arguments/processors",
+          "href": "https://docs.facefusion.io/usage/cli-arguments/processors"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "三、安装方式怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 新手用户：优先考虑官方一键安装程序"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 有一定技术基础：按照官方文档使用 Git、Conda 和 FFmpeg 安装"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• NVIDIA 显卡：可配置 CUDA，通常拥有更好的处理速度"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• Intel 显卡：可参考 OpenVINO 安装方式"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• Windows 兼容显卡：可根据硬件选择 DirectML"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• Apple 芯片 Mac：可使用 CoreML 加速"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 仅使用 CPU：也可运行，但视频处理速度通常较慢"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官方安装教程："
+        },
+        {
+          "text": "https://docs.facefusion.io/installation",
+          "href": "https://docs.facefusion.io/installation"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "四、基本使用流程"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "准备一张已获得授权的清晰正脸图片"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "导入需要处理的目标图片或视频"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "选择 Face Swapper 人脸替换处理器"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "根据需要添加 Face Enhancer 等增强模块"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "先用短片段预览换脸和遮挡效果"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "确认无误后再处理完整视频"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "导出后检查边缘、表情、口型和画面闪烁"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "五、提升效果的建议"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 来源人脸尽量清晰、无遮挡、光线均匀"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 来源人脸与目标人物的角度差异不要过大"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 多人视频需要确认选中了正确的人脸"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 眼镜、手部遮挡、快速转头和运动模糊容易影响效果"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 先处理短片段，满意后再运行完整视频"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 人脸增强不宜设置过强，否则可能产生塑料感或身份偏移"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 高清长视频会占用较多显存、内存和处理时间"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "六、其他换脸工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AKOOL Face Swap官网："
+        },
+        {
+          "text": "https://akool.com/apps/faceswap",
+          "href": "https://akool.com/apps/faceswap"
+        },
+        {
+          "text": "类型：在线工具适合：图片、视频及商业内容快速换脸。注意：按积分计费，处理素材需要上传云端。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Remaker AI官网："
+        },
+        {
+          "text": "https://remaker.ai/video-face-swap-online/",
+          "href": "https://remaker.ai/video-face-swap-online/"
+        },
+        {
+          "text": "类型：在线工具适合：视频、GIF、多人换脸和批量处理。注意：视频处理会按照时长消耗积分。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Vidnoz Face Swap官网："
+        },
+        {
+          "text": "https://www.vidnoz.com/face-swap.html",
+          "href": "https://www.vidnoz.com/face-swap.html"
+        },
+        {
+          "text": "类型：在线工具适合：新手快速处理图片和短视频。注意：免费额度、高清输出和文件大小可能有限制。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Reface官网："
+        },
+        {
+          "text": "https://reface.ai/reface/",
+          "href": "https://reface.ai/reface/"
+        },
+        {
+          "text": "类型：手机端应用适合：娱乐模板、表情包和短视频。注意：偏模板化，人脸素材会在云端处理，上传前应阅读其隐私政策。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "Rope项目地址："
+        },
+        {
+          "text": "https://github.com/Hillobar/Rope",
+          "href": "https://github.com/Hillobar/Rope"
+        },
+        {
+          "text": "类型：本地开源工具适合：Windows 本地视频换脸、实时预览和遮挡修复。注意：主要面向 Windows 与 NVIDIA 显卡，项目最后一次主要更新停留在2024年。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "ReActor for ComfyUI项目地址："
+        },
+        {
+          "text": "https://codeberg.org/Gourieff/comfyui-reactor-node",
+          "href": "https://codeberg.org/Gourieff/comfyui-reactor-node"
+        },
+        {
+          "text": "类型：ComfyUI 插件适合：把换脸与人脸修复接入图片和视频工作流。注意：安装依赖较多，需要处理 InsightFace、Python 和运行环境的兼容问题。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "七、怎么选"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 本地综合使用：FaceFusion"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 在线商业视频：AKOOL"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 在线批量处理：Remaker AI"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 免费快速尝试：Vidnoz"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• 手机娱乐模板：Reface"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• Windows 本地精细调整：Rope"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "• ComfyUI 工作流：ReActor"
+        }
+      ]
+    }
+  ],
+  "other": [
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "AI 其他工具"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "注意：部分海外工具可能无法在国内网络环境中直接访问。免费额度和功能请以官网实时信息为准。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "1、百言神通"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "全新智能学习辅助平台。覆盖学、练、问全环节。它是随身英语外教，造就地道英语；它会全科辅导，是不会发脾气的好老师。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "微信搜索“百言神通”小程序，无需下载即可使用。你也可以在平板电脑上使用，保护眼睛。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "链接："
+        },
+        {
+          "text": "跳转百言神通 | 百言科技",
+          "href": "https://www.baiyan.tech/go/shentong/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "2、NotebookLM"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://notebooklm.google.com/",
+          "href": "https://notebooklm.google.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：论文阅读、课程学习、资料研究和知识整理。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：上传文档、网页等资料后，可以基于资料进行问答、总结和内容梳理，还能生成音频概览。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "3、秘塔 AI 搜索"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://metaso.cn/",
+          "href": "https://metaso.cn/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：中文资料搜索、行业研究和信息汇总。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：通过联网搜索生成结构化回答，并展示参考网页和资料来源，国内网络环境可以直接使用。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "4、通义听悟"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://www.tingwu.cn/",
+          "href": "https://www.tingwu.cn/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "适合：会议、访谈、课程和长音视频内容整理。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：支持实时语音转文字、音视频转写、多语言翻译、内容总结和待办事项提取。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "spans": [
+        {
+          "text": "5、GeoSpy"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "官网："
+        },
+        {
+          "text": "https://geospy.ai/",
+          "href": "https://geospy.ai/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "spans": [
+        {
+          "text": "特点：根据建筑、道路、植被等视觉线索推测照片的国家、城市或大致位置。仅用于合规学习与公开图片分析，请勿侵犯他人隐私。"
+        }
+      ]
+    }
+  ]
+}

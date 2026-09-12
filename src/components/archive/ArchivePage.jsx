@@ -25,11 +25,15 @@ function ArchivePage({ page, parent }) {
   const entries = page.entries.map((entry) => ({
     ...entry,
     image: entry.image || coverByHref[entry.href],
-    // These are unverified placeholder series, not an existing photo inventory.
+    // Old placeholder photo directions must not imply a verified image count.
     meta: page.code === 'PHOTOGRAPHY' ? entry.meta.replace(/\s*·\s*\d+\s*张/g, '') : entry.meta,
     status: entry.href ? entry.status : '详情待补充',
     linkLabel: entry.linkLabel || (entry.href?.startsWith('/projects/') ? '查看完整案例' : '打开查看'),
   }));
+  let inventoryLabel = `${entries.length} 个条目`;
+  if (page.code === 'PHOTOGRAPHY') inventoryLabel = `${entries.filter((entry) => entry.href).length} 个交付案例`;
+  else if (page.code === 'AIGC') inventoryLabel = `${entries.length} 件作品`;
+  else if (page.code === 'PERSONAL SKILLS') inventoryLabel = `${entries.length} 个方向`;
 
   return (
     <>
@@ -47,7 +51,7 @@ function ArchivePage({ page, parent }) {
             <span aria-hidden="true">/</span>
             <span aria-current="page">{page.title}</span>
           </nav>
-          <span>{page.code === 'PHOTOGRAPHY' || page.code === 'PERSONAL SKILLS' || page.code === 'AIGC' ? `${entries.length} 个方向` : `${entries.length} 个条目`}</span>
+          <span>{inventoryLabel}</span>
         </div>
         <div className={styles.heading}>
           <h1>{page.title}</h1>

@@ -20,14 +20,17 @@
   font-display: swap;
 }
 :root {
-  // The approved palette is still monochrome. Vermilion marks a small action
-  // or state; it never replaces full surfaces or the neutral --portfolio-acid.
+  // Monochrome surfaces with one vermilion accent family.
   --portfolio-paper: #f6f6f6;
   --portfolio-ink: #090909;
   --portfolio-muted: #686868;
   --portfolio-accent: #d74436;
   --portfolio-accent-ink: #b83228;
   --portfolio-accent-on-dark: #ef7768;
+  --portfolio-accent-tint: #f6e5e2;
+  --portfolio-secondary: var(--portfolio-accent);
+  --portfolio-secondary-ink: var(--portfolio-accent-ink);
+  --portfolio-secondary-tint: var(--portfolio-accent-tint);
   --portfolio-acid: #d8d8d8;
   --portfolio-line: #cdcdcd;
   --portfolio-header-height: 92px;

@@ -62,7 +62,7 @@ export default function SkillAtlas({ entries = [] }) {
   };
 
   return (
-    <section className={styles.atlas} data-instrument="skills" data-skill-atlas aria-label="个人 Skill 方法剖面">
+    <section className={styles.atlas} data-instrument="skills" data-skill-atlas aria-label="Skill 与工作流提效方法剖面">
       <div className={styles.caption}>
         <span>方法剖面</span>
         <span>{directions.length ? '展开方向，查看介绍' : '暂无 Skill 方向'}</span>

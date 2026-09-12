@@ -1,413 +1,387 @@
 .hero {
+  --poster-paper: #f6f6f6;
   position: relative;
   isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100svh;
-  padding: 116px var(--portfolio-gutter) 28px !important;
   overflow: clip;
-  background: #f6f6f6;
+  background: var(--poster-paper);
   color: #090909;
-  box-shadow: none;
-  > :not(.atmosphere) {
-    position: relative;
+  padding: 112px var(--portfolio-gutter) 26px !important;
+  a,
+  button {
+    &:focus-visible {
+      outline: 2px solid var(--portfolio-accent);
+      outline-offset: 6px;
+    }
   }
 }
-.atmosphere {
+.identityHeader {
   position: absolute;
-  z-index: -1;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-.fieldWrap {
-  position: absolute;
-  inset: -18% -10% -20% 35%;
-}
-.field {
-  position: absolute;
-  inset: 0;
-  background: #e8e8e8;
-  clip-path: polygon(64% 0, 100% 0, 100% 100%, 0 100%);
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #dcdcdc;
-    clip-path: polygon(62% 0, 70% 0, 22% 100%, 14% 100%);
+  top: 132px;
+  right: var(--portfolio-gutter);
+  z-index: 5;
+  font-size: 13px;
+  a {
+    color: #090909;
+    text-decoration: none;
   }
-}
-.replay {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 0;
-  border-radius: 0;
-  padding: 5px 0;
-  background: transparent;
-  color: #686868;
-  font: 13px var(--portfolio-font);
-  cursor: pointer;
-  > span {
-    display: block;
-    font-size: 20px;
-    transition: transform 600ms var(--portfolio-ease);
-  }
-  &:hover > span {
-    transform: rotate(-180deg);
-  }
-  &:focus-visible {
-    outline: 1px solid #090909;
-    outline-offset: 5px;
+  a span {
+    margin-left: 12px;
+    color: var(--portfolio-accent-ink);
   }
 }
 .composition {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(20px, 2vw, 30px);
-  align-items: center;
-  width: 100%;
-  max-width: 960px;
-  margin-inline: auto;
-  min-height: 480px;
+  position: relative;
+  min-height: clamp(620px, 76svh, 980px);
 }
 .identity {
-  min-width: 0;
+  position: static;
 }
 .title {
   margin: 0;
-  font-weight: 400;
+  padding-top: 0;
+  text-align: left;
+  font-weight: 600;
   line-height: 1;
-}
-.chineseName {
-  display: block;
-  margin-bottom: 18px;
-  font-size: clamp(24px, 2.4vw, 32px);
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  > span {
-    color: #aaa;
-    margin-left: 0.4em;
-    font-weight: 300;
-  }
 }
 .nameWord {
   display: block;
   overflow: hidden;
-  width: fit-content;
-  padding: 0.06em 0.08em 0.11em 0;
-  margin: -0.06em -0.08em -0.11em 0;
-  font-size: clamp(76px, 9.3vw, 134px);
-  letter-spacing: -0.065em;
-  line-height: 0.91;
-  font-weight: 500;
+  font-size: clamp(150px, min(14.4vw, 23svh), 240px);
+  letter-spacing: -0.06em;
+  line-height: 1.03;
+  padding-right: 0.06em;
+  white-space: nowrap;
   > span {
     display: block;
-    transform-origin: 0 100%;
+    transform-origin: 50% 100%;
   }
 }
-.givenName {
-  margin-top: 0.1em;
-  font-size: clamp(48px, 6.4vw, 93px);
-  font-weight: 400;
-  letter-spacing: -0.055em;
+.nameGlyph {
+  display: block;
 }
-.namePeriod {
-  color: var(--portfolio-accent);
-  margin-left: 0.02em;
-}
-.introduction {
-  margin-top: 30px;
+.thesis {
+  position: absolute;
+  right: 0;
+  top: 124px;
+  z-index: 4;
   > p {
     margin: 0;
-    font-size: clamp(16px, 1.3vw, 19px);
-    line-height: 1.65;
-    font-weight: 400;
-    letter-spacing: 0;
+    font-size: clamp(28px, 3.2vw, 54px);
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    line-height: 1.25;
+  }
+  > p span {
+    color: var(--portfolio-accent);
   }
 }
+.introduction {
+  display: block;
+  margin-top: 24px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #666;
+}
 .selectedLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  margin-top: 20px;
-  > a {
-    display: inline-flex;
+  position: absolute;
+  right: 0;
+  bottom: 88px;
+  z-index: 4;
+  display: grid;
+  gap: 4px;
+  a {
+    display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 6px 0;
-    color: #686868;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 44px;
     font-size: 13px;
-    border-bottom: 1px solid #bcbcbc;
+    color: #090909;
     text-decoration: none;
-    transition:
-      color 200ms,
-      border-color 200ms;
-    > span {
-      color: var(--portfolio-accent);
-      transition: transform 300ms var(--portfolio-ease);
-    }
-    &:hover {
-      color: #090909;
-      border-color: var(--portfolio-accent);
-    }
-    &:hover > span {
-      transform: translate(2px, -2px);
-    }
-    &:focus-visible {
-      outline: 1px solid #090909;
-      outline-offset: 5px;
-    }
+  }
+  a span:last-child {
+    color: var(--portfolio-accent-ink);
+    transition: transform 250ms;
+  }
+  a:hover span:last-child {
+    transform: translate(3px, -3px);
   }
 }
 .portrait {
-  justify-self: center;
-  align-self: center;
-  width: min(100%, clamp(300px, 46svh, 440px));
-  min-width: 0;
+  position: absolute;
+  width: clamp(300px, 40vw, 620px);
+  bottom: -14px;
+  left: 49%;
+  transform: translateX(-50%);
   margin: 0;
+  z-index: 2;
   mix-blend-mode: multiply;
+  > figcaption {
+    position: absolute;
+    top: 55%;
+    right: -12px;
+    writing-mode: vertical-rl;
+    font: 10px var(--portfolio-mono);
+    letter-spacing: 0.07em;
+    color: #666;
+  }
 }
 .portraitReveal {
   position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1.12;
   overflow: hidden;
-  background: transparent;
 }
 .portraitSurface {
   position: absolute;
-  inset: 0;
+  inset: -8% 0 -10%;
   img {
     object-fit: cover;
     image-rendering: pixelated;
   }
 }
-.portraitPlaceholder {
+.portraitShutters {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #747474;
-  background: linear-gradient(145deg, #e4e4e4, #d2d2d2);
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
-    letter-spacing: 0.12em;
-    > small {
-      font-size: 10px;
-      color: #8a8a8a;
-      letter-spacing: 0.04em;
-    }
+  pointer-events: none;
+  i {
+    width: 16.667%;
+    background: var(--poster-paper);
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  i:nth-child(even) {
+    transform-origin: bottom;
   }
 }
-.cropTop,
-.cropBottom {
+.portraitPlaceholder {
   position: absolute;
-  width: 28px;
-  height: 28px;
-  border-color: #aaa;
-  border-style: solid;
-  pointer-events: none;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  small {
+    display: block;
+  }
 }
-.cropTop {
-  top: 24px;
-  left: 24px;
-  border-width: 1px 0 0 1px;
-}
-.cropBottom {
-  bottom: 24px;
-  right: 24px;
-  border-width: 0 1px 1px 0;
+.nameBaseline {
+  position: relative;
+  z-index: 3;
+  margin: -46px calc(-1 * var(--portfolio-gutter)) 0;
+  padding: 12px var(--portfolio-gutter) 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: clamp(56px, 12.5vw, 220px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  background: #090909;
+  color: var(--poster-paper);
+  > span {
+    display: block;
+  }
 }
 .heroFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding-top: 18px;
-  border-top: 1px solid #cdcdcd;
+  gap: 24px;
+  padding-top: 22px;
 }
 .workLink {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 75px;
-  min-height: 52px;
-  padding: 14px 22px;
-  background: #090909;
-  color: #f6f6f6;
-  font-size: 13px;
+  gap: 18px;
+  min-height: 48px;
+  color: #090909;
   text-decoration: none;
-  transition: background 250ms;
+  font-size: 16px;
   > span {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    color: white;
+    background: var(--portfolio-accent);
+    border-radius: 50%;
     font-size: 26px;
-    color: var(--portfolio-accent-on-dark);
-    transition: transform 300ms var(--portfolio-ease);
-  }
-  &:hover {
-    background: #272727;
+    transition: transform 300ms;
   }
   &:hover > span {
-    transform: translate(3px, 3px);
-  }
-  &:focus-visible {
-    outline: 1px solid #090909;
-    outline-offset: 5px;
+    transform: rotate(45deg);
   }
 }
 .playLinkGroup {
   display: flex;
   align-items: center;
-  gap: 38px;
+  gap: 28px;
+}
+.replay {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #666;
+  font: 13px var(--portfolio-font);
+  cursor: pointer;
+  > span {
+    font-size: 21px;
+  }
 }
 .pianoLink {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  min-height: 48px;
-  padding: 12px 0;
+  gap: 12px;
+  min-height: 44px;
   color: #090909;
-  font-size: 12px;
   text-decoration: none;
-  &:focus-visible {
-    outline: 1px solid #090909;
-    outline-offset: 5px;
-  }
+  font-size: 13px;
 }
 .pianoKeys {
   display: flex;
-  color: var(--portfolio-accent);
+  align-items: flex-end;
   gap: 3px;
   height: 20px;
-  align-items: flex-end;
-  > i {
-    display: block;
+  i {
     width: 3px;
     height: 17px;
-    background: currentColor;
+    background: var(--portfolio-accent);
     transform-origin: bottom;
-    transition: transform 400ms var(--portfolio-ease);
+    transition: transform 300ms;
     &:nth-child(even) {
       height: 12px;
     }
   }
 }
-.pianoLink:hover .pianoKeys > i {
+.pianoLink:hover .pianoKeys i {
   transform: scaleY(0.6);
   &:nth-child(even) {
     transform: scaleY(1.5);
   }
 }
-@media (min-width: 761px) and (max-height: 800px) {
-  .hero {
-    padding-top: 106px !important;
-  }
+@media (min-width: 1800px) {
   .composition {
-    min-height: 390px;
+    max-width: 1640px;
+    margin-inline: auto;
   }
-  .nameWord {
-    font-size: clamp(72px, 8.5vw, 120px);
-  }
-  .givenName {
-    font-size: clamp(47px, 5.85vw, 84px);
-  }
-  .introduction {
-    margin-top: 28px;
+}
+@media (max-width: 1050px) {
+  .composition {
+    min-height: 650px;
   }
   .portrait {
-    width: min(100%, 48svh, 390px);
+    width: 43vw;
   }
-  .heroFooter {
-    margin-top: 0;
-    padding-top: 14px;
+  .thesis {
+    top: 120px;
+  }
+  .introduction {
+    max-width: 180px;
+    font-size: 12px;
+  }
+  .selectedLinks {
+    bottom: 110px;
+    a {
+      gap: 12px;
+      font-size: 12px;
+    }
   }
 }
 @media (max-width: 760px) {
   .hero {
-    padding: 112px var(--portfolio-gutter) 26px !important;
-    min-height: auto;
+    padding-top: 96px !important;
   }
-  .fieldWrap {
-    inset: 30% -80% -15% 24%;
+  .identityHeader {
+    top: 100px;
+    font-size: 12px;
   }
   .composition {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    min-height: 0;
-    max-width: 480px;
+    min-height: 670px;
   }
-  .identity {
-    width: fit-content;
-    margin-inline: auto;
-  }
-  .chineseName {
-    margin-bottom: 14px;
-    font-size: 25px;
+  .title {
+    padding-top: 32px;
   }
   .nameWord {
-    font-size: clamp(76px, 23vw, 118px);
-  }
-  .givenName {
-    font-size: clamp(52px, 16.1vw, 82px);
-  }
-  .introduction {
-    margin-top: 28px;
-    > p {
-      font-size: 16px;
-    }
-  }
-  .selectedLinks {
-    margin-top: 16px;
-    gap: 12px 22px;
+    font-size: 25vw;
   }
   .portrait {
-    width: 86%;
-    max-width: 330px;
-    min-width: 0;
-    justify-self: center;
+    width: min(64vw, 390px);
+    bottom: 150px;
+    left: 66%;
+  }
+  .portrait > figcaption {
+    right: -5px;
+  }
+  .thesis {
+    top: auto;
+    bottom: 34px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+  }
+  .thesis > p {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .introduction {
+    margin-top: 0;
+    font-size: 12px;
+    max-width: none;
+  }
+  .selectedLinks {
+    position: absolute;
+    left: 0;
+    bottom: 112px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .nameBaseline {
+    margin-top: 0;
+    font-size: 12.1vw;
+    padding-top: 10px;
   }
   .heroFooter {
-    align-items: flex-start;
-    gap: 16px;
-    max-width: 480px;
-    margin-top: 0;
+    gap: 12px;
   }
   .workLink {
-    min-width: 155px;
-    gap: 22px;
-    padding: 12px 16px;
-    font-size: 12px;
+    font-size: 14px;
+    gap: 12px;
   }
   .playLinkGroup {
     flex-direction: column-reverse;
     align-items: flex-end;
-    gap: 10px;
+    gap: 0;
   }
+  .replay,
   .pianoLink {
-    gap: 24px;
-    font-size: 11px;
+    font-size: 12px;
+    min-height: 32px;
+  }
+}
+@media (max-width: 420px) {
+  .composition {
+    min-height: 600px;
+  }
+  .portrait {
+    bottom: 130px;
+  }
+  .thesis {
+    gap: 16px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .portraitShutters,
   .replay {
     display: none;
-  }
-  .replay > span,
-  .workLink,
-  .workLink > span,
-  .selectedLinks > a,
-  .selectedLinks > a > span,
-  .pianoKeys > i {
-    transition: none;
   }
 }

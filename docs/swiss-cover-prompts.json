@@ -1,0 +1,80 @@
+[
+  {
+    "id": "project1",
+    "kind": "art",
+    "prompt": "Use case: stylized-concept. Create ONE premium conceptual fine-art still-life photograph for a personal AI product portfolio carousel. Portrait 3:4, edge to edge, no words, no lettering, no logos, no UI screenshots, no borders. Sculptural gallery installation, cinematic physical materials, directional museum lighting, strong simple silhouette and generous negative space. Elegant restrained COLOR, jewel colors against neutral surroundings; must also read clearly in grayscale. Large subject in central 70% safe for narrow portrait crop. No generic brain/circuit icon, no clutter. Theme: AI operations agent: a sculptural conductor baton in brushed silver suspended over three flowing ribbons of translucent cobalt glass that gather scattered small data tiles into one orderly continuous path. Ivory background, cobalt and tiny vermilion accent; metaphor of coordinating data analysis, strategy and content execution.",
+    "sourceFile": "exec-65579210-6cae-4087-acc6-ea489447f54c.png"
+  },
+  {
+    "id": "project2",
+    "kind": "art",
+    "prompt": "Use case: stylized-concept. Create ONE premium conceptual fine-art still-life photograph for a personal AI product portfolio carousel. Portrait 3:4, edge to edge, no words, no lettering, no logos, no UI screenshots, no borders. Sculptural gallery installation, cinematic physical materials, directional museum lighting, strong simple silhouette and generous negative space. Elegant restrained COLOR, jewel colors against neutral surroundings; must also read clearly in grayscale. Large subject in central 70% safe for narrow portrait crop. No generic brain/circuit icon, no clutter. Theme: GEO content growth: a rooted black stone knowledge monolith emits branching fine copper-red threads outward through several translucent emerald glass portals, like answers propagating to multiple search destinations. Dark charcoal museum, light rims, sculptural not infographic.",
+    "sourceFile": "exec-11de29d5-a389-4cee-ab7d-84a449c6a62e.png"
+  },
+  {
+    "id": "rag-copywriting",
+    "kind": "art",
+    "prompt": "Use case: stylized-concept. Create ONE premium conceptual fine-art still-life photograph for a personal AI product portfolio carousel. Portrait 3:4, edge to edge, no words, no lettering, no logos, no UI screenshots, no borders. Sculptural gallery installation, cinematic physical materials, directional museum lighting, strong simple silhouette and generous negative space. Elegant restrained COLOR, jewel colors against neutral surroundings; must also read clearly in grayscale. Large subject in central 70% safe for narrow portrait crop. No generic brain/circuit icon, no clutter. Theme: RAG clothing copywriting: one beautiful draped burgundy silk garment hangs through a polished rectangular chrome retrieval frame; below it a precise stack of ivory paper pages unfolds into a single graceful ribbon. Fashion editorial object sculpture, warm pale gray setting, clothes and knowledge to language, no text.",
+    "sourceFile": "exec-b859b14a-895f-46cc-b6a0-891e48d5a171.png"
+  },
+  {
+    "id": "ai-interview",
+    "kind": "art",
+    "prompt": "Use case: stylized-concept. Create ONE premium conceptual fine-art still-life photograph for a personal AI product portfolio carousel. Portrait 3:4, edge to edge, no words, no lettering, no logos, no UI screenshots, no borders. Sculptural gallery installation, cinematic physical materials, directional museum lighting, strong simple silhouette and generous negative space. Elegant restrained COLOR, jewel colors against neutral surroundings; must also read clearly in grayscale. Large subject in central 70% safe for narrow portrait crop. No generic brain/circuit icon, no clutter. Theme: AI English interview practice: two minimalist opposing sculptural acoustic forms, one amber glass and one brushed aluminum, like two voices in dialogue across a slim microphone-shaped central object. Deep blue studio backdrop, beautiful soft light, conversational practice, not faces or robots.",
+    "sourceFile": "exec-9000778b-be26-4290-a6f6-c8e72f9caae9.png"
+  },
+  {
+    "id": "chuangyiya-ip",
+    "kind": "art",
+    "prompt": "Use case: stylized-concept. Create ONE premium conceptual fine-art still-life photograph for a personal AI product portfolio carousel. Portrait 3:4, edge to edge, no words, no lettering, no logos, no UI screenshots, no borders. Sculptural gallery installation, cinematic physical materials, directional museum lighting, strong simple silhouette and generous negative space. Elegant restrained COLOR, jewel colors against neutral surroundings; must also read clearly in grayscale. Large subject in central 70% safe for narrow portrait crop. No generic brain/circuit icon, no clutter. Theme: Creative duck IP animation pipeline: a charming sophisticated small duck-shaped ceramic sculpture in pale butter yellow, displayed on a dark slate plinth; behind it one flowing translucent teal film ribbon contains embossed successive duck poses, evoking character to animation. Gallery collectible, restrained not kiddie illustration, crisp silhouette.",
+    "sourceFile": "exec-2fec279f-3ab0-45db-b9c2-e63e31e6152c.png"
+  },
+  {
+    "id": "adcanvas",
+    "kind": "art",
+    "prompt": "Use case: stylized-concept. Create ONE premium conceptual fine-art still-life photograph for a personal AI product portfolio carousel. Portrait 3:4, edge to edge, no words, no lettering, no logos, no UI screenshots, no borders. Sculptural gallery installation, cinematic physical materials, directional museum lighting, strong simple silhouette and generous negative space. Elegant restrained COLOR, jewel colors against neutral surroundings; must also read clearly in grayscale. Large subject in central 70% safe for narrow portrait crop. No generic brain/circuit icon, no clutter. Theme: AI advertising creative canvas: three large thin translucent rectangular glass canvases arranged in depth, sculptural coral-red curved ribbon weaving through the frames and transforming into a pristine ivory sphere; composition evokes layered visual creation and versioning. Pale gallery setting, red glass and cobalt edge reflections, no charts.",
+    "sourceFile": "exec-64aeabf6-92dc-43d3-b60a-83022a01a494.png"
+  },
+  {
+    "id": "open-llm-vtuber-companion",
+    "kind": "art",
+    "prompt": "Use case: stylized-concept. Create ONE premium conceptual fine-art still-life photograph for a personal AI product portfolio carousel. Portrait 3:4, edge to edge, no words, no lettering, no logos, no UI screenshots, no borders. Sculptural gallery installation, cinematic physical materials, directional museum lighting, strong simple silhouette and generous negative space. Elegant restrained COLOR, jewel colors against neutral surroundings; must also read clearly in grayscale. Large subject in central 70% safe for narrow portrait crop. No generic brain/circuit icon, no clutter. Theme: AI companion with memory: a warm glowing amber orb nested inside two embracing translucent lavender glass forms, with a delicate trail of small pearl-like memory beads curling around its base. Intimate dark violet museum light, tactile poetic companionship, not a robot, no human face, not a generic planet.",
+    "sourceFile": "exec-e5462251-2a7e-4f3a-ad56-ad5d5c0a3863.png"
+  },
+  {
+    "id": "projects",
+    "kind": "book",
+    "prompt": "Use case: stylized-concept. Create a FLAT EDGE-TO-EDGE 3:4 portrait ART IMAGE to print on a book cover for a minimal Swiss black-white personal portfolio. NOT an actual book mockup, no spine, no text, no letters, no logos, no labels. Gallery-grade minimalist conceptual photography, sharp sculptural form, deep blacks clean whites gray with one subtle vermilion accent, intentional negative space; central subject safe for narrow crop. Subject: a pristine architectural impossible staircase made of white concrete and one vermilion step, ascends into a deep black square doorway. Precise frontal architectural art photo, no buildings around it.",
+    "sourceFile": "exec-83eeb56e-cd48-4953-a329-ae8d1d09b870.png"
+  },
+  {
+    "id": "tutorials",
+    "kind": "book",
+    "prompt": "Use case: stylized-concept. Create a FLAT EDGE-TO-EDGE 3:4 portrait ART IMAGE to print on a book cover for a minimal Swiss black-white personal portfolio. NOT an actual book mockup, no spine, no text, no letters, no logos, no labels. Gallery-grade minimalist conceptual photography, sharp sculptural form, deep blacks clean whites gray with one subtle vermilion accent, intentional negative space; central subject safe for narrow crop. Subject: a single ivory paper strip folds into five ascending accordion steps with subtle red edge, light grey gallery background, strong diagonal light; the art of learning step by step.",
+    "sourceFile": "exec-27ab3277-6f8d-4070-a104-89504672a7c2.png"
+  },
+  {
+    "id": "photography",
+    "kind": "book",
+    "prompt": "Use case: stylized-concept. Create a FLAT EDGE-TO-EDGE 3:4 portrait ART IMAGE to print on a book cover for a minimal Swiss black-white personal portfolio. NOT an actual book mockup, no spine, no text, no letters, no logos, no labels. Gallery-grade minimalist conceptual photography, sharp sculptural form, deep blacks clean whites gray with one subtle vermilion accent, intentional negative space; central subject safe for narrow crop. Subject: a monumental black camera aperture sculpture with a tiny vermilion center, projecting a long sharp shadow on white seamless studio floor, beautiful photographic lens glass detail.",
+    "sourceFile": "exec-1931bf7b-3a40-44b9-9677-541f7a47f9a4.png"
+  },
+  {
+    "id": "writing",
+    "kind": "book",
+    "prompt": "Use case: stylized-concept. Create a FLAT EDGE-TO-EDGE 3:4 portrait ART IMAGE to print on a book cover for a minimal Swiss black-white personal portfolio. NOT an actual book mockup, no spine, no text, no letters, no logos, no labels. Gallery-grade minimalist conceptual photography, sharp sculptural form, deep blacks clean whites gray with one subtle vermilion accent, intentional negative space; central subject safe for narrow crop. Subject: one flowing black ink ribbon suspended above a single ivory sheet, the ribbon forms an elegant open loop with a tiny red bead resting underneath. Art of thought becoming words, no actual letters.",
+    "sourceFile": "exec-61af7bce-b031-4a0a-a40f-8269b80e522e.png"
+  },
+  {
+    "id": "skills",
+    "kind": "book",
+    "prompt": "Use case: stylized-concept. Create a FLAT EDGE-TO-EDGE 3:4 portrait ART IMAGE to print on a book cover for a minimal Swiss black-white personal portfolio. NOT an actual book mockup, no spine, no text, no letters, no logos, no labels. Gallery-grade minimalist conceptual photography, sharp sculptural form, deep blacks clean whites gray with one subtle vermilion accent, intentional negative space; central subject safe for narrow crop. Subject: three tactile precision-cut brushed aluminum interlocking modules assemble into one simple sculptural tool, black background, one small red joining component; reusable modular intelligence.",
+    "sourceFile": "exec-46ed98d5-a741-4ce8-8bef-28586f68b225.png"
+  },
+  {
+    "id": "aigc",
+    "kind": "book",
+    "prompt": "Use case: stylized-concept. Create a FLAT EDGE-TO-EDGE 3:4 portrait ART IMAGE to print on a book cover for a minimal Swiss black-white personal portfolio. NOT an actual book mockup, no spine, no text, no letters, no logos, no labels. Gallery-grade minimalist conceptual photography, sharp sculptural form, deep blacks clean whites gray with one subtle vermilion accent, intentional negative space; central subject safe for narrow crop. Subject: a white porcelain sphere transitions along its edge into a delicate flowing iridescent metallic fabric, pale studio background, one vermilion fold, restrained generative transformation.",
+    "sourceFile": "exec-3806c74e-7120-4644-809f-d2da5ac2b270.png"
+  }
+]

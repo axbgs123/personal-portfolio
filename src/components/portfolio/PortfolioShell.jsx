@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -11,13 +10,15 @@ import CreativePointer from './CreativePointer';
 import SignatureMark from './SignatureMark';
 import ArchiveSearch from './ArchiveSearch';
 import ArchiveDeck from './ArchiveDeck';
+import ContactDetails from './ContactDetails';
 import styles from './portfolioShell.module.scss';
 
 if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 
-const StudioCat = dynamic(() => import('./StudioCat'), { ssr: false });
-const StudioCatChat = dynamic(() => import('./StudioCatChat'), { ssr: false });
 const useClientLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+const EDITION_SESSION_KEY = 'chen-portfolio-edition';
+const isDirectorRoute = (pathname) => pathname === '/director' || pathname.startsWith('/director/');
+const isProductRoute = (pathname) => pathname === '/' || pathname === '/about';
 
 export default function PortfolioShell({ children, router }) {
   const mainRef = useRef();
@@ -35,6 +36,23 @@ export default function PortfolioShell({ children, router }) {
   const homeReturn = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [directorMode, setDirectorMode] = useState(() => isDirectorRoute(router.pathname));
+  const homePath = directorMode ? '/director' : '/';
+  const aboutPath = directorMode ? '/director/about' : '/about';
+
+  useEffect(() => {
+    if (isDirectorRoute(router.pathname)) {
+      sessionStorage.setItem(EDITION_SESSION_KEY, 'director');
+      setDirectorMode(true);
+      return;
+    }
+    if (isProductRoute(router.pathname)) {
+      sessionStorage.setItem(EDITION_SESSION_KEY, 'product');
+      setDirectorMode(false);
+      return;
+    }
+    setDirectorMode(sessionStorage.getItem(EDITION_SESSION_KEY) === 'director');
+  }, [router.pathname]);
 
   const closeMenu = useCallback(() => {
     menuAnimation.current?.kill();
@@ -43,7 +61,7 @@ export default function PortfolioShell({ children, router }) {
       if (menuFocusFrame.current !== null) cancelAnimationFrame(menuFocusFrame.current);
       menuFocusFrame.current = requestAnimationFrame(() => {
         menuFocusFrame.current = null;
-        if (document.documentElement.dataset.portfolioTransition === 'playing' || document.querySelector('[data-search-dialog], [data-cat-chat-dialog], [data-archive-dialog]')) return;
+        if (document.documentElement.dataset.portfolioTransition === 'playing' || document.querySelector('[data-search-dialog], [data-archive-dialog]')) return;
         menuButton.current?.focus({ preventScroll: true });
       });
     };
@@ -73,18 +91,13 @@ export default function PortfolioShell({ children, router }) {
       menuFocusFrame.current = null;
       setMenuOpen(false);
     };
-    const onChatState = (event) => {
-      if (event.detail?.open) dismiss();
-    };
     window.addEventListener('portfolio:search-opened', dismiss);
     window.addEventListener('portfolio:intro-start', dismiss);
-    window.addEventListener('portfolio:cat-chat-state', onChatState);
     router.events.on('routeChangeStart', dismiss);
     router.events.on('hashChangeStart', dismiss);
     return () => {
       window.removeEventListener('portfolio:search-opened', dismiss);
       window.removeEventListener('portfolio:intro-start', dismiss);
-      window.removeEventListener('portfolio:cat-chat-state', onChatState);
       router.events.off('routeChangeStart', dismiss);
       router.events.off('hashChangeStart', dismiss);
       menuAnimation.current?.kill();
@@ -163,7 +176,7 @@ export default function PortfolioShell({ children, router }) {
 
   const returnHome = useCallback(
     async (event) => {
-      if (router.pathname !== '/' || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (router.pathname !== homePath || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       const intent = {};
       homeReturn.current = intent;
@@ -176,19 +189,23 @@ export default function PortfolioShell({ children, router }) {
       scrollPositions.current.set(sourceKey, sourceY);
       scrollPositions.current.set(source, sourceY);
       try {
-        if (source !== '/' && !(await router.push('/', undefined, { scroll: false }))) return;
-        if (homeReturn.current !== intent || window.location.pathname !== '/' || window.location.search || window.location.hash) return;
+        if (source !== homePath && !(await router.push(homePath, undefined, { scroll: false }))) return;
+        if (homeReturn.current !== intent || window.location.pathname !== homePath || window.location.search || window.location.hash) return;
         const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const { lenis } = useStore.getState();
         if (lenis) lenis.scrollTo(0, { force: true, duration: 1.1, immediate: reduced });
-        else mainRef.current?.scrollTo({ top: 0, behavior: reduced ? 'instant' : 'smooth' });
+        else
+          mainRef.current?.scrollTo({
+            top: 0,
+            behavior: reduced ? 'instant' : 'smooth',
+          });
       } catch {
         // Failed or superseded navigation must not overwrite the current scroll position.
       } finally {
         if (homeReturn.current === intent) homeReturn.current = null;
       }
     },
-    [router],
+    [homePath, router],
   );
 
   useEffect(() => {
@@ -255,7 +272,7 @@ export default function PortfolioShell({ children, router }) {
 
   useClientLayoutEffect(() => {
     if (!menuOpen) {
-      if (document.documentElement.dataset.portfolioTransition !== 'playing' && !document.querySelector('[data-search-dialog], [data-cat-chat-dialog]')) useStore.getState().lenis?.start();
+      if (document.documentElement.dataset.portfolioTransition !== 'playing' && !document.querySelector('[data-search-dialog]')) useStore.getState().lenis?.start();
       return undefined;
     }
     // Own children only: route transitions independently own main/header.inert.
@@ -281,8 +298,7 @@ export default function PortfolioShell({ children, router }) {
       );
     }
     const onKey = (event) => {
-      if (event.defaultPrevented || event.isComposing || document.documentElement.dataset.portfolioTransition === 'playing' || document.querySelector('[data-search-dialog], [data-cat-chat-dialog]'))
-        return;
+      if (event.defaultPrevented || event.isComposing || document.documentElement.dataset.portfolioTransition === 'playing' || document.querySelector('[data-search-dialog]')) return;
       if (event.key === 'Escape') {
         event.preventDefault();
         if (event.repeat) return;
@@ -304,7 +320,7 @@ export default function PortfolioShell({ children, router }) {
       }
     };
     const containFocus = (event) => {
-      if (document.documentElement.dataset.portfolioTransition === 'playing' || document.querySelector('[data-search-dialog], [data-cat-chat-dialog]')) return;
+      if (document.documentElement.dataset.portfolioTransition === 'playing' || document.querySelector('[data-search-dialog]')) return;
       if (!menuRef.current?.contains(event.target)) menuRef.current?.querySelector('button')?.focus({ preventScroll: true });
     };
     window.addEventListener('keydown', onKey);
@@ -324,21 +340,15 @@ export default function PortfolioShell({ children, router }) {
       <MotionDirector router={router} />
       <ArchiveSearch />
       <CreativePointer />
-      <StudioCat />
-      <StudioCatChat />
       <a className={styles.skip} href="#page-content" data-motion-background>
         跳至正文
       </a>
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`} data-motion-background>
-        <Link className={styles.brand} href="/" scroll={false} aria-label="陈祉辰 · 首页" onClick={returnHome}>
+        <Link className={styles.brand} href={homePath} scroll={false} aria-label={`陈祉辰 · ${directorMode ? '编导运营版' : 'AI 产品版'}首页`} onClick={returnHome}>
           <SignatureMark className={styles.brandMark} />
         </Link>
-        <span className={styles.headerNote}>AI 产品 · 内容 · 创作</span>
         <nav className={styles.nav} aria-label="主导航">
-          <Link href="/projects" scroll={false} aria-current={router.pathname.startsWith('/projects') ? 'page' : undefined}>
-            项目
-          </Link>
-          <Link href="/about" scroll={false} aria-current={router.pathname === '/about' ? 'page' : undefined}>
+          <Link href={aboutPath} scroll={false} aria-current={router.pathname === aboutPath ? 'page' : undefined}>
             关于我
           </Link>
           <button className={styles.searchButton} type="button" aria-label="搜索全站内容" onClick={() => window.dispatchEvent(new CustomEvent('portfolio:open-search'))}>
@@ -375,21 +385,12 @@ export default function PortfolioShell({ children, router }) {
             />
             <div className={styles.menuBottom}>
               <span>项目 / 记录 / 方法 / 创作</span>
-              <Link
-                href="/#playground"
-                scroll={false}
-                onClick={() => {
-                  if (router.pathname === '/') closeMenu();
-                }}
-              >
-                去弹一首 ↘
+              <Link href="/more-projects" scroll={false}>
+                查看全部项目 ↘
               </Link>
             </div>
             <div className={styles.menuMobileNav}>
-              <Link href="/projects" scroll={false}>
-                代表项目
-              </Link>
-              <Link href="/about" scroll={false}>
+              <Link href={aboutPath} scroll={false}>
                 关于我
               </Link>
               <a href="mailto:2907107669@qq.com">与我联系 ↗</a>
@@ -403,23 +404,24 @@ export default function PortfolioShell({ children, router }) {
             {children}
           </div>
           <footer className={styles.footer} id="contact">
+            <div className={styles.footerWatermark} aria-hidden="true">
+              LET’S TALK<span>↗</span>
+            </div>
             <div className={styles.footerTop}>
               <div>
-                <span className={styles.eyebrow}>LET’S MAKE IT REAL</span>
+                <span className={styles.eyebrow}>从一个想法开始</span>
                 <h2>
-                  期待参与，
+                  下一个想法，
                   <br />
-                  下一个值得做的产品。
+                  一起做出来<span className={styles.footerPeriod}>。</span>
                 </h2>
               </div>
               <a className={styles.mailArrow} data-magnetic href="mailto:2907107669@qq.com" aria-label="给陈祉辰发送邮件">
-                ↗
+                <span aria-hidden="true">↗</span>
+                <small>写信给我</small>
               </a>
             </div>
-            <div className={styles.footerInfo}>
-              <span>AI 产品实践 · 内容工作流 · 视觉创作</span>
-              <a href="mailto:2907107669@qq.com">2907107669@qq.com</a>
-            </div>
+            <ContactDetails />
             <div className={styles.footerBottom}>
               <span className={styles.footerSignature}>
                 <SignatureMark />
@@ -430,10 +432,10 @@ export default function PortfolioShell({ children, router }) {
                   教程
                 </Link>
                 <Link href="/writing" scroll={false}>
-                  文字与思考
+                  口播稿
                 </Link>
                 <Link href="/photography" scroll={false}>
-                  摄影
+                  照片视频
                 </Link>
               </div>
               <button type="button" onClick={() => useStore.getState().lenis?.scrollTo(0)}>

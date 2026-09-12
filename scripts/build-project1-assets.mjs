@@ -35,7 +35,7 @@ const screenshots = [
   ['19-模型配置与连接验证.png', '19.webp'],
 ];
 
-const contentDocuments = ['01-项目总览.md', '02-产品背景与核心闭环.md', '03-核心功能与组件说明.md', '04-技术架构与工程亮点.md', '05-个人贡献与迭代复盘.md', '06-面试讲解稿与常见追问.md'];
+const contentDocuments = ['01-项目总览.md', '02-产品背景与核心闭环.md', '03-核心功能与组件说明.md', '04-技术架构与工程亮点.md'];
 
 try {
   await mkdir(outputDir, { recursive: true });

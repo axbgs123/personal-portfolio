@@ -12,12 +12,13 @@ const pageNames = {
   '/': '陈祉辰',
   '/projects': '作品档案',
   '/about': '关于我',
+  '/director': '编导 / AI 运营',
   '/tutorials': '教程与方法',
-  '/writing': '文字与思考',
-  '/photography': '摄影',
-  '/personal-skills': '个人 Skill',
+  '/writing': '口播稿',
+  '/photography': '照片视频',
+  '/personal-skills': 'Skill 与工作流提效',
   '/aigc': 'AIGC',
-  '/more-projects': '更多项目',
+  '/more-projects': '项目',
 };
 function destinationName(path) {
   const pathname = path.split(/[?#]/)[0];

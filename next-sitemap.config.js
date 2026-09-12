@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://giats.me/',
+  siteUrl: 'https://chenzhichen.cc/',
   generateRobotsTxt: true, // (optional)
   generateIndexSitemap: false,
 };

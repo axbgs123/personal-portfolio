@@ -100,6 +100,21 @@
     white-space: pre-line;
   }
 
+  strong {
+    font-weight: 750;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2em 0 0.9em;
+    font-size: 1.35em;
+    line-height: 1.5;
+    font-weight: 750;
+  }
+
   > div:first-child p {
     margin-bottom: 1.6em;
     font-size: clamp(20px, 1.6vw, 25px);

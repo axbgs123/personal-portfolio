@@ -10,20 +10,18 @@ import styles from './avantHero.module.scss';
 export default function AvantHero() {
   const root = useRef(null);
   const composition = useRef(null);
-  const field = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const media = gsap.matchMedia();
     media.add('(prefers-reduced-motion: no-preference)', () => {
       let entrance;
-      let moveField;
-      let resetField;
       const context = gsap.context(() => {
         entrance = gsap
           .timeline({ paused: true })
           .fromTo('[data-name-reveal]', { yPercent: 105, rotate: 3 }, { yPercent: 0, rotate: 0, duration: 1.05, stagger: 0.1, ease: 'expo.out' }, 0)
-          .fromTo('[data-portrait-reveal]', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power4.inOut' }, 0.12)
+          .fromTo('[data-portrait-reveal]', { clipPath: 'inset(8% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.35, ease: 'power4.inOut' }, 0.12)
+          .fromTo('[data-portrait-shutter]', { scaleY: 1 }, { scaleY: 0, duration: 1.1, stagger: { each: 0.075, from: 'center' }, ease: 'power4.inOut' }, 0.08)
           .fromTo('[data-intro-caption]', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.07, ease: 'power3.out' }, 0.45);
         gsap
           .timeline({
@@ -37,25 +35,10 @@ export default function AvantHero() {
             },
             defaults: { ease: 'none' },
           })
-          .to('[data-name-word]', { xPercent: (index) => (index === 0 ? -3 : 3), duration: 1 }, 0)
-          .to('[data-portrait-surface]', { yPercent: 2, scale: 1.05, duration: 1 }, 0)
-          .to('[data-hero-plane-shift]', { xPercent: -12, yPercent: 6, rotate: -4, duration: 1 }, 0);
-        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-          const toX = gsap.quickTo(field.current, 'x', { duration: 1.2, ease: 'power2.out' });
-          const toY = gsap.quickTo(field.current, 'y', { duration: 1.2, ease: 'power2.out' });
-          moveField = (event) => {
-            toX((event.clientX / window.innerWidth - 0.5) * 28);
-            toY((event.clientY / window.innerHeight - 0.5) * 16);
-          };
-          resetField = () => {
-            toX(0);
-            toY(0);
-          };
-        }
+          .to('[data-name-word]', { xPercent: (index) => (index === 0 ? -1.5 : 1.5), duration: 1 }, 0)
+          .to('[data-portrait-surface]', { yPercent: -5, duration: 1 }, 0)
+          .to('[data-name-baseline]', { xPercent: -4, duration: 1 }, 0);
       }, root);
-      const hero = root.current;
-      if (moveField) hero.addEventListener('pointermove', moveField);
-      if (resetField) hero.addEventListener('pointerleave', resetField);
       const resetEntrance = () => {
         entrance.pause(0);
         root.current?.setAttribute('data-intro-pending', 'true');
@@ -69,8 +52,6 @@ export default function AvantHero() {
       if (document.documentElement.dataset.portfolioIntro === 'playing') resetEntrance();
       else playEntrance();
       return () => {
-        if (moveField) hero.removeEventListener('pointermove', moveField);
-        if (resetField) hero.removeEventListener('pointerleave', resetField);
         window.removeEventListener('portfolio:intro-start', resetEntrance);
         window.removeEventListener('portfolio:intro-complete', playEntrance);
         root.current?.removeAttribute('data-intro-pending');
@@ -89,51 +70,52 @@ export default function AvantHero() {
 
   return (
     <section ref={root} className={styles.hero} aria-labelledby="hero-title">
-      <div className={styles.atmosphere} aria-hidden="true">
-        <div className={styles.fieldWrap} data-hero-plane-shift>
-          <div ref={field} className={styles.field} />
-        </div>
+      <div className={styles.identityHeader} data-intro-caption>
+        <Link href="/about" scroll={false}>
+          认识我 <span aria-hidden="true">↗</span>
+        </Link>
       </div>
       <div ref={composition} className={styles.composition}>
         <div className={styles.identity}>
           <h1 className={styles.title} id="hero-title" aria-label="陈祉辰，AI 产品、内容与创作">
-            <span className={styles.chineseName} data-intro-caption>
-              陈祉辰<span aria-hidden="true"> / </span>
-            </span>
             <span className={styles.nameWord} data-name-word aria-hidden="true">
-              <span data-name-reveal>CHEN</span>
-            </span>
-            <span className={[styles.nameWord, styles.givenName].join(' ')} data-name-word aria-hidden="true">
               <span data-name-reveal>
-                ZHICHEN<span className={styles.namePeriod}>.</span>
+                <span className={styles.nameGlyph}>陈</span>
+                <span className={styles.nameGlyph}>祉</span>
+                <span className={styles.nameGlyph}>辰</span>
               </span>
             </span>
           </h1>
-          <div className={styles.introduction} data-intro-caption>
+          <div className={styles.thesis} data-intro-caption>
             <p>
+              想清楚<span>，</span>
+              <br />
+              做出来<span>。</span>
+            </p>
+            <span className={styles.introduction}>
               把 AI 带进真实工作，
               <br />
-              也把实践变成值得分享的内容。
-            </p>
-            <div className={styles.selectedLinks}>
-              <Link href="/projects/project1" scroll={false}>
-                AI 运营平台<span aria-hidden="true">↗</span>
-              </Link>
-              <Link href="/projects/project2" scroll={false}>
-                GEO 内容增长<span aria-hidden="true">↗</span>
-              </Link>
-            </div>
+              把实践变成值得分享的内容。
+            </span>
+          </div>
+          <div className={styles.selectedLinks} data-intro-caption>
+            <Link href="/projects/project1" scroll={false}>
+              <span>AI 运营平台</span>
+              <span aria-hidden="true">↗</span>
+            </Link>
+            <Link href="/projects/project2" scroll={false}>
+              <span>GEO 内容增长</span>
+              <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </div>
         <figure className={styles.portrait} aria-label={profilePortrait.src ? profilePortrait.alt : '虚拟形象预留位'}>
           <div className={styles.portraitReveal} data-portrait-reveal>
             <div className={styles.portraitSurface} data-portrait-surface>
               {profilePortrait.src ? (
-                <Image src={profilePortrait.src} alt={profilePortrait.alt} fill priority sizes="(max-width: 760px) 86vw, 440px" style={{ objectPosition: profilePortrait.position }} />
+                <Image src={profilePortrait.src} alt={profilePortrait.alt} fill priority sizes="(max-width: 760px) 64vw, 40vw" style={{ objectPosition: profilePortrait.position }} />
               ) : (
                 <div className={styles.portraitPlaceholder}>
-                  <span className={styles.cropTop} aria-hidden="true" />
-                  <span className={styles.cropBottom} aria-hidden="true" />
                   <div>
                     <span>虚拟形象</span>
                     <small>像素形象待加入</small>
@@ -141,8 +123,17 @@ export default function AvantHero() {
                 </div>
               )}
             </div>
+            <div className={styles.portraitShutters} aria-hidden="true">
+              {[0, 1, 2, 3, 4, 5].map((strip) => (
+                <i key={strip} data-portrait-shutter />
+              ))}
+            </div>
           </div>
+          <figcaption>PIXEL SELF · 虚拟形象</figcaption>
         </figure>
+      </div>
+      <div className={styles.nameBaseline} aria-hidden="true" data-name-baseline>
+        <span data-name-reveal>CHEN ZHICHEN</span>
       </div>
       <div className={styles.heroFooter} data-intro-caption>
         <Link href="/#work" scroll={false} className={styles.workLink}>

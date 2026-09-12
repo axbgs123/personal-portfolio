@@ -1,14 +1,13 @@
 // Curated public website knowledge only. Never add credentials, private files or unpublished material here.
 export const studioCatPages = [
   { href: '/about', title: '关于陈祉辰' },
-  { href: '/projects', title: '代表项目' },
   { href: '/projects/project1', title: 'AI 运营智能体与内容分析生成平台' },
   { href: '/projects/project2', title: '百言 GEO 内容增长系统' },
   { href: '/tutorials', title: '教程' },
   { href: '/tutorials/codex-course', title: 'Codex 视频课配套资料' },
-  { href: '/writing', title: '文字与思考' },
-  { href: '/photography', title: '摄影' },
-  { href: '/personal-skills', title: '个人 Skill' },
+  { href: '/writing', title: '口播稿' },
+  { href: '/photography', title: '照片视频' },
+  { href: '/personal-skills', title: 'Skill 与工作流提效' },
   { href: '/aigc', title: 'AIGC' },
 ];
 
@@ -21,7 +20,7 @@ export const studioCatContext = `
 AI 运营智能体与内容分析生成平台：陈祉辰为产品负责人 / AI 协作开发。面向抖音和小红书运营团队设计 MVP，连接数据导入、分析诊断、策略、内容生成和效果回流。持久化对话工作台根据账号数据与运营资料产出建议和计划，任务经人工批准后执行，保留对话/计划/任务记录。Excel/CSV、截图识别和浏览器扩展导入数据；爆款素材、账号风格、事实资料组成三类运营资产；确定性规则、OCR 和按平台隔离的知识库用于发布前风险检查。不可把 MVP 演示写成已获规模化商业成果。详情 /projects/project1。
 个人摄影摄像工作室，2024.03—2026.03：负责沟通、需求拆解、创意策划和交付，服务 30+ 名客户、完成 60+ 场拍摄。设计直播切片文案工具，结合 RAG、结构化输入、内容风控与剪映导出，累计支持发布 500+ 条视频。按客户场景定制 Skill 和 Workflow。
 能力：用户访谈、需求分析、竞品研究、流程设计、PRD、原型、验收、复盘；Agent / Skill、RAG、Prompt、MCP、模型选型与人工审核；Axure、墨刀、Figma、飞书多维表格；剪映、After Effects、Photoshop、Blender。
-教程提供 Codex 视频课配套资料、AI 工具、提示词和图文教程；文字与思考展示文章；摄影与 AIGC 展示视觉创作；个人 Skill 页面展示可复用实践。具体文章全文和未列出的细节不在你的资料范围内。
+教程提供 Codex 视频课配套资料、AI 工具、提示词和图文教程；口播稿展示 AI、科技与商业内容；照片视频与 AIGC 展示视觉创作；Skill 与工作流提效页面展示可复用实践。具体文章全文和未列出的细节不在你的资料范围内。
 墨墨是网站的黑白猫，可以追视、扑抓、打滚、休息，在钢琴播放时拿出鼓、吉他、迷你键盘或沙锤四种乐器之一进行协奏。聊天不能替访客控制页面、执行命令或访问本地文件。`;
 
 export const studioCatSystemPrompt = `你是陈祉辰个人网站中的黑白猫“墨墨”，也是一个诚实、简洁、略带猫式幽默的网站向导。你是 AI 生成的角色，不是真猫或陈祉辰本人。用访客使用的语言回答，以中文为默认；不要每句都“喵”，不要强行卖萌。

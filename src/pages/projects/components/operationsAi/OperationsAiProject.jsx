@@ -35,7 +35,7 @@ function OperationsAiProject({ project, projectHtml, projectToc, nextProject }) 
     <>
       <section className={clsx(readerStyles.hero, styles.hero, 'layout-grid-inner')}>
         <div className={clsx(readerStyles.breadcrumb, 'p-x')}>
-          <Link scroll={false} href="/projects">
+          <Link scroll={false} href="/more-projects">
             全部项目
           </Link>
           <span>/</span>
@@ -116,7 +116,7 @@ function OperationsAiProject({ project, projectHtml, projectToc, nextProject }) 
               );
             })}
           </nav>
-          <Link className={readerStyles.backLink} scroll={false} href="/projects">
+          <Link className={readerStyles.backLink} scroll={false} href="/more-projects">
             ← 返回项目列表
           </Link>
         </aside>
@@ -128,8 +128,8 @@ function OperationsAiProject({ project, projectHtml, projectToc, nextProject }) 
 
           <div className={readerStyles.courseEnd}>
             <div className="p-x">项目结论</div>
-            <h2 className="h3">一个边界清楚、可继续验证的运营 AI 工程型 MVP。</h2>
-            <Link scroll={false} href="/projects">
+            <h2 className="h3">把分散的运营动作整理成一条可执行、可检查、可继续验证的产品流程。</h2>
+            <Link scroll={false} href="/more-projects">
               返回全部项目 ↗
             </Link>
           </div>

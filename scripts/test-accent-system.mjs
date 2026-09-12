@@ -25,21 +25,26 @@ test('approved neutral surfaces and legacy large-surface token remain neutral', 
   assert.match(global, /--portfolio-ink: #090909/);
   assert.match(global, /--portfolio-acid: #d8d8d8/);
   assert.match(global, /--portfolio-accent: #d74436/);
+  assert.match(global, /--portfolio-accent-tint: #f6e5e2/);
   assert.match(
     read('src/components/portfolio/avantHero.module.scss'),
-    /background: #f6f6f6/,
+    /--poster-paper: #f6f6f6/,
   );
 });
-test('red text variants meet AA on their intended surfaces; display accent meets non-text contrast', () => {
+test('red text variants meet AA on intended surfaces; selected-panel text remains readable', () => {
   assert.ok(contrast('#b83228', '#f6f6f6') >= 4.5);
   assert.ok(contrast('#ef7768', '#090909') >= 4.5);
   assert.ok(contrast('#d74436', '#f6f6f6') >= 3);
-  assert.ok(contrast('#ffffff', '#b83228') >= 4.5);
+  assert.ok(contrast('#b83228', '#f6e5e2') >= 4.5);
+  assert.match(global, /--portfolio-secondary: var\(--portfolio-accent\)/);
+  assert.match(global, /--portfolio-secondary-tint: var\(--portfolio-accent-tint\)/);
+  assert.doesNotMatch(global, /#c7cb97|#eceede|#444c28/);
+  assert.ok(contrast('#b83228', '#f6e5e2') >= 4.5);
 });
 test('accent is attached to a named state or action, not bulk text or body backgrounds', () => {
   assert.match(
     read('src/components/portfolio/avantHero.module.scss'),
-    /\.namePeriod\s*\{\s*color: var\(--portfolio-accent\)/,
+    /\.thesis[\s\S]*?> p span\s*\{\s*color: var\(--portfolio-accent\)/,
   );
   assert.match(
     read('src/components/portfolio/portfolioShell.module.scss'),

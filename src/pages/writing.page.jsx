@@ -6,8 +6,8 @@ export default function WritingPage({ entries, storageId = 'writing' }) {
   return (
     <>
       <Head>
-        <title>文字与思考 · 陈祉辰</title>
-        <meta name="description" content="陈祉辰的文章档案。拉动档案机发现一篇文章，也可以搜索直接阅读原文与配图。" />
+        <title>口播稿 · 陈祉辰</title>
+        <meta name="description" content="陈祉辰的口播稿档案，包含 AI、科技与商业选题。拉动档案机发现一篇，也可以搜索直接阅读。" />
       </Head>
       <ArchiveMachine key={storageId} entries={entries} storageId={storageId} />
     </>

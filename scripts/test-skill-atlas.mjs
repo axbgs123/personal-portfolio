@@ -9,7 +9,11 @@ const require = createRequire(import.meta.url);
 const root = fileURLToPath(new URL('..', import.meta.url));
 const read = (path) => readFileSync(`${root}/${path}`, 'utf8');
 const cleanImports = (source) => source.replace(/^import[\s\S]*?;\n/gm, '');
-const entries = vm.runInNewContext(`${cleanImports(read('src/constants/archivePages.js')).replace(/export default.*;/g, '')}\narchivePages.personalSkills.entries`, { writingArticles: [] });
+const migrated = vm.runInNewContext(`${read('src/constants/migratedPortfolio.js').replace(/export const /g, 'const ')}\n({ migratedProjectEntries, migratedPhotographyEntry, migratedShortDramaEntry })`);
+const entries = vm.runInNewContext(`${cleanImports(read('src/constants/archivePages.js')).replace(/export default.*;/g, '')}\narchivePages.personalSkills.entries`, {
+  writingArticles: [],
+  ...migrated,
+});
 const styles = new Proxy({}, { get: (_, key) => String(key) });
 const React = { createElement: (type, props, ...children) => ({ type, props: { ...props, children } }) };
 
@@ -102,11 +106,14 @@ function harness(initialEntries = entries) {
   return h;
 }
 
-test('the four real directions retain complete source titles, metadata, status and description without new destinations', () => {
+test('all supplied directions retain complete copy and the two local evidence detail destinations', () => {
   const h = harness();
-  assert.equal(classed(h.tree, 'method').length, 4);
-  assert.equal(classed(h.tree, 'trigger').length, 4);
-  assert.equal(nodes(h.tree).filter((node) => node.type === 'a').length, 0);
+  assert.equal(entries.length, 6);
+  assert.equal(classed(h.tree, 'method').length, entries.length);
+  assert.equal(classed(h.tree, 'trigger').length, entries.length);
+  const links = nodes(h.tree).filter((node) => node.type === 'a');
+  assert.deepEqual(links.map((node) => node.props.href), ['/personal-skills/remotion-talking-head-inserts', '/personal-skills/geo-seo-cn']);
+  links.forEach((node) => { assert.equal(node.props.target, undefined); assert.equal(node.props.onClick, undefined); });
   entries.forEach((entry, index) => {
     assert.equal(words(classed(h.tree, 'title')[index]), entry.title);
     assert.equal(words(classed(h.tree, 'meta')[index]), entry.meta);
@@ -115,14 +122,14 @@ test('the four real directions retain complete source titles, metadata, status a
   });
   assert.equal(classed(h.tree, 'note').length, 1);
   assert.equal(words(classed(h.tree, 'note')), 'Skill 文件与详情待补充。');
-  assert.equal(nodes(h.tree).filter((node) => node.type === 'button').length, 4);
+  assert.equal(nodes(h.tree).filter((node) => node.type === 'button').length, entries.length);
 });
 
 test('clicking real headings opens exactly their own introduction and clicking again closes it', () => {
   const h = harness();
   assert.deepEqual(
     classed(h.tree, 'panel').map((panel) => panel.props.hidden),
-    [false, true, true, true],
+    Array.from(entries, (_, index) => index !== 0),
   );
   for (let index = 0; index < entries.length; index += 1) {
     if (h.selected === index) h.choose(index);
@@ -132,7 +139,7 @@ test('clicking real headings opens exactly their own introduction and clicking a
     assert.equal(panels.filter((panel) => !panel.props.hidden).length, 1);
     assert.ok(words(panels[index]).includes(entries[index].desc));
     assert.equal(classed(h.tree, 'trigger')[index].props['aria-expanded'], true);
-    assert.equal(classed(h.tree, 'title').length, 4, 'other headings remain visible');
+    assert.equal(classed(h.tree, 'title').length, entries.length, 'other headings remain visible');
     h.choose(index);
     assert.equal(h.selected, null);
     assert.ok(classed(h.tree, 'panel').every((panel) => panel.props.hidden));
@@ -144,10 +151,10 @@ test('arrow/Home/End keys navigate heading focus without silently changing conte
   [
     [0, 'ArrowDown', 1],
     [2, 'ArrowUp', 1],
-    [0, 'End', 3],
+    [0, 'End', entries.length - 1],
     [3, 'Home', 0],
     [0, 'ArrowUp', 0],
-    [3, 'ArrowDown', 3],
+    [entries.length - 1, 'ArrowDown', entries.length - 1],
   ].forEach(([index, key, expected]) => {
     assert.equal(h.key(index, key), true);
     assert.equal(h.focused, expected);
@@ -163,8 +170,8 @@ test('each accessible heading controls a uniquely named region with proper colla
   const h = harness();
   const triggers = classed(h.tree, 'trigger');
   const panels = classed(h.tree, 'panel');
-  assert.equal(new Set(triggers.map((trigger) => trigger.props.id)).size, 4);
-  assert.equal(new Set(panels.map((panel) => panel.props.id)).size, 4);
+  assert.equal(new Set(triggers.map((trigger) => trigger.props.id)).size, entries.length);
+  assert.equal(new Set(panels.map((panel) => panel.props.id)).size, entries.length);
   triggers.forEach((trigger, index) => {
     assert.equal(trigger.type, 'button');
     assert.equal(trigger.props.type, 'button');

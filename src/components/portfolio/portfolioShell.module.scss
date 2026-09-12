@@ -244,17 +244,45 @@
   background: #090909;
   color: #f6f6f6;
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  > :not(.footerWatermark) {
+    position: relative;
+    z-index: 1;
+  }
+}
+.footerWatermark {
+  position: absolute;
+  right: -1%;
+  bottom: 35px;
+  white-space: nowrap;
+  font-size: clamp(100px, 20vw, 350px);
+  letter-spacing: -0.075em;
+  line-height: 1;
+  color: #ffffff08;
+  pointer-events: none;
+  transform: translateY(12%);
+  transition: transform 900ms var(--portfolio-ease);
+  span {
+    margin-left: 0.05em;
+  }
+}
+.footer:hover .footerWatermark {
+  transform: translateY(0);
+}
+.footerPeriod {
+  color: var(--portfolio-accent-on-dark);
 }
 .footerTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 58px;
+  margin-bottom: 64px;
   h2 {
     margin-top: 27px;
-    font-size: clamp(30px, 5.5vw, 92px);
-    line-height: 1.35;
+    font-size: clamp(36px, 7vw, 112px);
+    line-height: 1.17;
     font-weight: 450;
     letter-spacing: -0.045em;
   }
@@ -265,23 +293,35 @@
   color: #c8c8c8;
 }
 .mailArrow {
-  color: var(--portfolio-accent-on-dark);
-  width: 112px;
-  height: 112px;
+  color: #fff;
+  background: var(--portfolio-accent);
+  width: clamp(110px, 13vw, 190px);
+  height: clamp(110px, 13vw, 190px);
   flex-shrink: 0;
-  border: 1px solid #808080;
-  border-radius: 0;
-  display: grid;
-  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 52px;
+  text-decoration: none;
+  small {
+    font-size: 14px;
+    margin-top: 8px;
+  }
   transition:
     background 0.3s,
     color 0.3s,
     transform 0.3s;
   &:hover {
-    background: #dedede;
-    color: var(--portfolio-accent-ink);
-    transform: translate(5px, -5px);
+    background: #f6f6f6;
+    color: #090909;
+    transform: rotate(-8deg);
+  }
+  &:focus-visible {
+    outline: 2px solid #f6f6f6;
+    outline-offset: 8px;
   }
 }
 .footerInfo {
@@ -421,13 +461,17 @@
     margin-bottom: 40px;
     gap: 10px;
     h2 {
-      font-size: 29px;
+      font-size: clamp(30px, 7vw, 50px);
     }
   }
   .mailArrow {
-    width: 58px;
-    height: 58px;
+    width: 82px;
+    height: 82px;
     font-size: 29px;
+    small {
+      font-size: 12px;
+      margin-top: 2px;
+    }
   }
   .footerInfo {
     flex-direction: column;

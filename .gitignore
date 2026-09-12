@@ -21,6 +21,7 @@
 *.pem
 *.key
 /tmp/
+/.media-originals/
 *.log
 
 # debug

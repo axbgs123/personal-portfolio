@@ -35,7 +35,7 @@ function GeoGrowthProject({ project, projectHtml, projectToc, nextProject }) {
     <>
       <section className={clsx(readerStyles.hero, styles.hero, 'layout-grid-inner')}>
         <div className={clsx(readerStyles.breadcrumb, 'p-x')}>
-          <Link scroll={false} href="/projects">
+          <Link scroll={false} href="/more-projects">
             全部项目
           </Link>
           <span>/</span>
@@ -116,7 +116,7 @@ function GeoGrowthProject({ project, projectHtml, projectToc, nextProject }) {
               );
             })}
           </nav>
-          <Link className={readerStyles.backLink} scroll={false} href="/projects">
+          <Link className={readerStyles.backLink} scroll={false} href="/more-projects">
             ← 返回项目列表
           </Link>
         </aside>
@@ -129,7 +129,7 @@ function GeoGrowthProject({ project, projectHtml, projectToc, nextProject }) {
           <div className={readerStyles.courseEnd}>
             <div className="p-x">项目结论</div>
             <h2 className="h3">把 GEO 方法、知识证据、内容任务与人工审核组织成可持续改进的产品链路。</h2>
-            <Link scroll={false} href="/projects">
+            <Link scroll={false} href="/more-projects">
               返回全部项目 ↗
             </Link>
           </div>
